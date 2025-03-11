@@ -38,6 +38,23 @@ class MyDocument extends Document {
               }),
             }}
           />
+          <meta
+            property="og:title"
+            content="Clínica Reabilitare - Fisioterapia e Pilates em Pelotas-RS"
+          />
+          <meta
+            property="og:description"
+            content="Clínica especializada em fisioterapia e pilates, oferecendo tratamentos personalizados para recuperação e bem-estar."
+          />
+          <meta
+            property="og:image"
+            content="https://www.clinicareabilitare.com/cover.png"
+          />
+          <meta
+            property="og:url"
+            content="https://www.clinicareabilitare.com"
+          />
+          <meta property="og:type" content="website" />
         </Head>
         <body>
           <Main />
