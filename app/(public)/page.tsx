@@ -18,7 +18,7 @@ export default function Home() {
             description:
               "Clínica especializada em Fisioterapia e Pilates em Pelotas-RS, oferecendo tratamentos personalizados para recuperação e bem-estar.",
             url: "https://www.clinicareabilitare.com",
-            logo: "https://www.clinicareabilitare.com/logo-reabilitare.png",
+            logo: "https://www.clinicareabilitare.com/logo-reabilitare.jpg",
             image: "https://www.clinicareabilitare.com/foto-clinica.jpg",
             address: {
               "@type": "PostalAddress",
@@ -40,7 +40,7 @@ export default function Home() {
           }),
         }}
       />
-      <div className="bg-(--color-emerald-400) rounded-b-[32px]">
+      <div className="bg-(--color-emerald-800) rounded-b-[32px]">
         <Header />
         <Main />
       </div>

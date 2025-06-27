@@ -20,7 +20,7 @@ export default function Main() {
               target="_blank"
               className="mr-3 mb-3 block"
             >
-              <button className="border-none rounded-full cursor-pointer text-lg font-bold leading-5 px-9 py-2.5 transition-all duration-400 bg-white text-(--color-emerald-400) hover:bg-white/95">
+              <button className="border-none rounded-full cursor-pointer text-lg font-bold leading-5 px-9 py-2.5 transition-all duration-400 bg-white text-(--color-emerald-800) hover:bg-white/95">
                 Agendar Fisioterapia
               </button>
             </a>
@@ -36,7 +36,7 @@ export default function Main() {
           </div>
         </div>
         <Image
-          src="/kauane-ramos-fiseoterapia-pelotas.png"
+          src="/kauane-ramos-fiseoterapia-pelotas.webp"
           alt="Foto da profissional Kauane Ramos"
           width={405}
           height={506}

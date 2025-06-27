@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-(--color-emerald-400) text-white py-6">
+    <footer className="bg-(--color-emerald-800) text-white py-6">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm order-last sm:order-first pt-2 sm:pt-0">
@@ -9,7 +9,10 @@ export default function Footer() {
           <a
             href="https://www.instagram.com/clinicareabilitare.fisio/"
             target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 text-white hover:text-gray-100 transition"
+            aria-label="Instagram da Clínica Reabilitare"
+            role="link"
           >
             <svg
               className="w-6 h-6"
