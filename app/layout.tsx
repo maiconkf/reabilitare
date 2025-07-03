@@ -9,7 +9,7 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas-RS",
   description:
-    "Conheça a Clínica Reabilitare em Pelotas-RS, especializada em fisioterapia e pilates. Oferecemos tratamentos personalizados para sua recuperação e bem-estar. Agende sua consulta hoje!",
+    "Fisioterapia e pilates personalizados em Pelotas. Tratamentos eficazes para dor, lesões e bem-estar. Agende sua consulta na Reabilitare!",
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas-RS",
     description:
-      "Clínica especializada em fisioterapia e pilates, oferecendo tratamentos personalizados para recuperação e bem-estar.",
+      "Fisioterapia e pilates personalizados em Pelotas. Tratamentos eficazes para dor, lesões e bem-estar. Agende sua consulta na Reabilitare!",
     images: "https://www.clinicareabilitare.com/cover.png",
     url: "https://www.clinicareabilitare.com",
     type: "website",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas-RS",
     description:
-      "Clínica especializada em fisioterapia e pilates, oferecendo tratamentos personalizados para recuperação e bem-estar.",
+      "Fisioterapia e pilates personalizados em Pelotas. Tratamentos eficazes para dor, lesões e bem-estar. Agende sua consulta na Reabilitare!",
     images: ["https://www.clinicareabilitare.com/cover.png"],
     site: "@clinicareabilitare",
   },

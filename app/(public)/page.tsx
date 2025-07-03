@@ -16,7 +16,7 @@ export default function Home() {
             "@type": "HealthAndBeautyBusiness",
             name: "Clínica Reabilitare",
             description:
-              "Clínica especializada em Fisioterapia e Pilates em Pelotas-RS, oferecendo tratamentos personalizados para recuperação e bem-estar.",
+              "Fisioterapia e pilates personalizados em Pelotas. Tratamentos eficazes para dor, lesões e bem-estar. Agende sua consulta na Reabilitare!",
             url: "https://www.clinicareabilitare.com",
             logo: "https://www.clinicareabilitare.com/logo-reabilitare.jpg",
             image: "https://www.clinicareabilitare.com/foto-clinica.jpg",
