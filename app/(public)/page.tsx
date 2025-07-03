@@ -35,7 +35,7 @@ export default function Home() {
               areaServed: "BR",
               availableLanguage: "Portuguese",
             },
-            sameAs: ["https://www.instagram.com/clinicareabilitare"],
+            sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
             openingHours: ["Mo-Fr 08:00-20:00"],
           }),
         }}
