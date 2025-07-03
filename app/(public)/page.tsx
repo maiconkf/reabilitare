@@ -20,6 +20,7 @@ export default function Home() {
             url: "https://www.clinicareabilitare.com",
             logo: "https://www.clinicareabilitare.com/logo-reabilitare.jpg",
             image: "https://www.clinicareabilitare.com/foto-clinica.jpg",
+            telephone: "+55-53-99166-9801",
             address: {
               "@type": "PostalAddress",
               streetAddress: "Rua Dr. Vítor Russomano, 142",
