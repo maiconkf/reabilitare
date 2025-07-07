@@ -14,15 +14,13 @@ export default function Main() {
             <strong>Pilates</strong> para alívio da dor, fortalecimento e
             qualidade de vida.
           </h2>
-          <div className="md:flex flex-wrap">
-            {/* Bloco de botões corrigido */}
-
+          <div className="flex flex-wrap justify-between w-100% max-w-[484px]">
             <a
               href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20fisioterapia."
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Agendar avaliação de Fisioterapia pelo WhatsApp"
-              className="mr-3 mb-3 block border-none rounded-full cursor-pointer text-lg font-bold text-center leading-5 px-9 py-2.5 transition-all duration-400 bg-white text-(--color-emerald-800) hover:bg-white/95"
+              className="sm:mr-3 mb-3 lg:mb-0 block border-none rounded-full cursor-pointer text-lg font-bold text-center px-9 py-2.5 transition-all duration-400 bg-white text-(--color-emerald-800) hover:bg-white/95"
             >
               Agendar Fisioterapia
             </a>
@@ -32,7 +30,7 @@ export default function Main() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Agendar aula de Pilates pelo WhatsApp"
-              className="block border-none rounded-full cursor-pointer text-lg font-bold text-center leading-5 px-9 py-2.5 transition-all duration-400 bg-white/17 text-white hover:bg-white/34"
+              className="mb-3 lg:mb-0 block border-none rounded-full cursor-pointer text-lg font-bold text-center px-9 py-2.5 transition-all duration-400 bg-white/17 text-white hover:bg-white/34"
             >
               Agendar Pilates
             </a>
