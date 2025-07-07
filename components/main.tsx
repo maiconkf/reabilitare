@@ -15,23 +15,26 @@ export default function Main() {
             qualidade de vida.
           </h2>
           <div className="md:flex flex-wrap">
+            {/* Bloco de botões corrigido */}
+
             <a
               href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20fisioterapia."
               target="_blank"
-              className="mr-3 mb-3 block"
+              rel="noopener noreferrer"
+              aria-label="Agendar avaliação de Fisioterapia pelo WhatsApp"
+              className="mr-3 mb-3 block border-none rounded-full cursor-pointer text-lg font-bold text-center leading-5 px-9 py-2.5 transition-all duration-400 bg-white text-(--color-emerald-800) hover:bg-white/95"
             >
-              <button className="border-none rounded-full cursor-pointer text-lg font-bold leading-5 px-9 py-2.5 transition-all duration-400 bg-white text-(--color-emerald-800) hover:bg-white/95">
-                Agendar Fisioterapia
-              </button>
+              Agendar Fisioterapia
             </a>
+
             <a
               href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20pilates."
               target="_blank"
-              className="block"
+              rel="noopener noreferrer"
+              aria-label="Agendar aula de Pilates pelo WhatsApp"
+              className="block border-none rounded-full cursor-pointer text-lg font-bold text-center leading-5 px-9 py-2.5 transition-all duration-400 bg-white/17 text-white hover:bg-white/34"
             >
-              <button className="border-none rounded-full cursor-pointer text-lg font-bold leading-5 px-9 py-2.5 transition-all duration-400 bg-white/17 text-white hover:bg-white/34">
-                Agendar Pilates
-              </button>
+              Agendar Pilates
             </a>
           </div>
         </div>

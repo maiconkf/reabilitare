@@ -5,31 +5,33 @@ export default function Header() {
   return (
     <header className="py-3 bg-(--color-emerald-800) fixed z-10 w-full">
       <div className="flex justify-between items-center container mx-auto px-4">
-        <Image
-          src="/reabilitare-logo-white.webp"
-          width={129}
-          height={60}
-          alt="Reabilitare logotipo"
-        />
+        <Link href="/" className="block">
+          <Image
+            src="/reabilitare-logo-white.webp"
+            width={129}
+            height={60}
+            alt="Reabilitare logotipo"
+          />
+        </Link>
         <div className="flex justify-end items-center gap-6">
           <nav
             className="hidden md:flex items-center gap-6"
             aria-label="Navegação principal"
           >
             <Link
-              href="#servicos"
+              href="/#servicos"
               className="text-white hover:text-gray-100 transition"
             >
               Serviços
             </Link>
             <Link
-              href="#convenios"
+              href="/#convenios"
               className="text-white hover:text-gray-100 transition"
             >
               Convênios
             </Link>
             <Link
-              href="#localizacao"
+              href="/#localizacao"
               className="text-white hover:text-gray-100 transition"
             >
               Localização

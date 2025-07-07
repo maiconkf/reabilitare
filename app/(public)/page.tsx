@@ -4,6 +4,13 @@ import Header from "@/components/header";
 import Location from "@/components/location";
 import Main from "@/components/main";
 import Services from "@/components/services";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (
@@ -13,7 +20,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "HealthAndBeautyBusiness",
+            "@type": "Physiotherapy",
             name: "Clínica Reabilitare",
             description:
               "Fisioterapia e pilates personalizados em Pelotas. Tratamentos eficazes para dor, lesões e bem-estar. Agende sua consulta na Reabilitare!",
@@ -37,7 +44,20 @@ export default function Home() {
               availableLanguage: "Portuguese",
             },
             sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
-            openingHours: ["Mo-Fr 08:00-20:00"],
+            openingHoursSpecification: [
+              {
+                "@type": "OpeningHoursSpecification",
+                dayOfWeek: [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                ],
+                opens: "08:00",
+                closes: "20:00",
+              },
+            ],
           }),
         }}
       />

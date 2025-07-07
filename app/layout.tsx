@@ -7,7 +7,11 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas-RS",
+  metadataBase: new URL("https://www.clinicareabilitare.com"),
+  title: {
+    default: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas-RS",
+    template: "%s | Clínica Reabilitare",
+  },
   description:
     "Fisioterapia e pilates personalizados em Pelotas. Tratamentos eficazes para dor, lesões e bem-estar. Agende sua consulta na Reabilitare!",
   icons: {
@@ -22,16 +26,13 @@ export const metadata: Metadata = {
     title: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas-RS",
     description:
       "Fisioterapia e pilates personalizados em Pelotas. Tratamentos eficazes para dor, lesões e bem-estar. Agende sua consulta na Reabilitare!",
-    images: "https://www.clinicareabilitare.com/cover.png",
+    images: "/cover.png",
     url: "https://www.clinicareabilitare.com",
     type: "website",
+    siteName: "Clínica Reabilitare",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas-RS",
-    description:
-      "Fisioterapia e pilates personalizados em Pelotas. Tratamentos eficazes para dor, lesões e bem-estar. Agende sua consulta na Reabilitare!",
-    images: ["https://www.clinicareabilitare.com/cover.png"],
     site: "@clinicareabilitare",
   },
 };
