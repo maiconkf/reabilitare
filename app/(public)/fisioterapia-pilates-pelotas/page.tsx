@@ -202,7 +202,7 @@ export default function Home() {
             <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
               Pilates em Pelotas: Força, Flexibilidade e Consciência Corporal
             </h2>
-            <p className="text-lg  text-gray-600 mb-8">
+            <p className="text-gray-600 mb-8">
               O Pilates é mais do que um exercício, é uma ferramenta poderosa
               para fortalecer o corpo de dentro para fora, prevenir lesões e
               complementar seu tratamento fisioterapêutico. Em nosso estúdio de{" "}
