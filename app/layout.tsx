@@ -7,6 +7,10 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
+  robots: {
+    index: true,
+    follow: true,
+  },
   metadataBase: new URL("https://www.clinicareabilitare.com"),
   title: {
     default: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas-RS",
