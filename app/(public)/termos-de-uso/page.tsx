@@ -93,8 +93,13 @@ export default function TermsOfUse() {
             </h2>
             <p className="text-gray-600">
               Para dúvidas ou solicitações relacionadas a este serviço, entre em
-              contato conosco.
+              contato conosco:
             </p>
+            <ul className="text-gray-600 mt-2">
+              <li>📧 kauanerfisio@gmail.com</li>
+              <li>📞 (53) 99166-9801</li>
+              <li>📍 Rua Dr. Vítor Russomano, 142 - Pelotas, RS</li>
+            </ul>
           </section>
         </main>
       </div>

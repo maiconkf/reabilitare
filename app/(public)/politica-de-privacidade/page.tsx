@@ -89,8 +89,13 @@ export default function PrivacyPolicy() {
             </h2>
             <p className="text-gray-600">
               Se tiver dúvidas sobre esta política ou sobre o uso dos seus
-              dados, fale com a gente
+              dados, fale com a gente:
             </p>
+            <ul className="text-gray-600 mt-2">
+              <li>📧 kauanerfisio@gmail.com</li>
+              <li>📞 (53) 99166-9801</li>
+              <li>📍 Rua Dr. Vítor Russomano, 142 - Pelotas, RS</li>
+            </ul>
           </section>
         </main>
       </div>
