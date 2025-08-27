@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     description:
       "Equipe de fisioterapeutas qualificados oferecendo reabilitação, alívio de dores e tratamentos personalizados em Pelotas.",
     url: "https://www.clinicareabilitare.com/fisioterapia-pelotas",
-    images: "/cover-fisioterapia.png",
+    images: "/cover.png",
   },
   twitter: {
     title: "Fisioterapia em Pelotas | Clínica Reabilitare",
     description:
       "Equipe de fisioterapeutas qualificados oferecendo reabilitação, alívio de dores e tratamentos personalizados em Pelotas.",
-    images: ["/cover-fisioterapia.png"],
+    images: ["/cover.png"],
   },
 };
 
