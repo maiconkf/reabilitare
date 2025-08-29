@@ -5,7 +5,7 @@ import Location from "@/components/location";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Pilates em Pelotas | Clínica Reabilitare",
+  title: "Pilates em Pelotas",
   description:
     "Pilates em Pelotas com profissionais qualificados. Melhore postura, força, flexibilidade e bem-estar.",
   alternates: {

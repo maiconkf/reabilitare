@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Fisioterapia e Pilates em Pelotas | Clínica Reabilitare",
+  title: "Fisioterapia e Pilates em Pelotas",
   description:
     "Clínica Reabilitare oferece Fisioterapia e Pilates em Pelotas. Serviços especializados e separados para cuidado do corpo, bem-estar e reabilitação.",
   alternates: {

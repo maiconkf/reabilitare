@@ -5,7 +5,7 @@ import Location from "@/components/location";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Fisioterapia em Pelotas | Clínica Reabilitare",
+  title: "Fisioterapia em Pelotas",
   description:
     "Fisioterapia especializada em Pelotas. Tratamentos para dores, lesões, reabilitação pós-operatória e correção postural.",
   alternates: {
