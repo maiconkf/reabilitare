@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section id="contato">
+    <section id="contato" className="md:mb-8">
       <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
         Entre em Contato
       </h2>
