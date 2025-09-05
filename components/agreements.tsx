@@ -14,20 +14,22 @@ export default function Agreements() {
         <ul className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
           <li className="flex justify-center items-center">
             <Image
-              width={120}
-              height={80}
+              width={128}
+              height={78}
               src="/prevpel.webp"
               alt="PrevPel"
               className="h-20 grayscale hover:grayscale-0 transition duration-300"
+              loading="lazy"
             />
           </li>
           <li className="flex justify-center items-center">
             <Image
-              width={120}
-              height={80}
+              width={128}
+              height={78}
               src="/ibcm.webp"
               alt="IBCM"
               className="h-20 grayscale hover:grayscale-0 transition duration-300"
+              loading="lazy"
             />
           </li>
           <li className="flex justify-center items-center">
@@ -37,6 +39,7 @@ export default function Agreements() {
               src="/aspra.webp"
               alt="ASPRA"
               className="grayscale hover:grayscale-0 transition duration-300"
+              loading="lazy"
             />
           </li>
           <li className="flex justify-center items-center">
@@ -46,6 +49,7 @@ export default function Agreements() {
               src="/asstbm.webp"
               alt="ASSTBM"
               className="grayscale hover:grayscale-0 transition duration-300"
+              loading="lazy"
             />
           </li>
         </ul>

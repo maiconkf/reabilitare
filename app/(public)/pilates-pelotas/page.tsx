@@ -1,9 +1,11 @@
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import Location from "@/components/location";
 import Ratings from "@/components/ratings";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+
+const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
   title: "Pilates em Pelotas",

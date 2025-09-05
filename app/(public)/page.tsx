@@ -1,11 +1,13 @@
 import Agreements from "@/components/agreements";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import Location from "@/components/location";
 import Main from "@/components/main";
 import Ratings from "@/components/ratings";
 import Services from "@/components/services";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
+
+const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
   alternates: {

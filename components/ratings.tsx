@@ -33,7 +33,7 @@ const Ratings = () => {
         (el as HTMLElement).remove();
         clearInterval(interval);
       }
-    }, 1000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);

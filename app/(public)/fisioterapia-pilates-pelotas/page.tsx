@@ -1,10 +1,12 @@
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import Location from "@/components/location";
 import Ratings from "@/components/ratings";
 import type { Metadata } from "next";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
   title: "Fisioterapia e Pilates em Pelotas",

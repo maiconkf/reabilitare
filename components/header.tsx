@@ -8,8 +8,8 @@ export default function Header() {
         <Link href="/" className="block">
           <Image
             src="/reabilitare-logo-white.webp"
-            width={129}
-            height={60}
+            width={130}
+            height={46}
             alt="Reabilitare logotipo"
           />
         </Link>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Location() {
   return (
     <section id="localizacao" className="bg-gray-50 pt-16">
@@ -10,20 +12,23 @@ export default function Location() {
         </p>
       </div>
 
-      <figure className="w-full h-80 rounded-lg overflow-hidden">
-        <iframe
-          className="w-full h-full"
-          style={{ border: 0 }}
-          loading="lazy"
-          allowFullScreen
-          referrerPolicy="no-referrer-when-downgrade"
-          title="Mapa da localização da Clínica Reabilitare"
-          src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_API_KEY}&q=Rua+Vítor+Russomano+142,+Areal,+Pelotas,+RS`}
-        ></iframe>
-        <figcaption className="sr-only">
-          Mapa da localização da Clínica Reabilitare
-        </figcaption>
-      </figure>
+      <div className="w-full h-80 rounded-lg overflow-hidden relative">
+        <a
+          href="https://maps.app.goo.gl/v9oi4SFsH5MgpuSb7"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            src={`https://maps.googleapis.com/maps/api/staticmap?center=Rua+Vítor+Russomano+142,+Areal,+Pelotas,+RS&zoom=15&size=1920x320&scale=2&markers=color:red%7CRua+Vítor+Russomano+142,+Areal,+Pelotas,+RS&key=${process.env.NEXT_PUBLIC_API_KEY}`}
+            alt="Localização da Clínica"
+            fill
+            className="object-cover rounded-lg"
+            loading="lazy"
+            sizes="100vw"
+            priority={false}
+          />
+        </a>
+      </div>
     </section>
   );
 }
