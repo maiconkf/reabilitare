@@ -2,6 +2,7 @@ import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Location from "@/components/location";
+import Ratings from "@/components/ratings";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -114,6 +115,7 @@ export default function Home() {
           <Contact />
         </main>
       </div>
+      <Ratings />
       <Location />
       <Footer />
     </div>

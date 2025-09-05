@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Location from "@/components/location";
 import Main from "@/components/main";
+import Ratings from "@/components/ratings";
 import Services from "@/components/services";
 import type { Metadata } from "next";
 
@@ -67,6 +68,7 @@ export default function Home() {
       </div>
       <Services />
       <Agreements />
+      <Ratings />
       <Location />
       <Footer />
     </div>
