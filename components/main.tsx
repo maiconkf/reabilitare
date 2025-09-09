@@ -26,7 +26,7 @@ export default function Main() {
             </a>
 
             <a
-              href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20pilates."
+              href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20as%20aulas%20de%20pilates."
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Agendar aula de Pilates pelo WhatsApp"
