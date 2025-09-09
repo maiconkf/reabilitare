@@ -49,12 +49,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${openSans.className} antialiased`}>
+      <head>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=AW-17543322333`}
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
-        <Script id="gtag-init" strategy="afterInteractive">
+        <Script id="gtag-init" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -62,8 +62,26 @@ export default function RootLayout({
             gtag('config', 'AW-17543322333');
           `}
         </Script>
-        {children}
-      </body>
+        <Script id="gtag-conversion" strategy="beforeInteractive">
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-17543322333/2DOfCJ3pkZcbEN21p61B',
+                  'value': 1.0,
+                  'currency': 'BRL',
+                  'event_callback': callback
+              });
+              return false;
+            }
+          `}
+        </Script>
+      </head>
+      <body className={`${openSans.className} antialiased`}>{children}</body>
     </html>
   );
 }

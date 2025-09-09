@@ -19,6 +19,9 @@ const Contact = () => {
             href="https://wa.me/5553991669801"
             target="_blank"
             className="text-(--color-emerald-800) hover:underline"
+            onClick={() =>
+              gtag_report_conversion("https://wa.me/5553991669801")
+            }
           >
             Clique aqui para falar conosco
           </a>

@@ -21,6 +21,11 @@ export default function Main() {
               rel="noopener noreferrer"
               aria-label="Agendar avaliação de Fisioterapia pelo WhatsApp"
               className="sm:mr-3 mb-3 lg:mb-0 block border-none rounded-full cursor-pointer text-lg font-bold text-center px-9 py-2.5 transition-all duration-400 bg-white text-(--color-emerald-800) hover:bg-white/95"
+              onClick={() =>
+                gtag_report_conversion(
+                  "https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20fisioterapia."
+                )
+              }
             >
               Agendar Fisioterapia
             </a>
@@ -31,6 +36,11 @@ export default function Main() {
               rel="noopener noreferrer"
               aria-label="Agendar aula de Pilates pelo WhatsApp"
               className="mb-3 lg:mb-0 block border-none rounded-full cursor-pointer text-lg font-bold text-center px-9 py-2.5 transition-all duration-400 bg-white/17 text-white hover:bg-white/34"
+              onClick={() =>
+                gtag_report_conversion(
+                  "https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20as%20aulas%20de%20pilates."
+                )
+              }
             >
               Agendar Pilates
             </a>
