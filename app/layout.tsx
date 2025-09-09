@@ -62,24 +62,6 @@ export default function RootLayout({
             gtag('config', 'AW-17543322333');
           `}
         </Script>
-        <Script id="gtag-conversion" strategy="beforeInteractive">
-          {`
-            function gtag_report_conversion(url) {
-              var callback = function () {
-                if (typeof(url) != 'undefined') {
-                  window.location = url;
-                }
-              };
-              gtag('event', 'conversion', {
-                  'send_to': 'AW-17543322333/2DOfCJ3pkZcbEN21p61B',
-                  'value': 1.0,
-                  'currency': 'BRL',
-                  'event_callback': callback
-              });
-              return false;
-            }
-          `}
-        </Script>
       </head>
       <body className={`${openSans.className} antialiased`}>{children}</body>
     </html>

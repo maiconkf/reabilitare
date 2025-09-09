@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import WhatsAppButton from "./WhatsAppButton";
 
 export default function Header() {
   return (
@@ -37,20 +38,13 @@ export default function Header() {
               Localização
             </Link>
           </nav>
-          <a
+          <WhatsAppButton
             href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamentos%20de%20fisioterapia%20e%20pilates."
-            target="_blank"
-            rel="noopener noreferrer"
             className="block border-none rounded-full cursor-pointer text-md font-bold leading-5 px-5 py-1.5 transition-all duration-400 bg-white text-(--color-emerald-800) hover:bg-white/95"
             aria-label="Agendar atendimento pelo WhatsApp"
-            onClick={() =>
-              gtag_report_conversion(
-                "https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamentos%20de%20fisioterapia%20e%20pilates."
-              )
-            }
           >
             Agendar
-          </a>
+          </WhatsAppButton>
         </div>
       </div>
     </header>

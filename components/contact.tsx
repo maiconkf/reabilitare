@@ -1,3 +1,5 @@
+import WhatsAppButton from "./WhatsAppButton";
+
 const Contact = () => {
   return (
     <section id="contato" className="mb-4 md:mb-16">
@@ -15,16 +17,13 @@ const Contact = () => {
         </li>
         <li>
           <strong>📱 WhatsApp:</strong>{" "}
-          <a
+          <WhatsAppButton
             href="https://wa.me/5553991669801"
-            target="_blank"
             className="text-(--color-emerald-800) hover:underline"
-            onClick={() =>
-              gtag_report_conversion("https://wa.me/5553991669801")
-            }
+            aria-label="Fale conosco pelo WhatsApp"
           >
             Clique aqui para falar conosco
-          </a>
+          </WhatsAppButton>
         </li>
         <li>
           <strong>📍 Endereço:</strong> Rua Dr. Vítor Russomano, 142 – Bairro

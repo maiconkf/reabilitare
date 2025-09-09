@@ -2,6 +2,7 @@ import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Ratings from "@/components/ratings";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import type { Metadata } from "next";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -72,19 +73,13 @@ export default function Home() {
               >
                 Saiba Mais
               </Link>
-              <a
+              <WhatsAppButton
                 href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamentos%20de%20fisioterapia."
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-block border-none rounded-full cursor-pointer text-lg font-bold px-9 py-2.5 bg-(--color-emerald-800) text-white hover:bg-(--color-emerald-800)/90"
-                onClick={() =>
-                  gtag_report_conversion(
-                    "https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamentos%20de%20fisioterapia."
-                  )
-                }
+                aria-label="Agendar avaliação de Fisioterapia pelo WhatsApp"
               >
                 Agendar Fisioterapia
-              </a>
+              </WhatsAppButton>
             </div>
           </section>
 
@@ -106,19 +101,13 @@ export default function Home() {
               >
                 Saiba Mais
               </a>
-              <a
+              <WhatsAppButton
                 href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20pilates."
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-block border-none rounded-full cursor-pointer text-lg font-bold px-9 py-2.5 bg-(--color-emerald-800) text-white hover:bg-(--color-emerald-800)/90"
-                onClick={() =>
-                  gtag_report_conversion(
-                    "https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20pilates."
-                  )
-                }
+                aria-label="Agendar aula de Pilates pelo WhatsApp"
               >
                 Agendar Pilates
-              </a>
+              </WhatsAppButton>
             </div>
           </section>
 
