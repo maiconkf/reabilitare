@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const openSans = Open_Sans({
@@ -48,7 +49,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${openSans.className} antialiased`}>{children}</body>
+      <body className={`${openSans.className} antialiased`}>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=AW-17543322333`}
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17543322333');
+          `}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }
