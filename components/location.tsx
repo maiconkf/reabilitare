@@ -14,12 +14,12 @@ export default function Location() {
 
       <div className="w-full h-80 rounded-lg overflow-hidden relative">
         <a
-          href="https://maps.app.goo.gl/v9oi4SFsH5MgpuSb7"
+          href="https://maps.app.goo.gl/S4y6tkkLfFWxKYir8"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
-            src={`https://maps.googleapis.com/maps/api/staticmap?center=Rua+Vítor+Russomano+142,+Areal,+Pelotas,+RS&zoom=15&size=1920x320&scale=2&markers=color:red%7CRua+Vítor+Russomano+142,+Areal,+Pelotas,+RS&key=${process.env.NEXT_PUBLIC_API_KEY}`}
+            src={`https://maps.googleapis.com/maps/api/staticmap?center=Av.+Bento+Gonçalves+2146,+Areal,+Pelotas,+RS&zoom=15&size=1920x320&scale=2&markers=color:red%7CAv.+Bento+Gonçalves+2146,+Areal,+Pelotas,+RS&key=${process.env.NEXT_PUBLIC_API_KEY}`}
             alt="Localização da Clínica"
             fill
             className="object-cover rounded-lg"
