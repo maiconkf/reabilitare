@@ -26,7 +26,7 @@ const Contact = () => {
           </WhatsAppButton>
         </li>
         <li>
-          <strong>📍 Endereço:</strong> Rua Dr. Vítor Russomano, 142 – Bairro
+          <strong>📍 Endereço:</strong> Av. Bento Gonçalves, 2146 – Bairro
           Areal, Pelotas – RS
         </li>
       </ul>

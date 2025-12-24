@@ -50,10 +50,10 @@ export default function PilatesPage() {
                 telephone: "+5553991669801",
                 address: {
                   "@type": "PostalAddress",
-                  streetAddress: "Rua Dr. Vítor Russomano, 142",
+                  streetAddress: "Av. Bento Gonçalves, 2146",
                   addressLocality: "Pelotas",
                   addressRegion: "RS",
-                  postalCode: "96077-620",
+                  postalCode: "96015-140",
                   addressCountry: "BR",
                 },
                 contactPoint: {

@@ -94,7 +94,7 @@ export default function PrivacyPolicy() {
             <ul className="text-gray-600 mt-2">
               <li>📧 kauanerfisio@gmail.com</li>
               <li>📞 (53) 99166-9801</li>
-              <li>📍 Rua Dr. Vítor Russomano, 142 - Pelotas, RS</li>
+              <li>📍 Av. Bento Gonçalves, 2146 - Pelotas, RS</li>
             </ul>
           </section>
         </main>
