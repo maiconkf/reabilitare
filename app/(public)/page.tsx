@@ -23,42 +23,99 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Physiotherapy",
-            name: "Clínica Reabilitare",
-            description:
-              "Fisioterapia e pilates personalizados em Pelotas. Tratamentos eficazes para dor, lesões e bem-estar. Agende sua consulta na Reabilitare!",
-            url: "https://www.clinicareabilitare.com",
-            logo: "https://www.clinicareabilitare.com/logo-reabilitare.jpg",
-            image: "https://www.clinicareabilitare.com/foto-clinica.jpg",
-            telephone: "+55-53-99166-9801",
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "Av. Bento Gonçalves, 2146",
-              addressLocality: "Pelotas",
-              addressRegion: "RS",
-              postalCode: "96015-140",
-              addressCountry: "BR",
-            },
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+55-53-99166-9801",
-              contactType: "customer service",
-              areaServed: "BR",
-              availableLanguage: "Portuguese",
-            },
-            sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
-            openingHoursSpecification: [
+            "@graph": [
               {
-                "@type": "OpeningHoursSpecification",
-                dayOfWeek: [
-                  "Monday",
-                  "Tuesday",
-                  "Wednesday",
-                  "Thursday",
-                  "Friday",
+                "@type": "Physiotherapy",
+                "@id": "https://www.clinicareabilitare.com/#organization",
+                name: "Clínica Reabilitare",
+                alternateName: "Reabilitare Fisioterapia e Pilates",
+                description:
+                  "Clínica especializada em fisioterapia em Pelotas e pilates em Pelotas. Tratamentos personalizados para dores, lesões, reabilitação e bem-estar. Agende sua consulta!",
+                url: "https://www.clinicareabilitare.com",
+                logo: "https://www.clinicareabilitare.com/logo-reabilitare.jpg",
+                image: "https://www.clinicareabilitare.com/foto-clinica.jpg",
+                telephone: "+55-53-99166-9801",
+                priceRange: "$$",
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "Av. Bento Gonçalves, 2146",
+                  addressLocality: "Pelotas",
+                  addressRegion: "RS",
+                  postalCode: "96015-140",
+                  addressCountry: "BR",
+                },
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: -31.7649,
+                  longitude: -52.3371,
+                },
+                areaServed: {
+                  "@type": "City",
+                  name: "Pelotas",
+                  "@id": "https://www.wikidata.org/wiki/Q170851",
+                },
+                hasOfferCatalog: {
+                  "@type": "OfferCatalog",
+                  name: "Serviços de Fisioterapia e Pilates em Pelotas",
+                  itemListElement: [
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Fisioterapia em Pelotas",
+                        description:
+                          "Tratamentos de fisioterapia especializada para dores, lesões, reabilitação pós-operatória e correção postural em Pelotas RS",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Pilates em Pelotas",
+                        description:
+                          "Aulas de pilates clínico para fortalecimento, flexibilidade e consciência corporal em Pelotas RS",
+                      },
+                    },
+                  ],
+                },
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  telephone: "+55-53-99166-9801",
+                  contactType: "customer service",
+                  areaServed: "BR",
+                  availableLanguage: "Portuguese",
+                },
+                sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
+                openingHoursSpecification: [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    dayOfWeek: [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                    ],
+                    opens: "08:00",
+                    closes: "20:00",
+                  },
                 ],
-                opens: "08:00",
-                closes: "20:00",
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://www.clinicareabilitare.com/#website",
+                url: "https://www.clinicareabilitare.com",
+                name: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas",
+                description:
+                  "Site oficial da Clínica Reabilitare, especializada em fisioterapia e pilates em Pelotas RS",
+                publisher: {
+                  "@id": "https://www.clinicareabilitare.com/#organization",
+                },
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: "https://www.clinicareabilitare.com/?s={search_term_string}",
+                  "query-input": "required name=search_term_string",
+                },
               },
             ],
           }),

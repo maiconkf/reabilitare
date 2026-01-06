@@ -10,23 +10,32 @@ import dynamic from "next/dynamic";
 const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
-  title: "Fisioterapia e Pilates em Pelotas",
+  title: "Fisioterapia e Pilates em Pelotas | Clínica Especializada",
   description:
-    "Clínica Reabilitare oferece Fisioterapia e Pilates em Pelotas. Serviços especializados e separados para cuidado do corpo, bem-estar e reabilitação.",
+    "Procurando fisioterapia em Pelotas ou pilates em Pelotas? A Clínica Reabilitare oferece tratamentos especializados com profissionais qualificados. Agende sua avaliação!",
+  keywords: [
+    "fisioterapia pelotas",
+    "pilates pelotas",
+    "fisioterapeuta pelotas",
+    "clínica de fisioterapia pelotas",
+    "pilates clínico pelotas",
+    "fisioterapia em pelotas rs",
+    "pilates em pelotas rs",
+  ],
   alternates: {
     canonical: "/fisioterapia-pilates-pelotas",
   },
   openGraph: {
     title: "Fisioterapia e Pilates em Pelotas | Clínica Reabilitare",
     description:
-      "Serviços separados de Fisioterapia e Pilates em Pelotas, realizados por profissionais qualificados para cuidar do seu corpo e bem-estar.",
+      "Clínica especializada em fisioterapia e pilates em Pelotas. Tratamentos personalizados para dores, reabilitação e bem-estar. Agende agora!",
     url: "https://www.clinicareabilitare.com/fisioterapia-pilates-pelotas",
     images: "/cover.png",
   },
   twitter: {
     title: "Fisioterapia e Pilates em Pelotas | Clínica Reabilitare",
     description:
-      "Serviços separados de Fisioterapia e Pilates em Pelotas, realizados por profissionais qualificados para cuidar do seu corpo e bem-estar.",
+      "Clínica especializada em fisioterapia e pilates em Pelotas. Tratamentos personalizados para dores, reabilitação e bem-estar. Agende agora!",
     images: ["/cover.png"],
   },
 };
@@ -34,24 +43,123 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "MedicalBusiness",
+                "@id": "https://www.clinicareabilitare.com/#organization",
+                name: "Clínica Reabilitare - Fisioterapia e Pilates",
+                description:
+                  "Clínica especializada em fisioterapia e pilates em Pelotas, RS. Oferecemos tratamentos personalizados para dores, lesões, reabilitação e bem-estar.",
+                url: "https://www.clinicareabilitare.com/fisioterapia-pilates-pelotas",
+                logo: "https://www.clinicareabilitare.com/logo-reabilitare.jpg",
+                image: "https://www.clinicareabilitare.com/foto-clinica.jpg",
+                telephone: "+5553991669801",
+                priceRange: "$$",
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "Av. Bento Gonçalves, 2146",
+                  addressLocality: "Pelotas",
+                  addressRegion: "RS",
+                  postalCode: "96015-140",
+                  addressCountry: "BR",
+                },
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: -31.7649,
+                  longitude: -52.3371,
+                },
+                areaServed: {
+                  "@type": "City",
+                  name: "Pelotas",
+                  "@id": "https://www.wikidata.org/wiki/Q170851",
+                },
+                hasOfferCatalog: {
+                  "@type": "OfferCatalog",
+                  name: "Serviços de Fisioterapia e Pilates",
+                  itemListElement: [
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Fisioterapia em Pelotas",
+                        description:
+                          "Tratamento de dores, lesões, reabilitação pós-operatória e correção postural",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Pilates em Pelotas",
+                        description:
+                          "Aulas de pilates para fortalecimento, flexibilidade e consciência corporal",
+                      },
+                    },
+                  ],
+                },
+                openingHoursSpecification: [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    dayOfWeek: [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday",
+                    ],
+                    opens: "08:00",
+                    closes: "20:00",
+                  },
+                ],
+                sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
+              },
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Home",
+                    item: "https://www.clinicareabilitare.com",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Fisioterapia e Pilates em Pelotas",
+                    item:
+                      "https://www.clinicareabilitare.com/fisioterapia-pilates-pelotas",
+                  },
+                ],
+              },
+            ],
+          }),
+        }}
+      />
       <Header />
       <div className="container mx-auto px-4 pt-25">
         <main className="pt-4 pb-12 md:pb-0">
           <section>
             <h1 className="text-3xl font-extrabold text-(--color-emerald-800) mb-6">
-              Fisioterapia e Pilates em Pelotas
+              Fisioterapia e Pilates em Pelotas: Clínica Especializada
             </h1>
             <p className="text-gray-600 mb-4">
-              A <strong>Clínica Reabilitare</strong> oferece serviços
-              especializados de <strong>Fisioterapia</strong> e{" "}
-              <strong>Pilates</strong> em Pelotas. Cada serviço é realizado de
-              forma separada e dedicada, garantindo atenção total às
-              necessidades de cada paciente.
+              Está procurando <strong>fisioterapia em Pelotas</strong> ou{" "}
+              <strong>pilates em Pelotas</strong>? A{" "}
+              <strong>Clínica Reabilitare</strong> é referência em tratamentos
+              especializados na cidade. Cada serviço é realizado de forma
+              separada e dedicada, garantindo atenção total às necessidades de
+              cada paciente.
             </p>
             <p className="text-gray-600 mb-4">
-              Com profissionais qualificados e infraestrutura moderna, nosso
-              objetivo é promover saúde, bem-estar e qualidade de vida para
-              todos os nossos pacientes.
+              Localizada no bairro Areal, nossa clínica conta com{" "}
+              <strong>fisioterapeutas qualificados</strong> e infraestrutura
+              moderna para oferecer o melhor tratamento de fisioterapia e
+              pilates em Pelotas, RS.
             </p>
           </section>
 

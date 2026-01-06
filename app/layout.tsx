@@ -18,7 +18,19 @@ export const metadata: Metadata = {
     template: "%s | Clínica Reabilitare",
   },
   description:
-    "Fisioterapia e pilates personalizados em Pelotas. Tratamentos eficazes para dor, lesões e bem-estar. Agende sua consulta na Reabilitare!",
+    "Procurando fisioterapia em Pelotas ou pilates em Pelotas? A Clínica Reabilitare oferece tratamentos especializados com profissionais qualificados. Agende sua avaliação!",
+  keywords: [
+    "fisioterapia pelotas",
+    "pilates pelotas",
+    "fisioterapeuta pelotas",
+    "clínica de fisioterapia pelotas",
+    "pilates clínico pelotas",
+    "fisioterapia em pelotas rs",
+    "pilates em pelotas rs",
+    "tratamento de dor pelotas",
+    "reabilitação pelotas",
+    "clínica reabilitare",
+  ],
   icons: {
     icon: [
       { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },

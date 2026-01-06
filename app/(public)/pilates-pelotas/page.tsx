@@ -9,23 +9,32 @@ import dynamic from "next/dynamic";
 const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
-  title: "Pilates em Pelotas",
+  title: "Pilates em Pelotas | Melhor Estúdio de Pilates",
   description:
-    "Pilates em Pelotas com profissionais qualificados. Melhore postura, força, flexibilidade e bem-estar.",
+    "Pilates em Pelotas com profissionais qualificados. Aulas personalizadas para melhorar postura, força, flexibilidade e bem-estar. Agende sua aula experimental!",
+  keywords: [
+    "pilates pelotas",
+    "pilates em pelotas",
+    "aulas de pilates pelotas",
+    "pilates clínico pelotas",
+    "estúdio de pilates pelotas",
+    "pilates em pelotas rs",
+    "pilates para coluna pelotas",
+  ],
   alternates: {
     canonical: "/pilates-pelotas",
   },
   openGraph: {
-    title: "Pilates em Pelotas | Clínica Reabilitare",
+    title: "Pilates em Pelotas | Clínica Reabilitare - Aulas Personalizadas",
     description:
-      "Aulas de Pilates em Pelotas para fortalecimento, flexibilidade, equilíbrio e consciência corporal.",
+      "Procurando pilates em Pelotas? A Clínica Reabilitare oferece aulas personalizadas com profissionais qualificados. Agende sua aula experimental!",
     url: "https://www.clinicareabilitare.com/pilates-pelotas",
     images: "/cover.png",
   },
   twitter: {
-    title: "Pilates em Pelotas | Clínica Reabilitare",
+    title: "Pilates em Pelotas | Clínica Reabilitare - Aulas Personalizadas",
     description:
-      "Aulas de Pilates em Pelotas para fortalecimento, flexibilidade, equilíbrio e consciência corporal.",
+      "Procurando pilates em Pelotas? A Clínica Reabilitare oferece aulas personalizadas com profissionais qualificados. Agende sua aula experimental!",
     images: ["/cover.png"],
   },
 };
@@ -117,12 +126,20 @@ export default function PilatesPage() {
         <main className="pt-4 pb-12 md:pb-0">
           <section>
             <h1 className="text-3xl font-extrabold text-(--color-emerald-800) mb-6">
-              Pilates em Pelotas: Força, Flexibilidade e Consciência Corporal
+              Pilates em Pelotas: O Melhor Estúdio de Pilates
             </h1>
             <p className="text-gray-600 mb-4">
-              O Pilates é uma atividade física que fortalece o corpo, melhora
-              postura, equilíbrio e flexibilidade. Indicado para quem busca
-              bem-estar, prevenção de lesões e condicionamento físico.
+              Procurando <strong>pilates em Pelotas</strong>? A{" "}
+              <strong>Clínica Reabilitare</strong> oferece as melhores{" "}
+              <strong>aulas de pilates em Pelotas, RS</strong>. O Pilates é uma
+              atividade física que fortalece o corpo, melhora postura,
+              equilíbrio e flexibilidade.
+            </p>
+            <p className="text-gray-600 mb-4">
+              Nosso <strong>estúdio de pilates em Pelotas</strong> é indicado
+              para quem busca bem-estar, prevenção de lesões, condicionamento
+              físico e alívio de dores na coluna. Contamos com profissionais
+              especializados e equipamentos modernos.
             </p>
           </section>
 

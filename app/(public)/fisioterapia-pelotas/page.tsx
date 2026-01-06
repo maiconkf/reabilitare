@@ -9,23 +9,32 @@ import dynamic from "next/dynamic";
 const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
-  title: "Fisioterapia em Pelotas",
+  title: "Fisioterapia em Pelotas | Melhor Clínica de Fisioterapia",
   description:
-    "Fisioterapia especializada em Pelotas. Tratamentos para dores, lesões, reabilitação pós-operatória e correção postural.",
+    "Fisioterapia em Pelotas com fisioterapeutas especializados. Tratamentos para dores, lesões, reabilitação pós-operatória e correção postural. Agende sua avaliação!",
+  keywords: [
+    "fisioterapia pelotas",
+    "fisioterapeuta pelotas",
+    "clínica de fisioterapia pelotas",
+    "fisioterapia em pelotas rs",
+    "tratamento de dor pelotas",
+    "reabilitação pelotas",
+    "fisioterapia ortopédica pelotas",
+  ],
   alternates: {
     canonical: "/fisioterapia-pelotas",
   },
   openGraph: {
-    title: "Fisioterapia em Pelotas | Clínica Reabilitare",
+    title: "Fisioterapia em Pelotas | Clínica Reabilitare - Especialistas",
     description:
-      "Equipe de fisioterapeutas qualificados oferecendo reabilitação, alívio de dores e tratamentos personalizados em Pelotas.",
+      "Procurando fisioterapia em Pelotas? A Clínica Reabilitare oferece tratamentos personalizados para dores, lesões e reabilitação. Agende agora!",
     url: "https://www.clinicareabilitare.com/fisioterapia-pelotas",
     images: "/cover.png",
   },
   twitter: {
-    title: "Fisioterapia em Pelotas | Clínica Reabilitare",
+    title: "Fisioterapia em Pelotas | Clínica Reabilitare - Especialistas",
     description:
-      "Equipe de fisioterapeutas qualificados oferecendo reabilitação, alívio de dores e tratamentos personalizados em Pelotas.",
+      "Procurando fisioterapia em Pelotas? A Clínica Reabilitare oferece tratamentos personalizados para dores, lesões e reabilitação. Agende agora!",
     images: ["/cover.png"],
   },
 };
@@ -117,13 +126,21 @@ export default function FisioterapiaPage() {
         <main className="pt-4 pb-12 md:pb-0">
           <section>
             <h1 className="text-3xl font-extrabold text-(--color-emerald-800) mb-6">
-              Fisioterapia em Pelotas: Reabilitação e Cuidado Especializado
+              Fisioterapia em Pelotas: A Melhor Clínica de Reabilitação
             </h1>
             <p className="text-gray-600 mb-4">
-              Nossa equipe de fisioterapeutas altamente qualificados oferece
+              Procurando <strong>fisioterapia em Pelotas</strong>? A{" "}
+              <strong>Clínica Reabilitare</strong> é referência em tratamentos
+              fisioterapêuticos na cidade. Nossa equipe de{" "}
+              <strong>fisioterapeutas altamente qualificados</strong> oferece
               tratamentos personalizados para dores, lesões, reabilitação
-              pós-operatória e correção postural. Cada paciente recebe atenção
-              individual e um plano de cuidado adaptado às suas necessidades.
+              pós-operatória e correção postural.
+            </p>
+            <p className="text-gray-600 mb-4">
+              Localizada no bairro Areal, nossa clínica de{" "}
+              <strong>fisioterapia em Pelotas, RS</strong> atende pacientes com
+              atenção individual e um plano de cuidado adaptado às necessidades
+              específicas de cada um.
             </p>
           </section>
 
