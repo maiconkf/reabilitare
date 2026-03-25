@@ -49,7 +49,8 @@ export default function FisioterapiaPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "Physiotherapy",
+                "@type": "MedicalClinic",
+                medicalSpecialty: "Physiotherapy",
                 name: "Clínica Reabilitare",
                 description:
                   "Fisioterapia especializada em Pelotas com tratamentos para dores, lesões, reabilitação pós-operatória e correção postural.",
@@ -71,6 +72,15 @@ export default function FisioterapiaPage() {
                   contactType: "customer service",
                   areaServed: "BR",
                   availableLanguage: "Portuguese",
+                },
+                employee: {
+                  "@type": "Person",
+                  name: "Kauane Ramos",
+                  jobTitle: "Fisioterapeuta",
+                  hasCredential: {
+                    "@type": "EducationalOccupationalCredential",
+                    credentialCategory: "CREFITO-5: 375851-F",
+                  },
                 },
                 sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
                 openingHoursSpecification: [

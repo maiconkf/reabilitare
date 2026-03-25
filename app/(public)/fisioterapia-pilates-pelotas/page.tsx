@@ -50,7 +50,8 @@ export default function Home() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "MedicalBusiness",
+                "@type": "MedicalClinic",
+                medicalSpecialty: "Physiotherapy",
                 "@id": "https://www.clinicareabilitare.com/#organization",
                 name: "Clínica Reabilitare - Fisioterapia e Pilates",
                 description:
@@ -116,6 +117,15 @@ export default function Home() {
                     closes: "20:00",
                   },
                 ],
+                employee: {
+                  "@type": "Person",
+                  name: "Kauane Ramos",
+                  jobTitle: "Fisioterapeuta",
+                  hasCredential: {
+                    "@type": "EducationalOccupationalCredential",
+                    credentialCategory: "CREFITO-5: 375851-F",
+                  },
+                },
                 sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
               },
               {
@@ -131,8 +141,7 @@ export default function Home() {
                     "@type": "ListItem",
                     position: 2,
                     name: "Fisioterapia e Pilates em Pelotas",
-                    item:
-                      "https://www.clinicareabilitare.com/fisioterapia-pilates-pelotas",
+                    item: "https://www.clinicareabilitare.com/fisioterapia-pilates-pelotas",
                   },
                 ],
               },

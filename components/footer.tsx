@@ -3,9 +3,13 @@ export default function Footer() {
     <footer className="bg-(--color-emerald-800) text-white py-6">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm order-last sm:order-first pt-2 sm:pt-0">
-            &copy; 2025 Todos os direitos reservados.
-          </p>
+          <div className="order-last sm:order-first pt-2 sm:pt-0 text-center sm:text-left">
+            <p className="text-sm">&copy; 2025 Todos os direitos reservados.</p>
+            <p className="text-xs text-white/70 mt-0.5">
+              Fisioterapeuta responsável: Kauane Ramos &mdash; CREFITO-5:
+              375851-F
+            </p>
+          </div>
           <a
             href="https://www.instagram.com/clinicareabilitare.fisio/"
             target="_blank"

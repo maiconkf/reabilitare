@@ -49,7 +49,8 @@ export default function PilatesPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "ExerciseGym",
+                "@type": "MedicalClinic",
+                medicalSpecialty: "Physiotherapy",
                 name: "Clínica Reabilitare - Pilates",
                 description:
                   "Pilates em Pelotas com profissionais qualificados. Melhore postura, força, flexibilidade e bem-estar.",
@@ -71,6 +72,15 @@ export default function PilatesPage() {
                   contactType: "customer service",
                   areaServed: "BR",
                   availableLanguage: "Portuguese",
+                },
+                employee: {
+                  "@type": "Person",
+                  name: "Kauane Ramos",
+                  jobTitle: "Fisioterapeuta",
+                  hasCredential: {
+                    "@type": "EducationalOccupationalCredential",
+                    credentialCategory: "CREFITO-5: 375851-F",
+                  },
                 },
                 sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
                 openingHoursSpecification: [
