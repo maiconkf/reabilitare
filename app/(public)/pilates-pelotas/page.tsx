@@ -3,6 +3,9 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Ratings from "@/components/ratings";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import InternalHero from "@/components/InternalHero";
+import FaqAccordion from "@/components/FaqAccordion";
+import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
@@ -132,102 +135,131 @@ export default function PilatesPage() {
         }}
       />
       <Header />
-      <div className="container mx-auto px-4 pt-25">
-        <main className="pt-4 pb-12 md:pb-0">
-          <section>
-            <h1 className="text-3xl font-extrabold text-(--color-emerald-800) mb-6">
-              Pilates em Pelotas: O Melhor Estúdio de Pilates
-            </h1>
-            <p className="text-gray-600 mb-4">
-              Procurando <strong>pilates em Pelotas</strong>? A{" "}
-              <strong>Clínica Reabilitare</strong> oferece as melhores{" "}
-              <strong>aulas de pilates em Pelotas, RS</strong>. O Pilates é uma
-              atividade física que fortalece o corpo, melhora postura,
-              equilíbrio e flexibilidade.
-            </p>
-            <p className="text-gray-600 mb-4">
-              Nosso <strong>estúdio de pilates em Pelotas</strong> é indicado
-              para quem busca bem-estar, prevenção de lesões, condicionamento
-              físico e alívio de dores na coluna. Contamos com profissionais
-              especializados e equipamentos modernos.
-            </p>
-          </section>
+      
+      <InternalHero 
+        title={<>Pilates em <strong className="text-emerald-300 font-extrabold">Pelotas</strong></>}
+        subtitle="O Melhor Estúdio de Pilates para sua postura, força, flexibilidade e bem-estar."
+      />
 
-          <hr className="my-8 border-t border-gray-200" />
+      <div className="bg-white">
+        <main className="container mx-auto px-4 py-16 md:py-24">
+          <div className="max-w-4xl mx-auto">
+            {/* Intro Section */}
+            <ScrollReveal>
+              <section className="prose prose-lg md:prose-xl prose-emerald max-w-none text-gray-600 leading-relaxed mb-16">
+                <p>
+                  Procurando <strong>pilates em Pelotas</strong>? A <strong>Clínica Reabilitare</strong> oferece as melhores <strong>aulas de pilates em Pelotas, RS</strong>. O Pilates é uma atividade física que fortalece o corpo, melhora postura, equilíbrio e flexibilidade.
+                </p>
+                <p>
+                  Nosso <strong>estúdio de pilates em Pelotas</strong> é indicado para quem busca bem-estar, prevenção de lesões, condicionamento físico e alívio de dores na coluna. Contamos com profissionais especializados e equipamentos modernos.
+                </p>
+              </section>
+            </ScrollReveal>
 
-          <section>
-            <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
-              Benefícios do Pilates na Clínica Reabilitare
-            </h2>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Melhora postura e alinhamento corporal</li>
-              <li>Aumento de força, flexibilidade e mobilidade</li>
-              <li>Fortalecimento do core e prevenção de dores lombares</li>
-              <li>Maior equilíbrio, coordenação e consciência corporal</li>
-              <li>Ambiente acolhedor e equipamentos modernos</li>
-            </ul>
-            <WhatsAppButton
-              href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20pilates."
-              className="inline-block border-none rounded-full cursor-pointer text-lg font-bold px-9 py-2.5 bg-(--color-emerald-800) text-white hover:bg-(--color-emerald-800)/90 mb-6"
-              aria-label="Agendar aula de Pilates pelo WhatsApp"
-            >
-              Agendar Pilates
-            </WhatsAppButton>
-          </section>
+            {/* Benefits Section */}
+            <section className="mb-16">
+              <ScrollReveal>
+                <div className="text-center mb-10">
+                  <h2 className="text-3xl font-extrabold text-(--color-emerald-800) mb-4">
+                    Benefícios do Pilates na Reabilitare
+                  </h2>
+                  <p className="text-gray-600 text-lg">Seu corpo mais forte, flexível e sem dores.</p>
+                </div>
+              </ScrollReveal>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
+                {[
+                  "Melhora postura e alinhamento corporal",
+                  "Aumento de força, flexibilidade e mobilidade",
+                  "Fortalecimento do core e prevenção de dores lombares",
+                  "Maior equilíbrio, coordenação e consciência corporal",
+                  "Ambiente acolhedor e equipamentos modernos"
+                ].map((item, i) => (
+                  <ScrollReveal key={i} delay={i * 100}>
+                    <div className="bg-emerald-50/50 border border-emerald-100 rounded-2xl p-5 flex items-start gap-3 h-full hover:bg-emerald-50 hover:shadow-md transition-all">
+                      <span className="text-emerald-500 mt-0.5">
+                        <svg className="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <span className="text-gray-700 font-medium">{item}</span>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+              
+              <ScrollReveal delay={200}>
+                <div className="text-center">
+                  <WhatsAppButton
+                    href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20pilates."
+                    className="inline-flex items-center gap-2 border-none rounded-full cursor-pointer text-lg font-bold px-9 py-3.5 bg-(--color-emerald-800) text-white hover:bg-emerald-900 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                    aria-label="Agendar aula de Pilates pelo WhatsApp"
+                  >
+                    Agendar Pilates
+                    <span className="text-xl">→</span>
+                  </WhatsAppButton>
+                </div>
+              </ScrollReveal>
+            </section>
 
-          <hr className="my-8 border-t border-gray-200" />
+            {/* Why Choose Us */}
+            <section className="mb-20 bg-gray-50 rounded-3xl p-8 md:p-12 border border-gray-100">
+              <ScrollReveal>
+                <div className="text-center mb-10">
+                  <h2 className="text-3xl font-extrabold text-(--color-emerald-800) mb-4">
+                    Por que Escolher a Clínica Reabilitare?
+                  </h2>
+                </div>
+              </ScrollReveal>
 
-          <section>
-            <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
-              Por que Escolher a Clínica Reabilitare em Pelotas?
-            </h2>
-            <ul className="list-disc pl-6 mb-4">
-              <li>Profissionais qualificados e experientes</li>
-              <li>Atendimento individualizado e personalizado</li>
-              <li>Equipamentos modernos e ambiente acolhedor</li>
-              <li>Foco em resultados para postura, força e bem-estar</li>
-              <li>Localização de fácil acesso no bairro Areal</li>
-            </ul>
-          </section>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  { title: "Profissionais Qualificados", desc: "Equipe de fisioterapeutas experientes em Pilates Clínico." },
+                  { title: "Atendimento Individualizado", desc: "Aulas focadas nas suas necessidades específicas de saúde e condicionamento." },
+                  { title: "Equipamentos Modernos", desc: "Estúdio completo e ambiente acolhedor para o seu bem-estar." },
+                  { title: "Foco em Resultados", desc: "Resultados reais para correção postural, aumento de força e bem-estar." },
+                ].map((item, i) => (
+                  <ScrollReveal key={i} delay={i * 100}>
+                    <div className="bg-white rounded-2xl p-6 shadow-xs border border-gray-100 h-full">
+                      <h3 className="font-bold text-lg text-(--color-emerald-800) mb-2">{item.title}</h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </ScrollReveal>
+                ))}
+              </div>
+            </section>
 
-          <hr className="my-8 border-t border-gray-200" />
-
-          <section>
-            <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
-              Perguntas Frequentes (FAQ) sobre Pilates
-            </h2>
-            <article className="mb-4">
-              <h3 className="text-lg font-semibold text-(--color-emerald-800) mb-2">
-                Pilates é indicado para quem tem dor na coluna?
-              </h3>
-              <p className="text-gray-600">
-                Sim! O Pilates clínico orientado por profissional é excelente
-                para fortalecer os músculos profundos e reduzir dores na coluna.
-              </p>
-            </article>
-            <article className="mb-4">
-              <h3 className="text-lg font-semibold text-(--color-emerald-800) mb-2">
-                Preciso ter experiência em exercícios?
-              </h3>
-              <p className="text-gray-600">
-                Não. Todas as aulas são adaptadas ao nível do aluno, do
-                iniciante ao avançado.
-              </p>
-            </article>
-            <article className="mb-4">
-              <h3 className="text-lg font-semibold text-(--color-emerald-800) mb-2">
-                Qual frequência é ideal?
-              </h3>
-              <p className="text-gray-600">
-                O ideal varia de acordo com os objetivos do aluno. Recomendamos
-                avaliação inicial para definir a frequência ideal.
-              </p>
-            </article>
-          </section>
-
-          <hr className="my-8 border-t border-gray-200" />
-
-          <Contact />
+            {/* FAQ Section */}
+            <section className="mb-16">
+              <ScrollReveal>
+                <div className="text-center mb-4">
+                  <h2 className="text-3xl font-extrabold text-(--color-emerald-800)">
+                    Perguntas Frequentes sobre Pilates
+                  </h2>
+                </div>
+              </ScrollReveal>
+              <FaqAccordion 
+                items={[
+                  {
+                    question: "Pilates é indicado para quem tem dor na coluna?",
+                    answer: "Sim! O Pilates clínico orientado por profissional é excelente para fortalecer os músculos profundos e reduzir dores na coluna."
+                  },
+                  {
+                    question: "Preciso ter experiência em exercícios?",
+                    answer: "Não. Todas as aulas são adaptadas ao nível do aluno, do iniciante ao avançado."
+                  },
+                  {
+                    question: "Qual frequência é ideal?",
+                    answer: "O ideal varia de acordo com os objetivos do aluno. Recomendamos avaliação inicial para definir a frequência ideal de aulas por semana."
+                  }
+                ]} 
+              />
+            </section>
+          </div>
+          
+          <div className="mt-16">
+            <Contact />
+          </div>
         </main>
       </div>
       <Ratings />

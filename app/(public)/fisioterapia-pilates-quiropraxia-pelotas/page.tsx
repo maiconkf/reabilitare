@@ -3,6 +3,8 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Ratings from "@/components/ratings";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import InternalHero from "@/components/InternalHero";
+import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -162,114 +164,112 @@ export default function Home() {
         }}
       />
       <Header />
-      <div className="container mx-auto px-4 pt-25">
-        <main className="pt-4 pb-12 md:pb-0">
-          <section>
-            <h1 className="text-3xl font-extrabold text-(--color-emerald-800) mb-6">
-              Fisioterapia, Pilates e Quiropraxia em Pelotas: Clínica Especializada
-            </h1>
-            <p className="text-gray-600 mb-4">
-              Está procurando <strong>fisioterapia em Pelotas</strong>,{" "}
-              <strong>pilates em Pelotas</strong> ou{" "}
-              <strong>quiropraxia em Pelotas</strong>? A{" "}
-              <strong>Clínica Reabilitare</strong> é referência em tratamentos
-              especializados na cidade. Cada serviço é realizado de forma
-              dedicada, garantindo atenção total às necessidades de
-              cada paciente.
-            </p>
-            <p className="text-gray-600 mb-4">
-              Localizada no bairro Areal, nossa clínica conta com{" "}
-              <strong>profissionais qualificados</strong> e infraestrutura
-              moderna para oferecer o melhor tratamento de fisioterapia,
-              pilates e quiropraxia em Pelotas, RS.
-            </p>
-          </section>
+      
+      <InternalHero 
+        title={<>Fisioterapia, Pilates e <strong className="text-emerald-300 font-extrabold">Quiropraxia</strong></>}
+        subtitle="Sua Clínica Especializada no bairro Areal, Pelotas. Tudo para sua reabilitação em um só lugar."
+      />
 
-          <hr className="my-8 border-t border-gray-200" />
+      <div className="bg-white">
+        <main className="container mx-auto px-4 py-16 md:py-24">
+          <div className="max-w-4xl mx-auto">
+            {/* Intro Section */}
+            <ScrollReveal>
+              <section className="prose prose-lg md:prose-xl prose-emerald max-w-none text-gray-600 leading-relaxed mb-16">
+                <p>
+                  Está procurando <strong>fisioterapia em Pelotas</strong>, <strong>pilates em Pelotas</strong> ou <strong>quiropraxia em Pelotas</strong>? A <strong>Clínica Reabilitare</strong> é referência em tratamentos especializados na cidade. Cada serviço é realizado de forma dedicada, garantindo atenção total às necessidades de cada paciente.
+                </p>
+                <p>
+                  Localizada no bairro Areal, nossa clínica conta com <strong>profissionais qualificados</strong> e infraestrutura moderna para oferecer o melhor tratamento da região.
+                </p>
+              </section>
+            </ScrollReveal>
 
-          <section>
-            <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
-              Fisioterapia em Pelotas
-            </h2>
-            <p className="text-gray-600 mb-4">
-              Nossa fisioterapia oferece tratamentos para dores, lesões e
-              reabilitação funcional. Cada paciente recebe atenção individual e
-              um plano personalizado para recuperação eficaz.
-            </p>
-            <div className="flex gap-4 mb-6">
-              <Link
-                href="/fisioterapia-pelotas"
-                className="inline-block border-none rounded-full cursor-pointer text-lg font-bold px-6 py-2.5 bg-gray-200 text-gray-800 hover:bg-gray-300"
-              >
-                Saiba Mais
-              </Link>
-              <WhatsAppButton
-                href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamentos%20de%20fisioterapia."
-                className="inline-block border-none rounded-full cursor-pointer text-lg font-bold px-9 py-2.5 bg-(--color-emerald-800) text-white hover:bg-(--color-emerald-800)/90"
-                aria-label="Agendar avaliação de Fisioterapia pelo WhatsApp"
-              >
-                Agendar Fisioterapia
-              </WhatsAppButton>
+            {/* Services Hub */}
+            <div className="space-y-12">
+              <ScrollReveal delay={100}>
+                <section className="bg-emerald-50/30 rounded-3xl p-8 md:p-10 border border-emerald-100 hover:shadow-lg transition-all duration-300">
+                  <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
+                    Fisioterapia Especializada
+                  </h2>
+                  <p className="text-gray-600 text-lg mb-8">
+                    Nossa fisioterapia oferece tratamentos para dores, lesões e reabilitação funcional. Cada paciente recebe atenção individual e um plano personalizado para recuperação eficaz.
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Link
+                      href="/fisioterapia-pelotas"
+                      className="inline-flex items-center justify-center font-bold px-8 py-3 bg-white text-(--color-emerald-800) border border-emerald-200 rounded-full hover:bg-emerald-50 transition-colors shadow-xs"
+                    >
+                      Saiba Mais
+                    </Link>
+                    <WhatsAppButton
+                      href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamentos%20de%20fisioterapia."
+                      className="inline-flex items-center gap-2 border-none rounded-full cursor-pointer text-base md:text-lg font-bold px-8 py-3 bg-(--color-emerald-800) text-white hover:bg-emerald-900 transition-all shadow-md hover:shadow-xl hover:-translate-y-1"
+                      aria-label="Agendar avaliação de Fisioterapia pelo WhatsApp"
+                    >
+                      Agendar Fisioterapia <span className="text-xl">→</span>
+                    </WhatsAppButton>
+                  </div>
+                </section>
+              </ScrollReveal>
+
+              <ScrollReveal delay={200}>
+                <section className="bg-emerald-50/30 rounded-3xl p-8 md:p-10 border border-emerald-100 hover:shadow-lg transition-all duration-300">
+                  <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
+                    Estúdio de Pilates
+                  </h2>
+                  <p className="text-gray-600 text-lg mb-8">
+                    O Pilates é focado em melhorar postura, força, flexibilidade e consciência corporal. É indicado para quem busca bem-estar, condicionamento físico e prevenção de lesões.
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Link
+                      href="/pilates-pelotas"
+                      className="inline-flex items-center justify-center font-bold px-8 py-3 bg-white text-(--color-emerald-800) border border-emerald-200 rounded-full hover:bg-emerald-50 transition-colors shadow-xs"
+                    >
+                      Saiba Mais
+                    </Link>
+                    <WhatsAppButton
+                      href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20pilates."
+                      className="inline-flex items-center gap-2 border-none rounded-full cursor-pointer text-base md:text-lg font-bold px-8 py-3 bg-(--color-emerald-800) text-white hover:bg-emerald-900 transition-all shadow-md hover:shadow-xl hover:-translate-y-1"
+                      aria-label="Agendar aula de Pilates pelo WhatsApp"
+                    >
+                      Agendar Pilates <span className="text-xl">→</span>
+                    </WhatsAppButton>
+                  </div>
+                </section>
+              </ScrollReveal>
+
+              <ScrollReveal delay={300}>
+                <section className="bg-emerald-50/30 rounded-3xl p-8 md:p-10 border border-emerald-100 hover:shadow-lg transition-all duration-300">
+                  <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
+                    Quiropraxia Clínica
+                  </h2>
+                  <p className="text-gray-600 text-lg mb-8">
+                    A Quiropraxia é focada no alinhamento da coluna vertebral e restauração do equilíbrio articular. Auxilia no alívio rápido de dores nas costas, pescoço e articulações, devolvendo mobilidade.
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Link
+                      href="/quiropraxia-pelotas"
+                      className="inline-flex items-center justify-center font-bold px-8 py-3 bg-white text-(--color-emerald-800) border border-emerald-200 rounded-full hover:bg-emerald-50 transition-colors shadow-xs"
+                    >
+                      Saiba Mais
+                    </Link>
+                    <WhatsAppButton
+                      href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20atendimentos%20de%20quiropraxia."
+                      className="inline-flex items-center gap-2 border-none rounded-full cursor-pointer text-base md:text-lg font-bold px-8 py-3 bg-(--color-emerald-800) text-white hover:bg-emerald-900 transition-all shadow-md hover:shadow-xl hover:-translate-y-1"
+                      aria-label="Agendar atendimento de Quiropraxia pelo WhatsApp"
+                    >
+                      Agendar Quiropraxia <span className="text-xl">→</span>
+                    </WhatsAppButton>
+                  </div>
+                </section>
+              </ScrollReveal>
             </div>
-          </section>
-
-          <hr className="my-8 border-t border-gray-200" />
-
-          <section>
-            <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
-              Pilates em Pelotas
-            </h2>
-            <p className="text-gray-600 mb-4">
-              O Pilates é focado em melhorar postura, força, flexibilidade e
-              consciência corporal. É indicado para quem busca bem-estar,
-              condicionamento físico e prevenção de lesões.
-            </p>
-            <div className="flex gap-4 mb-6">
-              <Link
-                href="/pilates-pelotas"
-                className="inline-block border-none rounded-full cursor-pointer text-lg font-bold px-6 py-2.5 bg-gray-200 text-gray-800 hover:bg-gray-300"
-              >
-                Saiba Mais
-              </Link>
-              <WhatsAppButton
-                href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20pilates."
-                className="inline-block border-none rounded-full cursor-pointer text-lg font-bold px-9 py-2.5 bg-(--color-emerald-800) text-white hover:bg-(--color-emerald-800)/90"
-                aria-label="Agendar aula de Pilates pelo WhatsApp"
-              >
-                Agendar Pilates
-              </WhatsAppButton>
-            </div>
-          </section>
-
-          <hr className="my-8 border-t border-gray-200" />
-
-          <section>
-            <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
-              Quiropraxia em Pelotas
-            </h2>
-            <p className="text-gray-600 mb-4">
-              A Quiropraxia é focada no alinhamento da coluna vertebral e restauração do equilíbrio articular. Auxilia no alívio rápido de dores nas costas, pescoço e articulações, devolvendo mobilidade e qualidade de vida.
-            </p>
-            <div className="flex gap-4 mb-6">
-              <Link
-                href="/quiropraxia-pelotas"
-                className="inline-block border-none rounded-full cursor-pointer text-lg font-bold px-6 py-2.5 bg-gray-200 text-gray-800 hover:bg-gray-300"
-              >
-                Saiba Mais
-              </Link>
-              <WhatsAppButton
-                href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20atendimentos%20de%20quiropraxia."
-                className="inline-block border-none rounded-full cursor-pointer text-lg font-bold px-9 py-2.5 bg-(--color-emerald-800) text-white hover:bg-(--color-emerald-800)/90"
-                aria-label="Agendar atendimento de Quiropraxia pelo WhatsApp"
-              >
-                Agendar Quiropraxia
-              </WhatsAppButton>
-            </div>
-          </section>
-
-          <hr className="my-8 border-t border-gray-200" />
-
-          <Contact />
+          </div>
+          
+          <div className="mt-20">
+            <Contact />
+          </div>
         </main>
       </div>
       <Ratings />

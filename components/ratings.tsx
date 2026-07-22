@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Script from "next/script";
+import ScrollReveal from "./ScrollReveal";
 
 const Ratings = () => {
   const [loadWidget, setLoadWidget] = useState(false);
@@ -49,9 +50,17 @@ const Ratings = () => {
           />
         )}
         <div className="max-w-7xl mx-auto" ref={ref}>
-          <h2 className="text-3xl font-extrabold text-center text-white mb-6">
-            Avaliações dos Clientes
-          </h2>
+          <ScrollReveal>
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-xs px-4 py-1.5 rounded-full border border-white/20 text-white text-xs md:text-sm font-semibold mb-3">
+                <span className="text-amber-300">★★★★★</span>
+                <span>5.0 de Avaliação Média no Google</span>
+              </div>
+              <h2 className="text-3xl lg:text-4xl font-extrabold text-center text-white">
+                O que Nossos Pacientes Dizem
+              </h2>
+            </div>
+          </ScrollReveal>
           {loadWidget ? (
             <div
               className="elfsight-app-3437bd51-49a4-4264-9c5d-12fcdd682f13"
