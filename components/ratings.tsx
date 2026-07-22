@@ -61,16 +61,13 @@ const Ratings = () => {
               </h2>
             </div>
           </ScrollReveal>
-          {loadWidget ? (
+          <div className="min-h-[200px]">
             <div
               className="elfsight-app-3437bd51-49a4-4264-9c5d-12fcdd682f13"
               data-elfsight-app-lazy
+              suppressHydrationWarning
             />
-          ) : (
-            <p className="text-center text-gray-300">
-              Carregando avaliações...
-            </p>
-          )}
+          </div>
         </div>
       </div>
     </section>
