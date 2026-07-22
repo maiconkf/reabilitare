@@ -14,19 +14,23 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL("https://www.clinicareabilitare.com"),
   title: {
-    default: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas-RS",
+    default: "Clínica Reabilitare - Fisioterapia, Pilates e Quiropraxia em Pelotas-RS",
     template: "%s | Clínica Reabilitare",
   },
   description:
-    "Procurando fisioterapia em Pelotas ou pilates em Pelotas? A Clínica Reabilitare oferece tratamentos especializados com profissionais qualificados. Agende sua avaliação!",
+    "Procurando fisioterapia, pilates ou quiropraxia em Pelotas? A Clínica Reabilitare oferece tratamentos especializados com profissionais qualificados. Agende sua avaliação!",
   keywords: [
     "fisioterapia pelotas",
     "pilates pelotas",
+    "quiropraxia pelotas",
+    "quiropraxista pelotas",
+    "ajuste vertebral pelotas",
     "fisioterapeuta pelotas",
     "clínica de fisioterapia pelotas",
     "pilates clínico pelotas",
     "fisioterapia em pelotas rs",
     "pilates em pelotas rs",
+    "quiropraxia em pelotas rs",
     "tratamento de dor pelotas",
     "reabilitação pelotas",
     "clínica reabilitare",
@@ -40,9 +44,9 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas-RS",
+    title: "Clínica Reabilitare - Fisioterapia, Pilates e Quiropraxia em Pelotas-RS",
     description:
-      "Fisioterapia e pilates personalizados em Pelotas. Tratamentos eficazes para dor, lesões e bem-estar. Agende sua consulta na Reabilitare!",
+      "Fisioterapia, pilates e quiropraxia personalizados em Pelotas. Tratamentos eficazes para dor, lesões, alinhamento vertebral e bem-estar. Agende sua consulta na Reabilitare!",
     images: "/cover.png",
     url: "https://www.clinicareabilitare.com",
     type: "website",

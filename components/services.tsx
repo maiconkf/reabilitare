@@ -4,13 +4,31 @@ export default function Services() {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-extrabold text-center text-(--color-emerald-800) mb-6">
-            Serviços de Fisioterapia e Pilates em Pelotas
+            Serviços de Fisioterapia, Pilates e Quiropraxia em Pelotas
           </h2>
-          <p className="text-lg lg:text-xl text-center text-gray-600 mb-12">
-            Nossa clínica oferece tratamentos especializados de fisioterapia e
-            pilates em Pelotas para o seu bem-estar e recuperação.
+          <p className="text-lg lg:text-xl text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+            Nossa clínica oferece tratamentos especializados de fisioterapia,
+            pilates e quiropraxia em Pelotas para o seu bem-estar, alinhamento e recuperação.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <article className="bg-white shadow-xs rounded-lg p-6 hover:scale-105 transition-transform duration-300 ease-in-out">
+              <h3 className="text-xl font-semibold text-(--color-emerald-800) mb-4">
+                Quiropraxia & Ajuste Vertebral
+              </h3>
+              <p className="text-gray-600">
+                Ajustes articulares e vertebrais para restauração do alinhamento
+                corporal e alívio imediato de tensões.
+              </p>
+            </article>
+            <article className="bg-white shadow-xs rounded-lg p-6 hover:scale-105 transition-transform duration-300 ease-in-out">
+              <h3 className="text-xl font-semibold text-(--color-emerald-800) mb-4">
+                Tratamento da Coluna
+              </h3>
+              <p className="text-gray-600">
+                Cuidado especializado para problemas na coluna, incluindo hérnias,
+                nervo ciático e dores crônicas.
+              </p>
+            </article>
             <article className="bg-white shadow-xs rounded-lg p-6 hover:scale-105 transition-transform duration-300 ease-in-out">
               <h3 className="text-xl font-semibold text-(--color-emerald-800) mb-4">
                 Reabilitação
