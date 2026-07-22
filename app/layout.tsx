@@ -60,7 +60,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" suppressHydrationWarning>
       <head>
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=AW-17543322333`}
@@ -75,7 +75,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${openSans.className} antialiased`}>{children}</body>
+      <body className={`${openSans.className} antialiased`} suppressHydrationWarning>{children}</body>
     </html>
   );
 }

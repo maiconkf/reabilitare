@@ -37,10 +37,11 @@ export default function Main() {
         <Image
           src="/kauane-ramos-fisioterapia-pelotas.webp"
           alt="Kauane Ramos - Fisioterapeuta especializada em fisioterapia e pilates em Pelotas"
-          width={405}
-          height={506}
+          width={810}
+          height={1013}
           priority
           className="hidden md:block"
+          style={{ width: "100%", maxWidth: "405px", height: "auto" }}
         />
       </main>
     </div>

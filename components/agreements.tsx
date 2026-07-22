@@ -18,7 +18,8 @@ export default function Agreements() {
               height={78}
               src="/prevpel.webp"
               alt="PrevPel"
-              className="h-20 grayscale hover:grayscale-0 transition duration-300"
+              className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+              style={{ width: "auto" }}
               loading="lazy"
             />
           </li>
@@ -28,7 +29,8 @@ export default function Agreements() {
               height={78}
               src="/ibcm.webp"
               alt="IBCM"
-              className="h-20 grayscale hover:grayscale-0 transition duration-300"
+              className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+              style={{ width: "auto" }}
               loading="lazy"
             />
           </li>
@@ -38,7 +40,7 @@ export default function Agreements() {
               height={120}
               src="/aspra.webp"
               alt="ASPRA"
-              className="grayscale hover:grayscale-0 transition duration-300"
+              className="object-contain grayscale hover:grayscale-0 transition duration-300"
               loading="lazy"
             />
           </li>
@@ -48,7 +50,7 @@ export default function Agreements() {
               height={130}
               src="/asstbm.webp"
               alt="ASSTBM"
-              className="grayscale hover:grayscale-0 transition duration-300"
+              className="object-contain grayscale hover:grayscale-0 transition duration-300"
               loading="lazy"
             />
           </li>
