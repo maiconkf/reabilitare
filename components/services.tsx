@@ -7,6 +7,7 @@ export default function Services() {
       title: "Quiropraxia & Ajuste Vertebral",
       desc: "Ajustes articulares e vertebrais para restauração do alinhamento corporal e alívio imediato de tensões.",
       badge: "Quiropraxia",
+      isNew: true,
       msg: "Olá%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20Quiropraxia%20e%20Ajuste%20Vertebral.",
     },
     {
@@ -104,10 +105,15 @@ export default function Services() {
                   className="h-full relative bg-white border border-gray-100 rounded-2xl p-7 shadow-xs hover:shadow-2xl hover:border-emerald-500/40 hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between text-left before:absolute before:inset-x-0 before:top-0 before:h-1 before:bg-gradient-to-r before:from-emerald-600 before:to-teal-400 before:rounded-t-2xl before:opacity-0 hover:before:opacity-100 before:transition-opacity"
                 >
                   <div>
-                    <div className="flex items-center justify-start mb-5">
+                    <div className="flex items-center justify-start mb-5 gap-2">
                       <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 border border-emerald-100 px-2.5 py-1 rounded-md">
                         {item.badge}
                       </span>
+                      {item.isNew && (
+                        <span className="text-[10px] font-bold uppercase tracking-widest text-white bg-amber-500 px-2 py-0.5 rounded-full shadow-xs animate-pulse">
+                          Novidade
+                        </span>
+                      )}
                     </div>
 
                     <h3 className="text-xl font-bold text-gray-900 group-hover:text-(--color-emerald-800) transition-colors mb-3 leading-snug">
