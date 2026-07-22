@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="order-last sm:order-first pt-2 sm:pt-0 text-center sm:text-left">
-            <p className="text-sm font-medium">&copy; 2025 Clínica Reabilitare. Todos os direitos reservados.</p>
+            <p className="text-sm font-medium">&copy; {new Date().getFullYear()} Clínica Reabilitare. Todos os direitos reservados.</p>
             <p className="text-xs text-white/70 mt-1">
               Fisioterapeuta responsável: Kauane Ramos &mdash; CREFITO-5:
               375851-F
