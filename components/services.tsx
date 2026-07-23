@@ -79,7 +79,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="servicos" className="bg-gray-50 py-24 relative overflow-hidden">
+    <section id="servicos" className="bg-gray-50 py-20 relative overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <ScrollReveal>

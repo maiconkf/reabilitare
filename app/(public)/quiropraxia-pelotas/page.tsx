@@ -136,13 +136,14 @@ export default function QuiropraxiaPage() {
       />
       <Header />
       
-      <InternalHero 
-        title={<>Quiropraxia em <strong className="text-emerald-300 font-extrabold">Pelotas</strong></>}
-        subtitle="Ajustes Vertebrais e Articulares para restauração do alinhamento corporal e alívio imediato de dores."
+      <InternalHero
+        title="Quiropraxia e Ajuste Vertebral"
+        subtitle="Alívio imediato para suas dores em Pelotas."
+        breadcrumb="Quiropraxia"
       />
-
+      
       <div className="bg-white">
-        <main className="container mx-auto px-4 py-16 md:py-24">
+        <main className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
             {/* Intro Section */}
             <ScrollReveal>

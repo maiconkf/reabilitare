@@ -47,12 +47,12 @@ export default function Main() {
             <WhatsAppButton
               href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20atendimentos%20de%20quiropraxia."
               aria-label="Agendar atendimento de Quiropraxia pelo WhatsApp"
-              className="relative w-full min-[700px]:w-auto block border border-white/30 rounded-full cursor-pointer text-base min-[700px]:text-sm xl:text-base font-bold text-center px-6 min-[700px]:px-4.5 xl:px-7 py-2.5 min-[700px]:py-2 xl:py-2.5 transition-all duration-300 bg-white/17 text-white hover:bg-white/30 hover:border-white/50 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap"
+              className="relative w-full min-[700px]:w-auto flex md:block justify-center items-center gap-2 border border-white/30 rounded-full cursor-pointer text-base min-[700px]:text-sm xl:text-base font-bold text-center px-6 min-[700px]:px-4.5 xl:px-7 py-2.5 min-[700px]:py-2 xl:py-2.5 transition-all duration-300 bg-white/17 text-white hover:bg-white/30 hover:border-white/50 hover:shadow-md hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap"
             >
-              <span className="absolute -top-2.5 left-6 md:left-4 bg-amber-500/90 text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-xs backdrop-blur-sm">
-                Novidade
-              </span>
               Agendar Quiropraxia
+              <span className="md:absolute md:-top-2.5 md:left-4 bg-amber-500/90 text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-xs backdrop-blur-sm">
+                Novo
+              </span>
             </WhatsAppButton>
           </div>
         </div>
