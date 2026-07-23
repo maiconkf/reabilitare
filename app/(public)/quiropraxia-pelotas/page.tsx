@@ -136,10 +136,9 @@ export default function QuiropraxiaPage() {
       />
       <Header />
       
-      <InternalHero
-        title="Quiropraxia e Ajuste Vertebral"
-        subtitle="Alívio imediato para suas dores em Pelotas."
-        breadcrumb="Quiropraxia"
+      <InternalHero 
+        title={<>Quiropraxia em <strong className="text-emerald-300 font-extrabold">Pelotas</strong></>}
+        subtitle="Ajustes Vertebrais e Articulares para restauração do alinhamento corporal e alívio imediato de dores."
       />
       
       <div className="bg-white">

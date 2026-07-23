@@ -140,9 +140,9 @@ export default function PilatesPage() {
         title={<>Pilates em <strong className="text-emerald-300 font-extrabold">Pelotas</strong></>}
         subtitle="O Melhor Estúdio de Pilates para sua postura, força, flexibilidade e bem-estar."
       />
-
+      
       <div className="bg-white">
-        <main className="container mx-auto px-4 py-16 md:py-24">
+        <main className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
             {/* Intro Section */}
             <ScrollReveal>
