@@ -51,7 +51,8 @@ export default function Main() {
             >
               Agendar Quiropraxia
               <span className="md:absolute md:-top-2.5 md:left-4 bg-amber-500/90 text-white text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-xs backdrop-blur-sm">
-                Novo
+                <span className="md:hidden">Novo</span>
+                <span className="hidden md:inline">Novidade</span>
               </span>
             </WhatsAppButton>
           </div>
