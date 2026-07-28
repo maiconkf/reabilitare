@@ -127,7 +127,7 @@ export default function Home() {
           }),
         }}
       />
-      <div className="bg-(--color-emerald-800) rounded-b-[32px]">
+      <div className="z-1 relative bg-(--color-emerald-800) rounded-b-[32px]">
         <Header />
         <Main />
       </div>
