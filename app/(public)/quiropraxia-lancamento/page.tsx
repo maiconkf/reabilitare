@@ -76,7 +76,7 @@ export default function QuiropraxiaLancamentoPage() {
       {/* ── HEADER SIMPLIFICADO ─────────────────────────── */}
       <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-emerald-900/95 py-3 shadow-sm backdrop-blur-md">
         <div className="container mx-auto flex items-center justify-between px-4">
-          <Link href="/" className="block transition-opacity hover:opacity-90">
+          <a href="https://www.clinicareabilitare.com" className="block transition-opacity hover:opacity-90">
             <Image
               src="/reabilitare-logo-white.webp"
               width={120}
@@ -84,7 +84,7 @@ export default function QuiropraxiaLancamentoPage() {
               alt="Clínica Reabilitare logotipo"
               priority
             />
-          </Link>
+          </a>
           <a
             href={FORM_URL}
             target="_blank"
@@ -307,19 +307,19 @@ export default function QuiropraxiaLancamentoPage() {
       {/* ── FOOTER MÍNIMO ───────────────────────────────── */}
       <footer className="bg-emerald-950 py-8 text-center">
         <div className="container mx-auto px-4">
-          <Link href="/" className="mb-4 inline-block opacity-80 hover:opacity-100 transition-opacity">
+          <a href="https://www.clinicareabilitare.com" className="mb-4 inline-block opacity-80 hover:opacity-100 transition-opacity">
             <Image
               src="/reabilitare-logo-white.webp"
               width={100}
               height={36}
               alt="Clínica Reabilitare"
             />
-          </Link>
+          </a>
           <p className="text-xs text-emerald-200/40">
             © {new Date().getFullYear()} Clínica Reabilitare · Pelotas, RS ·{" "}
-            <Link href="/" className="hover:text-emerald-200/70 transition-colors">
+            <a href="https://www.clinicareabilitare.com" className="hover:text-emerald-200/70 transition-colors">
               Voltar ao site
-            </Link>
+            </a>
           </p>
         </div>
       </footer>
