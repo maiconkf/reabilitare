@@ -4,6 +4,7 @@ import Header from "@/components/header";
 import Main from "@/components/main";
 import Ratings from "@/components/ratings";
 import Services from "@/components/services";
+import WaitlistBanner from "@/components/WaitlistBanner";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
@@ -135,10 +136,11 @@ export default function Home() {
           }),
         }}
       />
-      <div className="bg-(--color-emerald-800) rounded-b-[32px] overflow-hidden">
+      <div className="z-1 relative bg-(--color-emerald-800) rounded-b-[32px] overflow-hidden">
         <Header />
         <Main />
       </div>
+      <WaitlistBanner />
       <Services />
       <Agreements />
       <Ratings />
