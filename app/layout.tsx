@@ -63,7 +63,7 @@ export default function RootLayout({
     <html lang="pt-br" suppressHydrationWarning>
       <head>
         <Script
-          src={`https://www.googletagmanager.com/gtag/js?id=AW-17543322333`}
+          src="https://www.googletagmanager.com/gtag/js?id=G-EK22XJKVWF"
           strategy="afterInteractive"
         />
         <Script id="gtag-init" strategy="afterInteractive">
@@ -72,10 +72,16 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-17543322333');
+            gtag('config', 'G-EK22XJKVWF');
           `}
         </Script>
       </head>
-      <body className={`${openSans.className} antialiased`} suppressHydrationWarning>{children}</body>
+      <body
+        className={`${openSans.className} antialiased`}
+        suppressHydrationWarning
+      >
+        {children}
+      </body>
     </html>
   );
 }
