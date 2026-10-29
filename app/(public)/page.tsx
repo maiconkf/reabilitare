@@ -136,7 +136,7 @@ export default function Home() {
           }),
         }}
       />
-      <div className="z-1 relative bg-(--color-emerald-800) rounded-b-[32px] overflow-hidden">
+      <div className="z-10 relative bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-900 rounded-b-[36px] sm:rounded-b-[48px] overflow-hidden shadow-2xl shadow-emerald-950/15">
         <Header />
         <Main />
       </div>

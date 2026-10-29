@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const openSans = Open_Sans({
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-jakarta",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -79,7 +82,12 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${openSans.className} antialiased`} suppressHydrationWarning>{children}</body>
+      <body
+        className={`${plusJakartaSans.variable} ${plusJakartaSans.className} antialiased selection:bg-emerald-600 selection:text-white`}
+        suppressHydrationWarning
+      >
+        {children}
+      </body>
     </html>
   );
 }
