@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 import WhatsAppButton from "./WhatsAppButton";
 
@@ -159,27 +158,16 @@ export default function Location() {
 
             {/* Right Map Column */}
             <div className="lg:col-span-7">
-              <a
-                href="https://maps.app.goo.gl/S4y6tkkLfFWxKYir8"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="relative block w-full h-80 sm:h-96 lg:h-full min-h-[340px] rounded-2xl overflow-hidden group border border-slate-200/80 shadow-inner"
-              >
-                <Image
-                  src={`https://maps.googleapis.com/maps/api/staticmap?center=Av.+Bento+Gonçalves+2146,+Areal,+Pelotas,+RS&zoom=15&size=1200x600&scale=2&markers=color:red%7CAv.+Bento+Gonçalves+2146,+Areal,+Pelotas,+RS&key=${process.env.NEXT_PUBLIC_API_KEY}`}
-                  alt="Mapa de localização da Clínica Reabilitare na Av. Bento Gonçalves, 2146 em Pelotas"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700"
+              <div className="relative w-full h-80 sm:h-96 lg:h-full min-h-[360px] rounded-2xl overflow-hidden border border-slate-200/80 shadow-inner bg-slate-100">
+                <iframe
+                  title="Mapa de localização da Clínica Reabilitare em Pelotas"
+                  src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_API_KEY}&q=Cl%C3%ADnica+Reabilitare+Fisioterapia+e+Pilates,+Pelotas+-+RS`}
+                  className="w-full h-full min-h-[360px] border-0"
                   loading="lazy"
-                  sizes="(max-width: 1024px) 100vw, 60vw"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/50 via-transparent to-transparent group-hover:from-emerald-950/30 transition-colors duration-300 flex items-end justify-center p-6">
-                  <span className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-md text-emerald-950 font-extrabold text-sm px-6 py-3 rounded-full shadow-xl group-hover:scale-105 transition-transform duration-300">
-                    <span>📍 Clique para abrir no Google Maps</span>
-                    <span className="text-emerald-700">↗</span>
-                  </span>
-                </div>
-              </a>
+              </div>
             </div>
           </div>
         </ScrollReveal>
