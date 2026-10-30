@@ -122,20 +122,6 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <Script id="os-detect" strategy="beforeInteractive">
-          {`
-            (function() {
-              try {
-                var p = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || "";
-                var u = navigator.userAgent || "";
-                var isMac = /mac|iphone|ipad|ipod/i.test(p) || /macintosh|mac os x|iphone|ipad|ipod/i.test(u);
-                if (!isMac) {
-                  document.documentElement.classList.add("custom-scrollbar");
-                }
-              } catch (e) {}
-            })();
-          `}
-        </Script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-EK22XJKVWF"
           strategy="afterInteractive"
