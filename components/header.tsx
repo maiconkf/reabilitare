@@ -98,9 +98,10 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden inline-flex items-center justify-center p-2.5 rounded-full text-white bg-white/10 hover:bg-white/20 border border-white/15 transition-colors focus:outline-none"
+              className="lg:hidden inline-flex items-center justify-center p-2.5 rounded-full text-white bg-white/10 hover:bg-white/20 border border-white/15 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-950"
               aria-expanded={mobileMenuOpen}
-              aria-label="Abrir menu de navegação"
+              aria-controls="mobile-navigation-menu"
+              aria-label={mobileMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
             >
               {mobileMenuOpen ? (
                 <svg
@@ -137,7 +138,7 @@ export default function Header() {
 
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden mt-3 pt-3 pb-4 px-4 rounded-2xl bg-emerald-950/95 backdrop-blur-xl border border-white/15 shadow-2xl animate-fade-in">
+          <div id="mobile-navigation-menu" className="lg:hidden mt-3 pt-3 pb-4 px-4 rounded-2xl bg-emerald-950/95 backdrop-blur-xl border border-white/15 shadow-2xl animate-fade-in">
             <nav className="flex flex-col space-y-1" aria-label="Menu Mobile">
               {navLinks.map((link) => (
                 <Link
