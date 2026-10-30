@@ -137,7 +137,7 @@ export default function Main() {
               priority
               loading="eager"
               fetchPriority="high"
-              sizes="(max-width: 640px) 280px, (max-width: 1024px) 340px, (max-width: 1280px) 390px, 420px"
+              sizes="(max-width: 640px) 232px, (max-width: 1024px) 272px, (max-width: 1280px) 312px, 336px"
               className="relative z-10 block w-auto h-auto max-h-[290px] sm:max-h-[340px] lg:max-h-[390px] xl:max-h-[420px] object-contain object-bottom pointer-events-none select-none drop-shadow-[0_12px_24px_rgba(0,0,0,0.3)]"
             />
           </div>
