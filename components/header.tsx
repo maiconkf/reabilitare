@@ -46,6 +46,7 @@ export default function Header() {
               height={48}
               alt="Reabilitare logotipo"
               priority
+              loading="eager"
               className="h-10 w-auto sm:h-11"
             />
           </Link>

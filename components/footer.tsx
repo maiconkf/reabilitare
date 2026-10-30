@@ -20,6 +20,7 @@ export default function Footer() {
                     width={140}
                     height={50}
                     alt="Clínica Reabilitare"
+                    loading="lazy"
                     className="h-11 w-auto"
                   />
                 </Link>
