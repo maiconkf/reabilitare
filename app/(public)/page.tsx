@@ -2,7 +2,6 @@ import Agreements from "@/components/agreements";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Main from "@/components/main";
-import Ratings from "@/components/ratings";
 import Services from "@/components/services";
 import WaitlistBanner from "@/components/WaitlistBanner";
 import FaqAccordion from "@/components/FaqAccordion";
@@ -10,6 +9,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 
+const Ratings = dynamic(() => import("@/components/ratings"));
 const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {

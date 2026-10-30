@@ -26,6 +26,7 @@ const Ratings = () => {
   }, []);
 
   useEffect(() => {
+    if (!loadWidget) return;
     const interval = setInterval(() => {
       const el = document.querySelector(
         'a[href*="elfsight.com/google-reviews-widget"]'
@@ -34,10 +35,10 @@ const Ratings = () => {
         (el as HTMLElement).remove();
         clearInterval(interval);
       }
-    }, 2500);
+    }, 1500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [loadWidget]);
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-950 py-20 sm:py-24">
@@ -50,7 +51,7 @@ const Ratings = () => {
           <Script
             src="https://elfsightcdn.com/platform.js"
             async
-            strategy="afterInteractive"
+            strategy="lazyOnload"
           />
         )}
         <div className="max-w-7xl mx-auto" ref={ref}>

@@ -23,7 +23,7 @@ export default function Main() {
           {/* Left Column: Copy, CTAs & Compact Trust Indicators */}
           <div className="lg:col-span-7 xl:col-span-7 pb-2 lg:pb-10 xl:pb-12 text-left">
             {/* Top Status & Rating Pill */}
-            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-white text-[11px] sm:text-xs font-medium mb-4 backdrop-blur-md shadow-xs whitespace-nowrap opacity-0 animate-fade-up">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-white text-[11px] sm:text-xs font-medium mb-4 backdrop-blur-md shadow-xs whitespace-nowrap animate-fade-up">
               <span className="inline-flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
                 <span>Clínica Especializada em Pelotas</span>
@@ -38,7 +38,7 @@ export default function Main() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] font-extrabold text-white mb-3.5 leading-[1.15] tracking-tight opacity-0 animate-fade-up delay-100">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] font-extrabold text-white mb-3.5 leading-[1.15] tracking-tight animate-fade-up">
               <strong className="font-extrabold text-white">Fisioterapia</strong>,{" "}
               <strong className="font-extrabold text-white">Pilates</strong> e{" "}
               <strong className="font-extrabold text-emerald-300">Quiropraxia</strong>{" "}
@@ -49,7 +49,7 @@ export default function Main() {
             </h1>
 
             {/* Subtitle with SEO keywords */}
-            <h2 className="text-sm sm:text-base max-w-xl font-normal text-emerald-50/85 mb-6 leading-relaxed opacity-0 animate-fade-up delay-200">
+            <h2 className="text-sm sm:text-base max-w-xl font-normal text-emerald-50/85 mb-6 leading-relaxed animate-fade-up">
               A Clínica Reabilitare é especialista em{" "}
               <strong className="font-semibold text-white">fisioterapia em Pelotas</strong>,{" "}
               <strong className="font-semibold text-white">pilates em Pelotas</strong> e{" "}
@@ -59,7 +59,7 @@ export default function Main() {
             </h2>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 w-full opacity-0 animate-fade-up delay-300">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 w-full animate-fade-up">
               <WhatsAppButton
                 href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20fisioterapia."
                 aria-label="Agendar avaliação de Fisioterapia pelo WhatsApp"
@@ -98,7 +98,7 @@ export default function Main() {
             </div>
 
             {/* Compact Trust Pills */}
-            <div className="mt-6 pt-5 border-t border-white/10 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-emerald-100/80 opacity-0 animate-fade-up delay-400">
+            <div className="mt-6 pt-5 border-t border-white/10 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-emerald-100/80 animate-fade-up">
               <span className="inline-flex items-center gap-1.5">
                 <span className="text-emerald-300 font-bold">✓</span>
                 <span>Atendimento 100% Individualizado</span>
@@ -115,7 +115,7 @@ export default function Main() {
           </div>
 
           {/* Right Column: Specialist Portrait — Flush with bottom on both mobile and desktop */}
-          <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center lg:justify-end items-end self-end -mb-px opacity-0 animate-fade-in delay-300">
+          <div className="lg:col-span-5 xl:col-span-5 relative flex justify-center lg:justify-end items-end self-end -mb-px animate-fade-in">
             {/* Subtle Halo behind specialist */}
             <div className="pointer-events-none absolute bottom-0 w-60 h-60 sm:w-72 sm:h-72 rounded-full bg-gradient-to-tr from-emerald-400/20 via-teal-300/15 to-transparent blur-md" />
 
@@ -135,6 +135,9 @@ export default function Main() {
               width={810}
               height={1013}
               priority
+              loading="eager"
+              fetchPriority="high"
+              sizes="(max-width: 640px) 280px, (max-width: 1024px) 340px, (max-width: 1280px) 390px, 420px"
               className="relative z-10 block w-auto h-auto max-h-[290px] sm:max-h-[340px] lg:max-h-[390px] xl:max-h-[420px] object-contain object-bottom pointer-events-none select-none drop-shadow-[0_12px_24px_rgba(0,0,0,0.3)]"
             />
           </div>

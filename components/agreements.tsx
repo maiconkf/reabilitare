@@ -68,6 +68,7 @@ export default function Agreements() {
                     className="max-h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                     style={{ width: "auto" }}
                     loading="lazy"
+                    sizes="(max-width: 640px) 120px, 160px"
                   />
                 </div>
                 <span className="mt-3 text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-emerald-800 transition-colors">
