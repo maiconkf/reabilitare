@@ -112,12 +112,6 @@ export default function RootLayout({
   return (
     <html lang="pt-br" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-EK22XJKVWF"
-          strategy="afterInteractive"
-        />
         <Script id="gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -127,6 +121,10 @@ export default function RootLayout({
             gtag('config', 'AW-17543322333');
           `}
         </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-EK22XJKVWF"
+          strategy="lazyOnload"
+        />
       </head>
       <body
         className={`${plusJakartaSans.variable} ${plusJakartaSans.className} antialiased selection:bg-emerald-600 selection:text-white`}
