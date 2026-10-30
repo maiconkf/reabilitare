@@ -4,6 +4,7 @@ import Header from "@/components/header";
 import Ratings from "@/components/ratings";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import type { Metadata } from "next";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 
 const Location = dynamic(() => import("@/components/location"));
@@ -274,6 +275,18 @@ export default function PilatesPage() {
           </section>
 
           <hr className="my-8 border-t border-gray-200" />
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-3">
+              Conheça Também Nossa Fisioterapia em Pelotas
+            </h2>
+            <p className="text-gray-600 mb-4">
+              Precisa de reabilitação ou tratamento para dores agudas? Conheça nosso atendimento de{" "}
+              <Link href="/fisioterapia-pelotas" className="text-(--color-emerald-800) font-bold underline">
+                Fisioterapia Especializada em Pelotas
+              </Link>.
+            </p>
+          </section>
 
           <Contact />
         </main>

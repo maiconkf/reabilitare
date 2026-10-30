@@ -20,6 +20,18 @@ export default function Header() {
             aria-label="Navegação principal"
           >
             <Link
+              href="/fisioterapia-pelotas"
+              className="text-white hover:text-gray-100 transition"
+            >
+              Fisioterapia
+            </Link>
+            <Link
+              href="/pilates-pelotas"
+              className="text-white hover:text-gray-100 transition"
+            >
+              Pilates
+            </Link>
+            <Link
               href="/#servicos"
               className="text-white hover:text-gray-100 transition"
             >

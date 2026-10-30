@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Services() {
   return (
     <section id="servicos" className="bg-gray-50">
@@ -6,10 +8,24 @@ export default function Services() {
           <h2 className="text-3xl font-extrabold text-center text-(--color-emerald-800) mb-6">
             Serviços de Fisioterapia e Pilates em Pelotas
           </h2>
-          <p className="text-lg lg:text-xl text-center text-gray-600 mb-12">
+          <p className="text-lg lg:text-xl text-center text-gray-600 mb-8">
             Nossa clínica oferece tratamentos especializados de fisioterapia e
             pilates em Pelotas para o seu bem-estar e recuperação.
           </p>
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <Link
+              href="/fisioterapia-pelotas"
+              className="inline-flex items-center gap-2 rounded-full bg-(--color-emerald-800) text-white font-bold text-sm px-6 py-2.5 hover:opacity-90 transition"
+            >
+              Conhecer Fisioterapia em Pelotas →
+            </Link>
+            <Link
+              href="/pilates-pelotas"
+              className="inline-flex items-center gap-2 rounded-full bg-white border border-(--color-emerald-800) text-(--color-emerald-800) font-bold text-sm px-6 py-2.5 hover:bg-emerald-50 transition"
+            >
+              Conhecer Pilates em Pelotas →
+            </Link>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <article className="bg-white shadow-xs rounded-lg p-6 hover:scale-105 transition-transform duration-300 ease-in-out">
               <h3 className="text-xl font-semibold text-(--color-emerald-800) mb-4">
