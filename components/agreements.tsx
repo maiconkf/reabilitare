@@ -57,24 +57,27 @@ export default function Agreements() {
 
         <ul className="grid grid-cols-2 md:grid-cols-4 gap-5 lg:gap-7 items-stretch">
           {partners.map((partner, idx) => (
-            <ScrollReveal key={partner.name} delay={idx * 100}>
-              <li className="group flex flex-col justify-center items-center bg-slate-50/80 border border-slate-200/80 rounded-3xl p-6 sm:p-8 h-44 hover:bg-white hover:border-emerald-500/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="flex-1 flex items-center justify-center">
-                  <Image
-                    width={partner.width}
-                    height={partner.height}
-                    src={partner.src}
-                    alt={partner.alt}
-                    className="max-h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                    style={{ width: "auto" }}
-                    loading="lazy"
-                    sizes="(max-width: 640px) 120px, 160px"
-                  />
-                </div>
-                <span className="mt-3 text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-emerald-800 transition-colors">
-                  {partner.name}
-                </span>
-              </li>
+            <ScrollReveal
+              key={partner.name}
+              as="li"
+              delay={idx * 100}
+              className="group flex flex-col justify-center items-center bg-slate-50/80 border border-slate-200/80 rounded-3xl p-6 sm:p-8 h-44 hover:bg-white hover:border-emerald-500/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex-1 flex items-center justify-center">
+                <Image
+                  width={partner.width}
+                  height={partner.height}
+                  src={partner.src}
+                  alt={partner.alt}
+                  className="max-h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                  style={{ width: "auto" }}
+                  loading="lazy"
+                  sizes="(max-width: 640px) 120px, 160px"
+                />
+              </div>
+              <span className="mt-3 text-xs font-bold uppercase tracking-wider text-slate-400 group-hover:text-emerald-800 transition-colors">
+                {partner.name}
+              </span>
             </ScrollReveal>
           ))}
         </ul>
