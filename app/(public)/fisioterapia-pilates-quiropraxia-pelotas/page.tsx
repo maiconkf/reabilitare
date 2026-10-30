@@ -208,9 +208,11 @@ export default function Home() {
                   <div className="flex flex-wrap gap-4">
                     <Link
                       href="/fisioterapia-pelotas"
+                      aria-label="Saiba mais sobre Fisioterapia Especializada em Pelotas"
                       className="inline-flex items-center justify-center font-bold px-8 py-3 bg-white text-(--color-emerald-800) border border-emerald-200 rounded-full hover:bg-emerald-50 transition-colors shadow-xs"
                     >
-                      Saiba Mais
+                      <span>Saiba Mais</span>
+                      <span className="sr-only"> sobre Fisioterapia Especializada em Pelotas</span>
                     </Link>
                     <WhatsAppButton
                       href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamentos%20de%20fisioterapia."
@@ -234,9 +236,11 @@ export default function Home() {
                   <div className="flex flex-wrap gap-4">
                     <Link
                       href="/pilates-pelotas"
+                      aria-label="Saiba mais sobre o Estúdio de Pilates em Pelotas"
                       className="inline-flex items-center justify-center font-bold px-8 py-3 bg-white text-(--color-emerald-800) border border-emerald-200 rounded-full hover:bg-emerald-50 transition-colors shadow-xs"
                     >
-                      Saiba Mais
+                      <span>Saiba Mais</span>
+                      <span className="sr-only"> sobre o Estúdio de Pilates em Pelotas</span>
                     </Link>
                     <WhatsAppButton
                       href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20pilates."
@@ -260,9 +264,11 @@ export default function Home() {
                   <div className="flex flex-wrap gap-4">
                     <Link
                       href="/quiropraxia-pelotas"
+                      aria-label="Saiba mais sobre Quiropraxia Clínica em Pelotas"
                       className="inline-flex items-center justify-center font-bold px-8 py-3 bg-white text-(--color-emerald-800) border border-emerald-200 rounded-full hover:bg-emerald-50 transition-colors shadow-xs"
                     >
-                      Saiba Mais
+                      <span>Saiba Mais</span>
+                      <span className="sr-only"> sobre Quiropraxia Clínica em Pelotas</span>
                     </Link>
                     <WhatsAppButton
                       href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20atendimentos%20de%20quiropraxia."
