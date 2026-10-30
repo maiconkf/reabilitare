@@ -101,8 +101,13 @@ export default function WaitlistBanner() {
                       →
                     </span>
                   </a>
-                  <div className="mt-4 flex items-center justify-center gap-3 text-xs text-emerald-200/70">
-                    <span>Sem compromisso</span>
+                  <div className="mt-4 flex flex-wrap items-center justify-center gap-3 text-xs text-emerald-200/70">
+                    <a
+                      href="https://quiropraxia.clinicareabilitare.com"
+                      className="underline decoration-emerald-400/50 hover:text-white transition-colors"
+                    >
+                      Página de Lançamento
+                    </a>
                     <span>•</span>
                     <Link
                       href="/quiropraxia-pelotas"

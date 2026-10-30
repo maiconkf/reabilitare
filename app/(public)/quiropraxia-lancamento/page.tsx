@@ -10,17 +10,20 @@ export const metadata: Metadata = {
   description:
     "A Quiropraxia chegou à Clínica Reabilitare em Pelotas! Agende sua avaliação com valor promocional e garanta prioridade no atendimento. Vagas limitadas.",
   alternates: {
-    canonical: "/quiropraxia-lancamento",
+    canonical: "https://quiropraxia.clinicareabilitare.com",
   },
   openGraph: {
     title: "Quiropraxia chegou à Clínica Reabilitare 🎉",
     description:
       "Agende sua avaliação com valor promocional e entre para a lista de lançamento. Vagas limitadas — garanta a sua com prioridade.",
-    url: "https://www.clinicareabilitare.com/quiropraxia-lancamento",
+    url: "https://quiropraxia.clinicareabilitare.com",
     images: "/cover.png",
     type: "website",
+    locale: "pt_BR",
+    siteName: "Clínica Reabilitare",
   },
   twitter: {
+    card: "summary_large_image",
     title: "Quiropraxia chegou à Clínica Reabilitare 🎉",
     description:
       "Agende sua avaliação com valor promocional e entre para a lista de lançamento. Vagas limitadas.",

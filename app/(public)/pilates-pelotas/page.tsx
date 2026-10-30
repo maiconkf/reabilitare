@@ -7,6 +7,7 @@ import InternalHero from "@/components/InternalHero";
 import FaqAccordion from "@/components/FaqAccordion";
 import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 
 const Location = dynamic(() => import("@/components/location"));
@@ -302,6 +303,22 @@ export default function PilatesPage() {
                   }
                 ]} 
               />
+            </section>
+            {/* Cross-link Section */}
+            <section className="mb-12 rounded-2xl bg-emerald-50/60 border border-emerald-100 p-6 sm:p-8 text-center">
+              <h2 className="text-xl font-extrabold text-emerald-950 mb-2">
+                Cuidado Integrado na Clínica Reabilitare
+              </h2>
+              <p className="text-slate-600 text-sm sm:text-base mb-5">
+                Além do Pilates Clínico, contamos com{" "}
+                <Link href="/fisioterapia-pelotas" className="text-emerald-800 font-bold underline">
+                  Fisioterapia Especializada em Pelotas
+                </Link>{" "}
+                e{" "}
+                <Link href="/quiropraxia-pelotas" className="text-emerald-800 font-bold underline">
+                  Quiropraxia e Ajuste Vertebral em Pelotas
+                </Link>.
+              </p>
             </section>
           </div>
           

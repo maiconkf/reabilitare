@@ -7,6 +7,7 @@ import InternalHero from "@/components/InternalHero";
 import FaqAccordion from "@/components/FaqAccordion";
 import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 
 const Location = dynamic(() => import("@/components/location"));
@@ -185,9 +186,14 @@ export default function FisioterapiaPage() {
         }}
       />
       <Header />
-      
-      <InternalHero 
-        title={<>Fisioterapia em <strong className="text-emerald-300 font-extrabold">Pelotas</strong></>}
+
+      <InternalHero
+        title={
+          <>
+            Fisioterapia em{" "}
+            <strong className="text-emerald-300 font-extrabold">Pelotas</strong>
+          </>
+        }
         subtitle="A Melhor Clínica de Reabilitação para dores, lesões, recuperação pós-operatória e correção postural."
       />
 
@@ -198,10 +204,18 @@ export default function FisioterapiaPage() {
             <ScrollReveal>
               <section className="prose prose-lg md:prose-xl prose-emerald max-w-none text-gray-600 leading-relaxed mb-16">
                 <p>
-                  Procurando <strong>fisioterapia em Pelotas</strong>? A <strong>Clínica Reabilitare</strong> é referência em tratamentos fisioterapêuticos na cidade. Nossa equipe de <strong>fisioterapeutas altamente qualificados</strong> oferece tratamentos personalizados para dores, lesões, reabilitação pós-operatória e correção postural.
+                  Procurando <strong>fisioterapia em Pelotas</strong>? A{" "}
+                  <strong>Clínica Reabilitare</strong> é referência em
+                  tratamentos fisioterapêuticos na cidade. Nossa equipe de{" "}
+                  <strong>fisioterapeutas altamente qualificados</strong>{" "}
+                  oferece tratamentos personalizados para dores, lesões,
+                  reabilitação pós-operatória e correção postural.
                 </p>
                 <p>
-                  Localizada no bairro Areal, nossa clínica de <strong>fisioterapia em Pelotas, RS</strong> atende pacientes com atenção individual e um plano de cuidado adaptado às necessidades específicas de cada um.
+                  Localizada no bairro Areal, nossa clínica de{" "}
+                  <strong>fisioterapia em Pelotas, RS</strong> atende pacientes
+                  com atenção individual e um plano de cuidado adaptado às
+                  necessidades específicas de cada um.
                 </p>
               </section>
             </ScrollReveal>
@@ -213,23 +227,35 @@ export default function FisioterapiaPage() {
                   <h2 className="text-3xl font-extrabold text-(--color-emerald-800) mb-4">
                     Benefícios da Fisioterapia na Reabilitare
                   </h2>
-                  <p className="text-gray-600 text-lg">Resultados que transformam a sua qualidade de vida.</p>
+                  <p className="text-gray-600 text-lg">
+                    Resultados que transformam a sua qualidade de vida.
+                  </p>
                 </div>
               </ScrollReveal>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
                 {[
                   "Tratamento de lesões musculares, articulares e ligamentares",
                   "Recuperação pós-operatória com suporte especializado",
                   "Correção postural e prevenção de dores crônicas",
                   "Alívio de dores agudas e crônicas de forma eficaz",
-                  "Plano de cuidado individualizado e acompanhamento contínuo"
+                  "Plano de cuidado individualizado e acompanhamento contínuo",
                 ].map((item, i) => (
                   <ScrollReveal key={i} delay={i * 100}>
                     <div className="bg-emerald-50/50 border border-emerald-100 rounded-2xl p-5 flex items-start gap-3 h-full hover:bg-emerald-50 hover:shadow-md transition-all">
                       <span className="text-emerald-500 mt-0.5">
-                        <svg className="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        <svg
+                          className="w-6 h-6 flex-shrink-0"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M5 13l4 4L19 7"
+                          />
                         </svg>
                       </span>
                       <span className="text-gray-700 font-medium">{item}</span>
@@ -237,7 +263,7 @@ export default function FisioterapiaPage() {
                   </ScrollReveal>
                 ))}
               </div>
-              
+
               <ScrollReveal delay={200}>
                 <div className="text-center">
                   <WhatsAppButton
@@ -264,15 +290,31 @@ export default function FisioterapiaPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  { title: "Atendimento Personalizado", desc: "Foco total na sua recuperação com acompanhamento individualizado." },
-                  { title: "Profissionais Qualificados", desc: "Equipe experiente e em constante atualização científica." },
-                  { title: "Infraestrutura Moderna", desc: "Ambiente acolhedor e equipamentos de ponta para sua reabilitação." },
-                  { title: "Foco na Causa", desc: "Tratamos a origem da dor e não apenas os sintomas superficiais." },
+                  {
+                    title: "Atendimento Personalizado",
+                    desc: "Foco total na sua recuperação com acompanhamento individualizado.",
+                  },
+                  {
+                    title: "Profissionais Qualificados",
+                    desc: "Equipe experiente e em constante atualização científica.",
+                  },
+                  {
+                    title: "Infraestrutura Moderna",
+                    desc: "Ambiente acolhedor e equipamentos de ponta para sua reabilitação.",
+                  },
+                  {
+                    title: "Foco na Causa",
+                    desc: "Tratamos a origem da dor e não apenas os sintomas superficiais.",
+                  },
                 ].map((item, i) => (
                   <ScrollReveal key={i} delay={i * 100}>
                     <div className="bg-white rounded-2xl p-6 shadow-xs border border-gray-100 h-full">
-                      <h3 className="font-bold text-lg text-(--color-emerald-800) mb-2">{item.title}</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                      <h3 className="font-bold text-lg text-(--color-emerald-800) mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
                     </div>
                   </ScrollReveal>
                 ))}
@@ -288,25 +330,52 @@ export default function FisioterapiaPage() {
                   </h2>
                 </div>
               </ScrollReveal>
-              <FaqAccordion 
+              <FaqAccordion
                 items={[
                   {
-                    question: "Preciso de encaminhamento médico para fisioterapia?",
-                    answer: "Não é obrigatório, mas pode ser útil dependendo do caso. Nossos fisioterapeutas avaliam cada situação individualmente em sua primeira consulta."
+                    question:
+                      "Preciso de encaminhamento médico para fisioterapia?",
+                    answer:
+                      "Não é obrigatório, mas pode ser útil dependendo do caso. Nossos fisioterapeutas avaliam cada situação individualmente em sua primeira consulta.",
                   },
                   {
                     question: "Quantas sessões são necessárias?",
-                    answer: "O número de sessões varia conforme a condição de cada paciente. Após a avaliação inicial e o diagnóstico fisioterapêutico, definimos um plano personalizado."
+                    answer:
+                      "O número de sessões varia conforme a condição de cada paciente. Após a avaliação inicial e o diagnóstico fisioterapêutico, definimos um plano personalizado.",
                   },
                   {
                     question: "O plano de saúde cobre as sessões?",
-                    answer: "Trabalhamos com diversas modalidades de atendimento e convênios parceiros. Entre em contato com nossa equipe para verificar a cobertura exata do seu plano."
-                  }
-                ]} 
+                    answer:
+                      "Trabalhamos com diversas modalidades de atendimento e convênios parceiros. Entre em contato com nossa equipe para verificar a cobertura exata do seu plano.",
+                  },
+                ]}
               />
             </section>
+            {/* Cross-link Section */}
+            <section className="mb-12 rounded-2xl bg-emerald-50/60 border border-emerald-100 p-6 sm:p-8 text-center">
+              <h2 className="text-xl font-extrabold text-emerald-950 mb-2">
+                Conheça Também Nossas Outras Especialidades em Pelotas
+              </h2>
+              <p className="text-slate-600 text-sm sm:text-base mb-5">
+                Integramos nossos tratamentos com{" "}
+                <Link
+                  href="/pilates-pelotas"
+                  className="text-emerald-800 font-bold underline"
+                >
+                  Estúdio de Pilates em Pelotas
+                </Link>{" "}
+                e{" "}
+                <Link
+                  href="/quiropraxia-pelotas"
+                  className="text-emerald-800 font-bold underline"
+                >
+                  Quiropraxia em Pelotas
+                </Link>{" "}
+                para resultados completos e duradouros.
+              </p>
+            </section>
           </div>
-          
+
           <div className="mt-16">
             <Contact />
           </div>
