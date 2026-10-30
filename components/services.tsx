@@ -188,9 +188,11 @@ export default function Services() {
                     </WhatsAppButton>
                     <Link
                       href={pillar.href}
+                      aria-label={`Saiba mais sobre ${pillar.title} em Pelotas`}
                       className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-slate-50 hover:bg-emerald-50 hover:border-emerald-200 text-slate-700 hover:text-emerald-900 font-semibold text-sm px-5 py-3 transition-colors"
                     >
-                      Saiba mais
+                      <span>Saiba mais</span>
+                      <span className="sr-only"> sobre {pillar.title} em Pelotas</span>
                     </Link>
                   </div>
                 </div>
