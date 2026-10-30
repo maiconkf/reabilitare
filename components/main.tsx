@@ -23,14 +23,16 @@ export default function Main() {
           {/* Left Column: Copy, CTAs & Compact Trust Indicators */}
           <div className="lg:col-span-7 xl:col-span-7 pb-2 lg:pb-10 xl:pb-12 text-left">
             {/* Top Status & Rating Pill */}
-            <div className="inline-flex flex-wrap items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-white text-xs font-medium mb-4 backdrop-blur-md shadow-xs opacity-0 animate-fade-up">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-white text-[11px] sm:text-xs font-medium mb-4 backdrop-blur-md shadow-xs whitespace-nowrap opacity-0 animate-fade-up">
               <span className="inline-flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
                 <span>Clínica Especializada em Pelotas</span>
               </span>
               <span className="text-white/30">•</span>
               <span className="inline-flex items-center gap-1 text-amber-300 font-semibold">
-                <span>★★★★★</span>
+                <span className="tracking-tighter">
+                  <span className="hidden min-[390px]:inline">★★★★</span>★
+                </span>
                 <span className="text-white/90 font-medium">5.0 no Google</span>
               </span>
             </div>
