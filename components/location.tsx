@@ -131,7 +131,7 @@ export default function Location() {
                   alt="Mapa de localização da Clínica Reabilitare na Av. Bento Gonçalves, 2146 em Pelotas"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  priority
+                  loading="lazy"
                   sizes="(max-width: 1024px) 100vw, 60vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/50 via-transparent to-transparent group-hover:from-emerald-950/30 transition-colors duration-300 flex items-end justify-center p-6">
