@@ -25,18 +25,27 @@ export default function Home() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "MedicalClinic",
-                medicalSpecialty: "Physiotherapy",
+                "@type": ["MedicalClinic", "LocalBusiness"],
+                medicalSpecialty: ["Physiotherapy", "Musculoskeletal"],
                 "@id": "https://www.clinicareabilitare.com/#organization",
                 name: "Clínica Reabilitare",
-                alternateName: "Reabilitare Fisioterapia e Pilates",
+                alternateName: "Reabilitare Fisioterapia e Pilates em Pelotas",
                 description:
-                  "Clínica especializada em fisioterapia em Pelotas e pilates em Pelotas. Tratamentos personalizados para dores, lesões, reabilitação e bem-estar. Agende sua consulta!",
+                  "Clínica especializada em fisioterapia em Pelotas e pilates em Pelotas (Bairro Areal). Tratamentos personalizados para dores na coluna, lesões, reabilitação pós-operatória e bem-estar. Agende sua consulta!",
                 url: "https://www.clinicareabilitare.com",
-                logo: "https://www.clinicareabilitare.com/logo-reabilitare.jpg",
-                image: "https://www.clinicareabilitare.com/foto-clinica.jpg",
+                logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
+                image: [
+                  "https://www.clinicareabilitare.com/foto-clinica.webp",
+                  "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
+                  "https://www.clinicareabilitare.com/cover.png",
+                ],
                 telephone: "+55-53-99166-9801",
+                email: "kauanerfisio@gmail.com",
                 priceRange: "$$",
+                currenciesAccepted: "BRL",
+                paymentAccepted:
+                  "PIX, Cartão de Crédito, Cartão de Débito, Dinheiro, Convênios (Prevpel, IBCM, ASPRA, ASSTBM)",
+                hasMap: "https://maps.app.goo.gl/S4y6tkkLfFWxKYir8",
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "Av. Bento Gonçalves, 2146",
@@ -55,6 +64,13 @@ export default function Home() {
                   name: "Pelotas",
                   "@id": "https://www.wikidata.org/wiki/Q170851",
                 },
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "5.0",
+                  bestRating: "5",
+                  worstRating: "1",
+                  ratingCount: "48",
+                },
                 hasOfferCatalog: {
                   "@type": "OfferCatalog",
                   name: "Serviços de Fisioterapia e Pilates em Pelotas",
@@ -62,8 +78,9 @@ export default function Home() {
                     {
                       "@type": "Offer",
                       itemOffered: {
-                        "@type": "Service",
+                        "@type": "MedicalTherapy",
                         name: "Fisioterapia em Pelotas",
+                        url: "https://www.clinicareabilitare.com/fisioterapia-pelotas",
                         description:
                           "Tratamentos de fisioterapia especializada para dores, lesões, reabilitação pós-operatória e correção postural em Pelotas RS",
                       },
@@ -73,6 +90,7 @@ export default function Home() {
                       itemOffered: {
                         "@type": "Service",
                         name: "Pilates em Pelotas",
+                        url: "https://www.clinicareabilitare.com/pilates-pelotas",
                         description:
                           "Aulas de pilates clínico para fortalecimento, flexibilidade e consciência corporal em Pelotas RS",
                       },
@@ -89,7 +107,9 @@ export default function Home() {
                 employee: {
                   "@type": "Person",
                   name: "Kauane Ramos",
-                  jobTitle: "Fisioterapeuta",
+                  jobTitle: "Fisioterapeuta Responsável",
+                  image:
+                    "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
                   hasCredential: {
                     "@type": "EducationalOccupationalCredential",
                     credentialCategory: "CREFITO-5: 375851-F",
@@ -116,8 +136,9 @@ export default function Home() {
                 "@id": "https://www.clinicareabilitare.com/#website",
                 url: "https://www.clinicareabilitare.com",
                 name: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas",
+                inLanguage: "pt-BR",
                 description:
-                  "Site oficial da Clínica Reabilitare, especializada em fisioterapia e pilates em Pelotas RS",
+                  "Site oficial da Clínica Reabilitare, especializada em fisioterapia e pilates no Bairro Areal em Pelotas RS",
                 publisher: {
                   "@id": "https://www.clinicareabilitare.com/#organization",
                 },

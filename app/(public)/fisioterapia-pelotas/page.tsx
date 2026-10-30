@@ -9,17 +9,22 @@ import dynamic from "next/dynamic";
 const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
-  title: "Fisioterapia em Pelotas | Melhor Clínica de Fisioterapia",
+  title: "Fisioterapia em Pelotas - Ortopédica, Coluna e Pós-Operatório",
   description:
-    "Fisioterapia em Pelotas com fisioterapeutas especializados. Tratamentos para dores, lesões, reabilitação pós-operatória e correção postural. Agende sua avaliação!",
+    "Procurando fisioterapia em Pelotas? A Clínica Reabilitare (Bairro Areal) oferece fisioterapia especializada para dores na coluna, lesões, pós-operatório e postura. Atendemos particular e convênios (Prevpel, IBCM, ASPRA, ASSTBM). Agende sua avaliação!",
   keywords: [
     "fisioterapia pelotas",
     "fisioterapeuta pelotas",
     "clínica de fisioterapia pelotas",
     "fisioterapia em pelotas rs",
+    "fisioterapia bairro areal pelotas",
     "tratamento de dor pelotas",
     "reabilitação pelotas",
     "fisioterapia ortopédica pelotas",
+    "fisioterapia pós-operatória pelotas",
+    "fisioterapia coluna pelotas",
+    "fisioterapia prevpel pelotas",
+    "fisioterapia ibcm pelotas",
   ],
   alternates: {
     canonical: "/fisioterapia-pelotas",
@@ -27,11 +32,22 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fisioterapia em Pelotas | Clínica Reabilitare - Especialistas",
     description:
-      "Procurando fisioterapia em Pelotas? A Clínica Reabilitare oferece tratamentos personalizados para dores, lesões e reabilitação. Agende agora!",
+      "Procurando fisioterapia em Pelotas? Tratamentos personalizados para dores, lesões e reabilitação pós-operatória na Av. Bento Gonçalves, 2146. Agende agora!",
     url: "https://www.clinicareabilitare.com/fisioterapia-pelotas",
-    images: "/cover.png",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Clínica Reabilitare",
+    images: [
+      {
+        url: "/cover.png",
+        width: 1200,
+        height: 630,
+        alt: "Fisioterapia Especializada em Pelotas - Clínica Reabilitare",
+      },
+    ],
   },
   twitter: {
+    card: "summary_large_image",
     title: "Fisioterapia em Pelotas | Clínica Reabilitare - Especialistas",
     description:
       "Procurando fisioterapia em Pelotas? A Clínica Reabilitare oferece tratamentos personalizados para dores, lesões e reabilitação. Agende agora!",
@@ -49,15 +65,21 @@ export default function FisioterapiaPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "MedicalClinic",
+                "@type": ["MedicalClinic", "LocalBusiness"],
                 medicalSpecialty: "Physiotherapy",
-                name: "Clínica Reabilitare",
+                "@id": "https://www.clinicareabilitare.com/#organization",
+                name: "Clínica Reabilitare - Fisioterapia em Pelotas",
                 description:
                   "Fisioterapia especializada em Pelotas com tratamentos para dores, lesões, reabilitação pós-operatória e correção postural.",
                 url: "https://www.clinicareabilitare.com/fisioterapia-pelotas",
-                logo: "https://www.clinicareabilitare.com/logo-reabilitare.jpg",
-                image: "https://www.clinicareabilitare.com/foto-clinica.jpg",
-                telephone: "+5553991669801",
+                logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
+                image: [
+                  "https://www.clinicareabilitare.com/foto-clinica.webp",
+                  "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
+                ],
+                telephone: "+55-53-99166-9801",
+                priceRange: "$$",
+                hasMap: "https://maps.app.goo.gl/S4y6tkkLfFWxKYir8",
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "Av. Bento Gonçalves, 2146",
@@ -66,9 +88,20 @@ export default function FisioterapiaPage() {
                   postalCode: "96015-140",
                   addressCountry: "BR",
                 },
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: -31.7649,
+                  longitude: -52.3371,
+                },
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "5.0",
+                  bestRating: "5",
+                  ratingCount: "48",
+                },
                 contactPoint: {
                   "@type": "ContactPoint",
-                  telephone: "+5553991669801",
+                  telephone: "+55-53-99166-9801",
                   contactType: "customer service",
                   areaServed: "BR",
                   availableLanguage: "Portuguese",
@@ -95,6 +128,23 @@ export default function FisioterapiaPage() {
                     ],
                     opens: "08:00",
                     closes: "20:00",
+                  },
+                ],
+              },
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Início",
+                    item: "https://www.clinicareabilitare.com",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Fisioterapia em Pelotas",
+                    item: "https://www.clinicareabilitare.com/fisioterapia-pelotas",
                   },
                 ],
               },

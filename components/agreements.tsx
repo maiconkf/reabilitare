@@ -17,7 +17,7 @@ export default function Agreements() {
               width={128}
               height={78}
               src="/prevpel.webp"
-              alt="PrevPel"
+              alt="Convênio PrevPel aceito na Clínica Reabilitare em Pelotas"
               className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
               style={{ width: "auto" }}
               loading="lazy"
@@ -28,7 +28,7 @@ export default function Agreements() {
               width={128}
               height={78}
               src="/ibcm.webp"
-              alt="IBCM"
+              alt="Convênio IBCM aceito na Clínica Reabilitare em Pelotas"
               className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
               style={{ width: "auto" }}
               loading="lazy"
@@ -39,7 +39,7 @@ export default function Agreements() {
               width={120}
               height={120}
               src="/aspra.webp"
-              alt="ASPRA"
+              alt="Convênio ASPRA aceito na Clínica Reabilitare em Pelotas"
               className="object-contain grayscale hover:grayscale-0 transition duration-300"
               loading="lazy"
             />
@@ -49,7 +49,7 @@ export default function Agreements() {
               width={130}
               height={130}
               src="/asstbm.webp"
-              alt="ASSTBM"
+              alt="Convênio ASSTBM aceito na Clínica Reabilitare em Pelotas"
               className="object-contain grayscale hover:grayscale-0 transition duration-300"
               loading="lazy"
             />

@@ -57,10 +57,20 @@ export default function Home() {
                 description:
                   "Clínica especializada em fisioterapia e pilates em Pelotas, RS. Oferecemos tratamentos personalizados para dores, lesões, reabilitação e bem-estar.",
                 url: "https://www.clinicareabilitare.com/fisioterapia-pilates-pelotas",
-                logo: "https://www.clinicareabilitare.com/logo-reabilitare.jpg",
-                image: "https://www.clinicareabilitare.com/foto-clinica.jpg",
-                telephone: "+5553991669801",
+                logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
+                image: [
+                  "https://www.clinicareabilitare.com/foto-clinica.webp",
+                  "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
+                ],
+                telephone: "+55-53-99166-9801",
                 priceRange: "$$",
+                hasMap: "https://maps.app.goo.gl/S4y6tkkLfFWxKYir8",
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "5.0",
+                  bestRating: "5",
+                  ratingCount: "48",
+                },
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "Av. Bento Gonçalves, 2146",
@@ -212,12 +222,12 @@ export default function Home() {
               condicionamento físico e prevenção de lesões.
             </p>
             <div className="flex gap-4 mb-6">
-              <a
+              <Link
                 href="/pilates-pelotas"
                 className="inline-block border-none rounded-full cursor-pointer text-lg font-bold px-6 py-2.5 bg-gray-200 text-gray-800 hover:bg-gray-300"
               >
                 Saiba Mais
-              </a>
+              </Link>
               <WhatsAppButton
                 href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20pilates."
                 className="inline-block border-none rounded-full cursor-pointer text-lg font-bold px-9 py-2.5 bg-(--color-emerald-800) text-white hover:bg-(--color-emerald-800)/90"

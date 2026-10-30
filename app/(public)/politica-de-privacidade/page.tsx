@@ -4,9 +4,13 @@ import Location from "@/components/location";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Política de Privacidade",
+  alternates: {
+    canonical: "/politica-de-privacidade",
+  },
   robots: {
     index: false,
-    follow: false,
+    follow: true,
   },
 };
 
