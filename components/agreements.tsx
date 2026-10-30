@@ -3,10 +3,34 @@ import ScrollReveal from "./ScrollReveal";
 import WhatsAppButton from "./WhatsAppButton";
 
 const partners = [
-  { name: "PrevPel", src: "/prevpel.webp", width: 128, height: 78 },
-  { name: "IBCM", src: "/ibcm.webp", width: 128, height: 78 },
-  { name: "ASPRA", src: "/aspra.webp", width: 120, height: 120 },
-  { name: "ASSTBM", src: "/asstbm.webp", width: 130, height: 130 },
+  {
+    name: "PrevPel",
+    alt: "Convênio PrevPel aceito na Clínica Reabilitare em Pelotas",
+    src: "/prevpel.webp",
+    width: 128,
+    height: 78,
+  },
+  {
+    name: "IBCM",
+    alt: "Convênio IBCM aceito na Clínica Reabilitare em Pelotas",
+    src: "/ibcm.webp",
+    width: 128,
+    height: 78,
+  },
+  {
+    name: "ASPRA",
+    alt: "Convênio ASPRA aceito na Clínica Reabilitare em Pelotas",
+    src: "/aspra.webp",
+    width: 120,
+    height: 120,
+  },
+  {
+    name: "ASSTBM",
+    alt: "Convênio ASSTBM aceito na Clínica Reabilitare em Pelotas",
+    src: "/asstbm.webp",
+    width: 130,
+    height: 130,
+  },
 ];
 
 export default function Agreements() {
@@ -40,7 +64,7 @@ export default function Agreements() {
                     width={partner.width}
                     height={partner.height}
                     src={partner.src}
-                    alt={partner.name}
+                    alt={partner.alt}
                     className="max-h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                     style={{ width: "auto" }}
                     loading="lazy"

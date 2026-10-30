@@ -12,9 +12,9 @@ import dynamic from "next/dynamic";
 const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
-  title: "Quiropraxia em Pelotas | Ajuste Vertebral e Alívio de Dores",
+  title: "Quiropraxia em Pelotas - Ajuste Vertebral e Alívio de Dores",
   description:
-    "Quiropraxia em Pelotas com profissionais qualificados. Tratamentos para dores na coluna, hérnia de disco, nervo ciático e postura. Agende sua consulta!",
+    "Quiropraxia em Pelotas na Clínica Reabilitare (Bairro Areal). Ajustes vertebrais e articulares seguros para dor na coluna, hérnia de disco, nervo ciático, cervicalgia e postura. Agende sua consulta!",
   keywords: [
     "quiropraxia pelotas",
     "quiropraxista pelotas",
@@ -22,7 +22,10 @@ export const metadata: Metadata = {
     "tratamento de coluna pelotas",
     "alinhamento vertebral pelotas",
     "quiropraxia em pelotas rs",
+    "quiropraxia bairro areal pelotas",
     "dor na coluna pelotas",
+    "hérnia de disco pelotas",
+    "nervo ciático pelotas",
   ],
   alternates: {
     canonical: "/quiropraxia-pelotas",
@@ -30,11 +33,22 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Quiropraxia em Pelotas | Clínica Reabilitare - Ajuste Vertebral",
     description:
-      "Procurando quiropraxia em Pelotas? A Clínica Reabilitare oferece atendimentos especializados para alinhamento da coluna e alívio de dores. Agende agora!",
+      "Procurando quiropraxia em Pelotas? A Clínica Reabilitare oferece atendimentos especializados para alinhamento da coluna e alívio imediato de dores. Agende agora!",
     url: "https://www.clinicareabilitare.com/quiropraxia-pelotas",
-    images: "/cover.png",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Clínica Reabilitare",
+    images: [
+      {
+        url: "/cover.png",
+        width: 1200,
+        height: 630,
+        alt: "Quiropraxia e Ajuste Vertebral em Pelotas - Clínica Reabilitare",
+      },
+    ],
   },
   twitter: {
+    card: "summary_large_image",
     title: "Quiropraxia em Pelotas | Clínica Reabilitare - Ajuste Vertebral",
     description:
       "Procurando quiropraxia em Pelotas? A Clínica Reabilitare oferece atendimentos especializados para alinhamento da coluna e alívio de dores. Agende agora!",
@@ -52,15 +66,21 @@ export default function QuiropraxiaPage() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "MedicalClinic",
-                medicalSpecialty: "Physiotherapy",
-                name: "Clínica Reabilitare - Quiropraxia",
+                "@type": ["MedicalClinic", "LocalBusiness"],
+                medicalSpecialty: ["Physiotherapy", "Musculoskeletal"],
+                "@id": "https://www.clinicareabilitare.com/#organization",
+                name: "Clínica Reabilitare - Quiropraxia em Pelotas",
                 description:
                   "Quiropraxia em Pelotas com profissionais qualificados. Tratamento de dores na coluna, ajustes articulares e alinhamento vertebral.",
                 url: "https://www.clinicareabilitare.com/quiropraxia-pelotas",
-                logo: "https://www.clinicareabilitare.com/logo-reabilitare.jpg",
-                image: "https://www.clinicareabilitare.com/foto-clinica.jpg",
-                telephone: "+5553991669801",
+                logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
+                image: [
+                  "https://www.clinicareabilitare.com/foto-clinica.webp",
+                  "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
+                ],
+                telephone: "+55-53-99166-9801",
+                priceRange: "$$",
+                hasMap: "https://maps.app.goo.gl/S4y6tkkLfFWxKYir8",
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "Av. Bento Gonçalves, 2146",
@@ -69,9 +89,20 @@ export default function QuiropraxiaPage() {
                   postalCode: "96015-140",
                   addressCountry: "BR",
                 },
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: -31.7649,
+                  longitude: -52.3371,
+                },
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "5.0",
+                  bestRating: "5",
+                  ratingCount: "48",
+                },
                 contactPoint: {
                   "@type": "ContactPoint",
-                  telephone: "+5553991669801",
+                  telephone: "+55-53-99166-9801",
                   contactType: "customer service",
                   areaServed: "BR",
                   availableLanguage: "Portuguese",
@@ -98,6 +129,23 @@ export default function QuiropraxiaPage() {
                     ],
                     opens: "08:00",
                     closes: "20:00",
+                  },
+                ],
+              },
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Início",
+                    item: "https://www.clinicareabilitare.com",
+                  },
+                  {
+                    "@type": "ListItem",
+                    position: 2,
+                    name: "Quiropraxia em Pelotas",
+                    item: "https://www.clinicareabilitare.com/quiropraxia-pelotas",
                   },
                 ],
               },

@@ -62,10 +62,20 @@ export default function Home() {
                 description:
                   "Clínica especializada em fisioterapia, pilates e quiropraxia em Pelotas, RS. Oferecemos tratamentos personalizados para dores, lesões, reabilitação e bem-estar.",
                 url: "https://www.clinicareabilitare.com/fisioterapia-pilates-quiropraxia-pelotas",
-                logo: "https://www.clinicareabilitare.com/logo-reabilitare.jpg",
-                image: "https://www.clinicareabilitare.com/foto-clinica.jpg",
-                telephone: "+5553991669801",
+                logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
+                image: [
+                  "https://www.clinicareabilitare.com/foto-clinica.webp",
+                  "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
+                ],
+                telephone: "+55-53-99166-9801",
                 priceRange: "$$",
+                hasMap: "https://maps.app.goo.gl/S4y6tkkLfFWxKYir8",
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "5.0",
+                  bestRating: "5",
+                  ratingCount: "48",
+                },
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "Av. Bento Gonçalves, 2146",

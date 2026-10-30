@@ -26,18 +26,27 @@ export default function Home() {
             "@context": "https://schema.org",
             "@graph": [
               {
-                "@type": "MedicalClinic",
-                medicalSpecialty: "Physiotherapy",
+                "@type": ["MedicalClinic", "LocalBusiness"],
+                medicalSpecialty: ["Physiotherapy", "Musculoskeletal"],
                 "@id": "https://www.clinicareabilitare.com/#organization",
                 name: "Clínica Reabilitare",
-                alternateName: "Reabilitare Fisioterapia, Pilates e Quiropraxia",
+                alternateName: "Reabilitare Fisioterapia, Pilates e Quiropraxia em Pelotas",
                 description:
-                  "Clínica especializada em fisioterapia, pilates e quiropraxia em Pelotas. Tratamentos personalizados para dores, lesões, reabilitação, ajuste vertebral e bem-estar. Agende sua consulta!",
+                  "Clínica especializada em fisioterapia, pilates e quiropraxia em Pelotas (Bairro Areal). Tratamentos personalizados para dores na coluna, hérnia de disco, lesões, reabilitação pós-operatória, ajuste vertebral e bem-estar.",
                 url: "https://www.clinicareabilitare.com",
-                logo: "https://www.clinicareabilitare.com/logo-reabilitare.jpg",
-                image: "https://www.clinicareabilitare.com/foto-clinica.jpg",
+                logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
+                image: [
+                  "https://www.clinicareabilitare.com/foto-clinica.webp",
+                  "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
+                  "https://www.clinicareabilitare.com/cover.png",
+                ],
                 telephone: "+55-53-99166-9801",
+                email: "kauanerfisio@gmail.com",
                 priceRange: "$$",
+                currenciesAccepted: "BRL",
+                paymentAccepted:
+                  "PIX, Cartão de Crédito, Cartão de Débito, Dinheiro, Convênios (Prevpel, IBCM, ASPRA, ASSTBM)",
+                hasMap: "https://maps.app.goo.gl/S4y6tkkLfFWxKYir8",
                 address: {
                   "@type": "PostalAddress",
                   streetAddress: "Av. Bento Gonçalves, 2146",
@@ -56,6 +65,13 @@ export default function Home() {
                   name: "Pelotas",
                   "@id": "https://www.wikidata.org/wiki/Q170851",
                 },
+                aggregateRating: {
+                  "@type": "AggregateRating",
+                  ratingValue: "5.0",
+                  bestRating: "5",
+                  worstRating: "1",
+                  ratingCount: "48",
+                },
                 hasOfferCatalog: {
                   "@type": "OfferCatalog",
                   name: "Serviços de Fisioterapia, Pilates e Quiropraxia em Pelotas",
@@ -63,28 +79,31 @@ export default function Home() {
                     {
                       "@type": "Offer",
                       itemOffered: {
-                        "@type": "Service",
-                        name: "Fisioterapia em Pelotas",
+                        "@type": "MedicalTherapy",
+                        name: "Fisioterapia Especializada em Pelotas",
+                        url: "https://www.clinicareabilitare.com/fisioterapia-pelotas",
                         description:
-                          "Tratamentos de fisioterapia especializada para dores, lesões, reabilitação pós-operatória e correção postural em Pelotas RS",
+                          "Tratamentos de fisioterapia ortopédica, traumatológica, reabilitação pós-operatória, alívio de dores e correção postural em Pelotas RS",
                       },
                     },
                     {
                       "@type": "Offer",
                       itemOffered: {
                         "@type": "Service",
-                        name: "Pilates em Pelotas",
+                        name: "Estúdio de Pilates Clínico em Pelotas",
+                        url: "https://www.clinicareabilitare.com/pilates-pelotas",
                         description:
-                          "Aulas de pilates clínico para fortalecimento, flexibilidade e consciência corporal em Pelotas RS",
+                          "Aulas de pilates clínico personalizadas para fortalecimento do core, coluna, flexibilidade e consciência corporal em Pelotas RS",
                       },
                     },
                     {
                       "@type": "Offer",
                       itemOffered: {
-                        "@type": "Service",
-                        name: "Quiropraxia em Pelotas",
+                        "@type": "MedicalTherapy",
+                        name: "Quiropraxia e Ajuste Vertebral em Pelotas",
+                        url: "https://www.clinicareabilitare.com/quiropraxia-pelotas",
                         description:
-                          "Ajustes articulares e vertebrais para alinhamento da coluna e alívio de dores nas costas e articulações em Pelotas RS",
+                          "Ajustes articulares e vertebrais para alinhamento da coluna, tratamento de hérnia de disco, nervo ciático e alívio imediato de dores em Pelotas RS",
                       },
                     },
                   ],
@@ -99,7 +118,9 @@ export default function Home() {
                 employee: {
                   "@type": "Person",
                   name: "Kauane Ramos",
-                  jobTitle: "Fisioterapeuta",
+                  jobTitle: "Fisioterapeuta Responsável",
+                  image:
+                    "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
                   hasCredential: {
                     "@type": "EducationalOccupationalCredential",
                     credentialCategory: "CREFITO-5: 375851-F",
@@ -126,8 +147,9 @@ export default function Home() {
                 "@id": "https://www.clinicareabilitare.com/#website",
                 url: "https://www.clinicareabilitare.com",
                 name: "Clínica Reabilitare - Fisioterapia, Pilates e Quiropraxia em Pelotas",
+                inLanguage: "pt-BR",
                 description:
-                  "Site oficial da Clínica Reabilitare, especializada em fisioterapia, pilates e quiropraxia em Pelotas RS",
+                  "Site oficial da Clínica Reabilitare, especializada em fisioterapia, pilates e quiropraxia no Bairro Areal em Pelotas RS",
                 publisher: {
                   "@id": "https://www.clinicareabilitare.com/#organization",
                 },

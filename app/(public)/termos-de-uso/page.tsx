@@ -5,9 +5,13 @@ import Location from "@/components/location";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  title: "Termos de Uso",
+  alternates: {
+    canonical: "/termos-de-uso",
+  },
   robots: {
     index: false,
-    follow: false,
+    follow: true,
   },
 };
 

@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.clinicareabilitare.com/sitemap.xml 
+Disallow: /termos-de-uso
+Disallow: /politica-de-privacidade
+
+Host: https://www.clinicareabilitare.com
+Sitemap: https://www.clinicareabilitare.com/sitemap.xml
