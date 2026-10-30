@@ -207,9 +207,9 @@ export default function FisioterapiaPage() {
                   Procurando <strong>fisioterapia em Pelotas</strong>? A{" "}
                   <strong>Clínica Reabilitare</strong> é referência em
                   tratamentos fisioterapêuticos na cidade. Nossa equipe de{" "}
-                  <strong>fisioterapeutas altamente qualificados</strong> oferece
-                  tratamentos personalizados para dores, lesões, reabilitação
-                  pós-operatória e correção postural.
+                  <strong>fisioterapeutas altamente qualificados</strong>{" "}
+                  oferece tratamentos personalizados para dores, lesões,
+                  reabilitação pós-operatória e correção postural.
                 </p>
                 <p>
                   Localizada no bairro Areal, nossa clínica de{" "}

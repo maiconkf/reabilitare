@@ -38,7 +38,7 @@ export default function Main() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] font-extrabold text-white mb-3.5 leading-[1.15] tracking-tight animate-fade-up">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] font-extrabold text-white mb-3.5 leading-[1.15] tracking-tight opacity-0 animate-fade-up delay-100">
               <strong className="font-extrabold text-white">Fisioterapia</strong> e{" "}
               <strong className="font-extrabold text-emerald-300">Pilates</strong>{" "}
               em Pelotas: Recupere sua liberdade de{" "}
