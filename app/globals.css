@@ -81,18 +81,26 @@ body {
   overflow-x: hidden;
 }
 
-/* Subtle custom scrollbar */
-::-webkit-scrollbar {
+/* Custom scrollbar only for non-Mac devices (e.g. Windows, Linux) */
+html.custom-scrollbar::-webkit-scrollbar,
+html.custom-scrollbar ::-webkit-scrollbar {
   width: 10px;
 }
-::-webkit-scrollbar-track {
+html.custom-scrollbar::-webkit-scrollbar-track,
+html.custom-scrollbar ::-webkit-scrollbar-track {
   background: #f1f5f9;
 }
-::-webkit-scrollbar-thumb {
+html.custom-scrollbar::-webkit-scrollbar-thumb,
+html.custom-scrollbar ::-webkit-scrollbar-thumb {
   background: #065f46;
   border-radius: 9999px;
   border: 2px solid #f1f5f9;
 }
-::-webkit-scrollbar-thumb:hover {
+html.custom-scrollbar::-webkit-scrollbar-thumb:hover,
+html.custom-scrollbar ::-webkit-scrollbar-thumb:hover {
   background: #047857;
+}
+html.custom-scrollbar {
+  scrollbar-color: #065f46 #f1f5f9;
+  scrollbar-width: thin;
 }
