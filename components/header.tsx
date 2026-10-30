@@ -47,6 +47,7 @@ export default function Header() {
               priority
               fetchPriority="high"
               loading="eager"
+              sizes="136px"
               className="h-10 w-auto sm:h-11"
             />
           </Link>
