@@ -120,6 +120,12 @@ export default function RootLayout({
   return (
     <html lang="pt-br" suppressHydrationWarning>
       <head>
+        <script
+          id="os-detect"
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var p=(navigator.userAgentData&&navigator.userAgentData.platform)||(navigator.platform)||"";var u=navigator.userAgent||"";var isMac=/mac|iphone|ipad|ipod/i.test(p)||/macintosh|mac os x|iphone|ipad|ipod/i.test(u);if(!isMac){document.documentElement.classList.add("custom-scrollbar");}}catch(e){}})();`,
+          }}
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-EK22XJKVWF"
           strategy="afterInteractive"
