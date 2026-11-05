@@ -31,6 +31,13 @@ const partners = [
     width: 130,
     height: 130,
   },
+  {
+    name: "Cabergs",
+    alt: "Convênio Cabergs aceito na Clínica Reabilitare em Pelotas",
+    src: "/cabergs.webp",
+    width: 140,
+    height: 50,
+  },
 ];
 
 export default function Agreements() {
@@ -55,7 +62,7 @@ export default function Agreements() {
           </div>
         </ScrollReveal>
 
-        <ul className="grid grid-cols-2 md:grid-cols-4 gap-5 lg:gap-7 items-stretch">
+        <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-5 lg:gap-6 items-stretch">
           {partners.map((partner, idx) => (
             <ScrollReveal
               key={partner.name}
