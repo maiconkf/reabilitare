@@ -26,7 +26,7 @@ const homeFaq = [
   {
     question: "A Clínica Reabilitare atende por convênio em Pelotas?",
     answer:
-      "Sim! Atendemos pelos convênios PrevPel, IBCM, ASPRA e ASSTBM, além de consultas e planos particulares com condições especiais. Você pode consultar a cobertura do seu plano diretamente pelo nosso WhatsApp.",
+      "Sim! Atendemos pelos convênios PrevPel, IBCM, ASPRA, ASSTBM e Cabergs, além de consultas e planos particulares com condições especiais. Você pode consultar a cobertura do seu plano diretamente pelo nosso WhatsApp.",
   },
   {
     question:
@@ -76,7 +76,7 @@ export default function Home() {
                 priceRange: "$$",
                 currenciesAccepted: "BRL",
                 paymentAccepted:
-                  "PIX, Cartão de Crédito, Cartão de Débito, Dinheiro, Convênios (Prevpel, IBCM, ASPRA, ASSTBM)",
+                  "PIX, Cartão de Crédito, Cartão de Débito, Dinheiro, Convênios (Prevpel, IBCM, ASPRA, ASSTBM, Cabergs)",
                 hasMap: "https://maps.app.goo.gl/S4y6tkkLfFWxKYir8",
                 address: {
                   "@type": "PostalAddress",

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Clínica Reabilitare",
   },
   description:
-    "Procurando fisioterapia em Pelotas ou pilates em Pelotas? A Clínica Reabilitare (Bairro Areal) oferece tratamentos especializados para dores na coluna, lesões, pós-operatório e postura. Atendemos particular e convênios (Prevpel, IBCM, ASPRA, ASSTBM). Agende sua avaliação!",
+    "Procurando fisioterapia em Pelotas ou pilates em Pelotas? A Clínica Reabilitare (Bairro Areal) oferece tratamentos especializados para dores na coluna, lesões, pós-operatório e postura. Atendemos particular e convênios (Prevpel, IBCM, ASPRA, ASSTBM, Cabergs). Agende sua avaliação!",
   keywords: [
     "fisioterapia pelotas",
     "pilates pelotas",
@@ -45,6 +45,7 @@ export const metadata: Metadata = {
     "fisioterapia ortopédica pelotas",
     "fisioterapia prevpel pelotas",
     "fisioterapia ibcm pelotas",
+    "fisioterapia cabergs pelotas",
     "reabilitação pelotas",
     "clínica reabilitare",
   ],

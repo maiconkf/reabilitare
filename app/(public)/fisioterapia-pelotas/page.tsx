@@ -15,7 +15,7 @@ const Location = dynamic(() => import("@/components/location"));
 export const metadata: Metadata = {
   title: "Fisioterapia em Pelotas - Ortopédica, Coluna e Pós-Operatório",
   description:
-    "Procurando fisioterapia em Pelotas? A Clínica Reabilitare (Bairro Areal) oferece fisioterapia especializada para dores na coluna, lesões, pós-operatório e postura. Atendemos particular e convênios (Prevpel, IBCM, ASPRA, ASSTBM). Agende sua avaliação!",
+    "Procurando fisioterapia em Pelotas? A Clínica Reabilitare (Bairro Areal) oferece fisioterapia especializada para dores na coluna, lesões, pós-operatório e postura. Atendemos particular e convênios (Prevpel, IBCM, ASPRA, ASSTBM, Cabergs). Agende sua avaliação!",
   keywords: [
     "fisioterapia pelotas",
     "fisioterapeuta pelotas",
@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     "fisioterapia coluna pelotas",
     "fisioterapia prevpel pelotas",
     "fisioterapia ibcm pelotas",
+    "fisioterapia cabergs pelotas",
   ],
   alternates: {
     canonical: "/fisioterapia-pelotas",
