@@ -108,8 +108,8 @@ export const metadata: Metadata = {
   other: {
     "geo.region": "BR-RS",
     "geo.placename": "Pelotas",
-    "geo.position": "-31.7649;-52.3371",
-    ICBM: "-31.7649, -52.3371",
+    "geo.position": "-31.7650111;-52.3255797",
+    ICBM: "-31.7650111, -52.3255797",
   },
 };
 

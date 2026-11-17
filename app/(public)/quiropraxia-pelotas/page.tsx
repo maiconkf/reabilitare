@@ -92,8 +92,8 @@ export default function QuiropraxiaPage() {
                 },
                 geo: {
                   "@type": "GeoCoordinates",
-                  latitude: -31.7649,
-                  longitude: -52.3371,
+                  latitude: -31.7650111,
+                  longitude: -52.3255797,
                 },
                 aggregateRating: {
                   "@type": "AggregateRating",
