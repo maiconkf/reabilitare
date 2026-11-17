@@ -21,6 +21,7 @@ export default function Header() {
     { href: "/#servicos", label: "Especialidades" },
     { href: "/fisioterapia-pelotas", label: "Fisioterapia" },
     { href: "/pilates-pelotas", label: "Pilates" },
+    { href: "/quiropraxia-pelotas", label: "Quiropraxia", isNew: true },
     { href: "/#convenios", label: "Convênios" },
     { href: "/#localizacao", label: "Localização" },
   ];
@@ -64,6 +65,11 @@ export default function Header() {
                 className="relative px-3.5 py-1.5 rounded-full text-white/90 hover:text-white hover:bg-white/10 font-medium text-sm transition-all duration-200 flex items-center gap-1.5"
               >
                 <span>{link.label}</span>
+                {link.isNew && (
+                  <span className="bg-amber-400 text-emerald-950 text-[10px] font-extrabold uppercase tracking-wider px-1.5 py-0.2 rounded-full leading-tight">
+                    Novo
+                  </span>
+                )}
               </Link>
             ))}
           </nav>
@@ -71,7 +77,7 @@ export default function Header() {
           {/* Right CTA & Mobile Menu Toggle */}
           <div className="flex items-center gap-3">
             <WhatsAppButton
-              href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamentos%20de%20fisioterapia%20e%20pilates."
+              href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamentos%20de%20fisioterapia%2C%20pilates%20e%20quiropraxia."
               className="group inline-flex items-center gap-2 rounded-full cursor-pointer text-sm font-bold leading-5 px-5 py-2.5 transition-all duration-300 bg-white text-emerald-950 hover:bg-emerald-50 shadow-md shadow-black/10 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
               aria-label="Agendar atendimento pelo WhatsApp"
             >
@@ -148,6 +154,11 @@ export default function Header() {
                   className="flex items-center justify-between px-4 py-2.5 rounded-xl text-white/90 hover:text-white hover:bg-white/10 font-medium text-sm transition-colors"
                 >
                   <span>{link.label}</span>
+                  {link.isNew && (
+                    <span className="bg-amber-400 text-emerald-950 text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full">
+                      Novidade
+                    </span>
+                  )}
                 </Link>
               ))}
             </nav>

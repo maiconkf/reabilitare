@@ -81,6 +81,15 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      {
+        source: "/fisioterapia-pilates-pelotas",
+        destination: "/fisioterapia-pilates-quiropraxia-pelotas",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

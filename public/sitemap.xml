@@ -8,7 +8,7 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://www.clinicareabilitare.com/reabilitare-logo-white.webp</image:loc>
-      <image:title>Clínica Reabilitare - Fisioterapia e Pilates em Pelotas</image:title>
+      <image:title>Clínica Reabilitare - Fisioterapia, Pilates e Quiropraxia em Pelotas</image:title>
     </image:image>
     <image:image>
       <image:loc>https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp</image:loc>
@@ -68,15 +68,31 @@
     </image:image>
   </url>
 
-  <!-- Página Fisioterapia + Pilates -->
+  <!-- Página Quiropraxia -->
   <url>
-    <loc>https://www.clinicareabilitare.com/fisioterapia-pilates-pelotas</loc>
+    <loc>https://www.clinicareabilitare.com/quiropraxia-pelotas</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp</image:loc>
+      <image:title>Quiropraxia e Ajuste Vertebral em Pelotas RS - Clínica Reabilitare</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.clinicareabilitare.com/reabilitare-logo-white.webp</image:loc>
+      <image:title>Clínica Reabilitare - Quiropraxia em Pelotas RS</image:title>
+    </image:image>
+  </url>
+
+  <!-- Página Fisioterapia + Pilates + Quiropraxia -->
+  <url>
+    <loc>https://www.clinicareabilitare.com/fisioterapia-pilates-quiropraxia-pelotas</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.clinicareabilitare.com/reabilitare-logo-white.webp</image:loc>
-      <image:title>Clínica Reabilitare - Fisioterapia e Pilates em Pelotas</image:title>
+      <image:title>Clínica Reabilitare - Fisioterapia, Pilates e Quiropraxia em Pelotas</image:title>
     </image:image>
   </url>
 </urlset>

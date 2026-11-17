@@ -46,4 +46,3 @@ export default function InternalHero({ title, subtitle }: InternalHeroProps) {
     </section>
   );
 }
-

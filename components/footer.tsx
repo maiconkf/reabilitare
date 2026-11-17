@@ -26,7 +26,7 @@ export default function Footer() {
                   />
                 </Link>
                 <p className="text-sm text-emerald-100/75 max-w-sm leading-relaxed">
-                  Clínica especializada em Fisioterapia e Pilates Clínico em Pelotas/RS. Tratamentos personalizados para restaurar seu movimento e bem-estar.
+                  Clínica especializada em Fisioterapia, Pilates Clínico e Quiropraxia em Pelotas/RS. Tratamentos personalizados para restaurar seu movimento e bem-estar.
                 </p>
                 <div className="inline-flex items-center gap-2 rounded-xl bg-white/[0.06] border border-white/10 px-3.5 py-2 text-xs text-emerald-200 font-medium">
                   <span className="w-2 h-2 rounded-full bg-emerald-400" />
@@ -51,8 +51,16 @@ export default function Footer() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/fisioterapia-pilates-pelotas" className="hover:text-white transition-colors">
-                      Fisioterapia e Pilates Integrados
+                    <Link href="/quiropraxia-pelotas" className="hover:text-white transition-colors inline-flex items-center gap-2">
+                      <span>Quiropraxia em Pelotas</span>
+                      <span className="bg-amber-400 text-emerald-950 text-[10px] font-extrabold uppercase px-1.5 py-0.2 rounded-full">
+                        Novo
+                      </span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/fisioterapia-pilates-quiropraxia-pelotas" className="hover:text-white transition-colors">
+                      Tratamentos Integrados
                     </Link>
                   </li>
                 </ul>

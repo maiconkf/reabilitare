@@ -66,12 +66,14 @@ export const metadata: Metadata = {
 
 const pilatesFaq = [
   {
-    question: "Quem tem hérnia de disco, dor na coluna ou no ciático pode fazer Pilates?",
+    question:
+      "Quem tem hérnia de disco, dor na coluna ou no ciático pode fazer Pilates?",
     answer:
       "Sim, é altamente recomendado! O Pilates Clínico ministrado por fisioterapeutas é uma das abordagens mais eficazes para descomprimir os discos intervertebrais, fortalecer a musculatura profunda estabilizadora (core) e eliminar a sobrecarga na coluna lombar e cervical.",
   },
   {
-    question: "Qual a diferença entre Pilates Clínico com Fisioterapeuta e Pilates comum?",
+    question:
+      "Qual a diferença entre Pilates Clínico com Fisioterapeuta e Pilates comum?",
     answer:
       "No Pilates Clínico da Reabilitare, as aulas são conduzidas por profissionais de Fisioterapia que conhecem a biomecânica corporal, anatomia e patologias. Cada exercício é adaptado às suas limitações e objetivos, prevenindo lesões e tratando as causas da dor com total segurança.",
   },
@@ -81,12 +83,14 @@ const pilatesFaq = [
       "Nosso estúdio em Pelotas conta com a linha completa de aparelhos tradicionais do Método Pilates — Reformer, Cadillac, Wunda Chair e Ladder Barrel —, além de acessórios para exercícios de solo (Mat Pilates). A combinação de molas e resistências permite desde exercícios suaves de reabilitação até desafios avançados de força.",
   },
   {
-    question: "Quantas vezes por semana devo fazer Pilates em Pelotas para ver resultados?",
+    question:
+      "Quantas vezes por semana devo fazer Pilates em Pelotas para ver resultados?",
     answer:
       "A frequência mais comum e eficaz é de 2 a 3 vezes por semana. Já nas primeiras semanas é possível notar alívio expressivo de dores, melhora na postura diária, aumento da flexibilidade e maior sensação de disposição e bem-estar corporal.",
   },
   {
-    question: "Como agendar uma avaliação no estúdio de Pilates da Clínica Reabilitare?",
+    question:
+      "Como agendar uma avaliação no estúdio de Pilates da Clínica Reabilitare?",
     answer:
       "É muito fácil! Basta entrar em contato com nossa recepção pelo WhatsApp (53) 99166-9801. Agendamos uma avaliação inicial para conhecer suas queixas, necessidades e histórico de saúde, definindo a turma e o plano de aulas ideal para você.",
   },
@@ -167,7 +171,8 @@ export default function PilatesPage() {
                       itemOffered: {
                         "@type": "Service",
                         name: "Pilates Clínico em Aparelhos",
-                        description: "Aulas orientadas por fisioterapeutas com Reformer, Cadillac, Chair e Barrel com foco terapêutico.",
+                        description:
+                          "Aulas orientadas por fisioterapeutas com Reformer, Cadillac, Chair e Barrel com foco terapêutico.",
                       },
                     },
                     {
@@ -175,7 +180,8 @@ export default function PilatesPage() {
                       itemOffered: {
                         "@type": "Service",
                         name: "Pilates para Dores na Coluna e Hérnia de Disco",
-                        description: "Exercícios seguros e progressivos para descompressão discal e fortalecimento estabilizador do core.",
+                        description:
+                          "Exercícios seguros e progressivos para descompressão discal e fortalecimento estabilizador do core.",
                       },
                     },
                     {
@@ -183,7 +189,8 @@ export default function PilatesPage() {
                       itemOffered: {
                         "@type": "Service",
                         name: "Pilates para Terceira Idade e Mobilidade",
-                        description: "Preservação da mobilidade articular, força funcional, equilíbrio e autonomia corporal para o dia a dia.",
+                        description:
+                          "Preservação da mobilidade articular, força funcional, equilíbrio e autonomia corporal para o dia a dia.",
                       },
                     },
                   ],
@@ -255,10 +262,22 @@ export default function PilatesPage() {
             <ScrollReveal>
               <section className="prose prose-lg md:prose-xl prose-emerald max-w-none text-gray-600 leading-relaxed mb-16">
                 <p>
-                  Procurando as melhores aulas de <strong>pilates em Pelotas</strong>? O <strong>estúdio de Pilates da Clínica Reabilitare</strong> oferece uma experiência diferenciada de <strong>Pilates Clínico em Aparelhos</strong>, no coração do Bairro Areal (Av. Bento Gonçalves, 2146).
+                  Procurando as melhores aulas de{" "}
+                  <strong>pilates em Pelotas</strong>? O{" "}
+                  <strong>estúdio de Pilates da Clínica Reabilitare</strong>{" "}
+                  oferece uma experiência diferenciada de{" "}
+                  <strong>Pilates Clínico em Aparelhos</strong>, no coração do
+                  Bairro Areal (Av. Bento Gonçalves, 2146).
                 </p>
                 <p>
-                  Diferente de academias convencionais com turmas cheias, nossas aulas são conduzidas diretamente por <strong>fisioterapeutas especialistas</strong> com turmas reduzidas. Essa atenção próxima garante que cada exercício seja ajustado às particularidades do seu corpo, garantindo resultados rápidos no alívio de dores na coluna, fortalecimento do core, reeducação postural e ganho de flexibilidade.
+                  Diferente de academias convencionais com turmas cheias, nossas
+                  aulas são conduzidas diretamente por{" "}
+                  <strong>fisioterapeutas especialistas</strong> com turmas
+                  reduzidas. Essa atenção próxima garante que cada exercício
+                  seja ajustado às particularidades do seu corpo, garantindo
+                  resultados rápidos no alívio de dores na coluna,
+                  fortalecimento do core, reeducação postural e ganho de
+                  flexibilidade.
                 </p>
               </section>
             </ScrollReveal>
@@ -274,7 +293,8 @@ export default function PilatesPage() {
                     Pilates Completo em Aparelhos em Pelotas
                   </h2>
                   <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
-                    Contamos com a linha clássica completa do Método Pilates em ambiente climatizado e preparado para seu conforto.
+                    Contamos com a linha clássica completa do Método Pilates em
+                    ambiente climatizado e preparado para seu conforto.
                   </p>
                 </div>
               </ScrollReveal>
@@ -409,7 +429,8 @@ export default function PilatesPage() {
                 >
                   Fisioterapia em Pelotas
                 </Link>{" "}
-                para um resultado corporal completo, reabilitação e alívio duradouro de dores.
+                para um resultado corporal completo, reabilitação e alívio
+                duradouro de dores.
               </p>
             </section>
           </div>

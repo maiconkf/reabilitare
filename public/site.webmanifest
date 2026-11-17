@@ -1,7 +1,7 @@
 {
-  "name": "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas",
+  "name": "Clínica Reabilitare - Fisioterapia, Pilates e Quiropraxia em Pelotas",
   "short_name": "Reabilitare",
-  "description": "Clínica especializada em Fisioterapia e Pilates Clínico em Pelotas-RS.",
+  "description": "Clínica especializada em Fisioterapia, Pilates Clínico e Quiropraxia em Pelotas-RS.",
   "start_url": "/",
   "lang": "pt-BR",
   "icons": [
@@ -17,6 +17,6 @@
     }
   ],
   "theme_color": "#064e3b",
-  "background_color": "#fcfcfc",
+  "background_color": "#f8faf9",
   "display": "standalone"
 }

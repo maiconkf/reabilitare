@@ -3,6 +3,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Main from "@/components/main";
 import Services from "@/components/services";
+import WaitlistBanner from "@/components/WaitlistBanner";
 import FaqAccordion from "@/components/FaqAccordion";
 import ScrollReveal from "@/components/ScrollReveal";
 import type { Metadata } from "next";
@@ -13,10 +14,10 @@ const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Fisioterapia e Pilates em Pelotas | Fisioterapeuta - Reabilitare",
+    absolute: "Fisioterapia, Pilates e Quiropraxia em Pelotas | Reabilitare",
   },
   description:
-    "Procurando fisioterapia ou pilates em Pelotas? A Clínica Reabilitare (Areal) oferece atendimento com fisioterapeuta especialista para coluna, postura e reabilitação. Agende!",
+    "Clínica Reabilitare em Pelotas (Areal): Especialistas em Fisioterapia, Pilates Clínico e Quiropraxia. Atendimento individualizado para dores na coluna, lesões e postura. Agende!",
   alternates: {
     canonical: "/",
   },
@@ -26,7 +27,7 @@ const homeFaq = [
   {
     question: "Quais serviços a Clínica Reabilitare oferece em Pelotas?",
     answer:
-      "Oferecemos atendimentos especializados de Fisioterapia (ortopédica, traumatológica, pós-operatória e alívio de dores) e aulas personalizadas de Pilates Clínico para correção postural, fortalecimento muscular e flexibilidade.",
+      "Oferecemos atendimentos especializados de Fisioterapia (ortopédica, traumatológica, pós-operatória e alívio de dores), Pilates Clínico personalizado e Quiropraxia (ajustes vertebrais e descompressão articular).",
   },
   {
     question: "A Clínica Reabilitare atende por convênio em Pelotas?",
@@ -35,15 +36,20 @@ const homeFaq = [
   },
   {
     question:
-      "Preciso de pedido ou encaminhamento médico para iniciar a Fisioterapia ou Pilates?",
+      "Preciso de pedido ou encaminhamento médico para iniciar Fisioterapia, Pilates ou Quiropraxia?",
     answer:
-      "Não é obrigatório encaminhamento prévio. Nossos fisioterapeutas realizam uma avaliação clínica e biomecânica completa no primeiro atendimento para traçar o melhor plano para o seu caso.",
+      "Não é obrigatório encaminhamento prévio. Nossos profissionais realizam uma avaliação clínica e biomecânica completa no primeiro atendimento para traçar o melhor plano para o seu caso.",
   },
   {
     question:
       "Onde fica a Clínica Reabilitare em Pelotas e qual o horário de funcionamento?",
     answer:
       "Estamos localizados na Av. Bento Gonçalves, 2146, no bairro Areal em Pelotas/RS, em ambiente moderno, climatizado e com estacionamento facilitado. Funcionamos de segunda a sexta-feira, das 08h às 20h, com horário agendado.",
+  },
+  {
+    question: "Como funciona a consulta de Quiropraxia e quem pode fazer?",
+    answer:
+      "A consulta inclui anamnese detalhada, testes ortopédicos e palpatórios da coluna e articulações, seguidos de ajustes específicos e indolores para restaurar o alinhamento, aliviar dores e melhorar a mobilidade.",
   },
   {
     question: "Como agendar uma avaliação na clínica?",
@@ -66,9 +72,9 @@ export default function Home() {
                 medicalSpecialty: ["Physiotherapy", "Musculoskeletal"],
                 "@id": "https://www.clinicareabilitare.com/#organization",
                 name: "Clínica Reabilitare",
-                alternateName: "Reabilitare Fisioterapia e Pilates em Pelotas",
+                alternateName: "Reabilitare Fisioterapia, Pilates e Quiropraxia em Pelotas",
                 description:
-                  "Clínica especializada em fisioterapia em Pelotas e pilates em Pelotas (Bairro Areal). Tratamentos personalizados para dores na coluna, lesões, reabilitação pós-operatória e bem-estar. Agende sua consulta!",
+                  "Clínica especializada em fisioterapia, pilates e quiropraxia em Pelotas (Bairro Areal). Tratamentos personalizados para dores na coluna, hérnia de disco, lesões, reabilitação pós-operatória, ajuste vertebral e bem-estar.",
                 url: "https://www.clinicareabilitare.com",
                 logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
                 image: [
@@ -109,26 +115,36 @@ export default function Home() {
                 },
                 hasOfferCatalog: {
                   "@type": "OfferCatalog",
-                  name: "Serviços de Fisioterapia e Pilates em Pelotas",
+                  name: "Serviços de Fisioterapia, Pilates e Quiropraxia em Pelotas",
                   itemListElement: [
                     {
                       "@type": "Offer",
                       itemOffered: {
                         "@type": "MedicalTherapy",
-                        name: "Fisioterapia em Pelotas",
+                        name: "Fisioterapia Especializada em Pelotas",
                         url: "https://www.clinicareabilitare.com/fisioterapia-pelotas",
                         description:
-                          "Tratamentos de fisioterapia especializada para dores, lesões, reabilitação pós-operatória e correção postural em Pelotas RS",
+                          "Tratamentos de fisioterapia ortopédica, traumatológica, reabilitação pós-operatória, alívio de dores e correção postural em Pelotas RS",
                       },
                     },
                     {
                       "@type": "Offer",
                       itemOffered: {
                         "@type": "Service",
-                        name: "Pilates em Pelotas",
+                        name: "Estúdio de Pilates Clínico em Pelotas",
                         url: "https://www.clinicareabilitare.com/pilates-pelotas",
                         description:
-                          "Aulas de pilates clínico para fortalecimento, flexibilidade e consciência corporal em Pelotas RS",
+                          "Aulas de pilates clínico personalizadas para fortalecimento do core, coluna, flexibilidade e consciência corporal em Pelotas RS",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "MedicalTherapy",
+                        name: "Quiropraxia e Ajuste Vertebral em Pelotas",
+                        url: "https://www.clinicareabilitare.com/quiropraxia-pelotas",
+                        description:
+                          "Ajustes articulares e vertebrais para alinhamento da coluna, tratamento de hérnia de disco, nervo ciático e alívio imediato de dores em Pelotas RS",
                       },
                     },
                   ],
@@ -171,10 +187,10 @@ export default function Home() {
                 "@type": "WebSite",
                 "@id": "https://www.clinicareabilitare.com/#website",
                 url: "https://www.clinicareabilitare.com",
-                name: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas",
+                name: "Clínica Reabilitare - Fisioterapia, Pilates e Quiropraxia em Pelotas",
                 inLanguage: "pt-BR",
                 description:
-                  "Site oficial da Clínica Reabilitare, especializada em fisioterapia e pilates no Bairro Areal em Pelotas RS",
+                  "Site oficial da Clínica Reabilitare, especializada em fisioterapia, pilates e quiropraxia no Bairro Areal em Pelotas RS",
                 publisher: {
                   "@id": "https://www.clinicareabilitare.com/#organization",
                 },
@@ -198,6 +214,7 @@ export default function Home() {
         <Header />
         <Main />
       </div>
+      <WaitlistBanner />
       <Services />
       <Agreements />
       <Ratings />

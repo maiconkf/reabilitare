@@ -38,9 +38,10 @@ export default function Main() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] font-extrabold text-white mb-3.5 leading-[1.15] tracking-tight opacity-0 animate-fade-up delay-100">
-              <strong className="font-extrabold text-white">Fisioterapia</strong> e{" "}
-              <strong className="font-extrabold text-emerald-300">Pilates</strong>{" "}
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.75rem] font-extrabold text-white mb-3.5 leading-[1.15] tracking-tight animate-fade-up">
+              <strong className="font-extrabold text-white">Fisioterapia</strong>,{" "}
+              <strong className="font-extrabold text-white">Pilates</strong> e{" "}
+              <strong className="font-extrabold text-emerald-300">Quiropraxia</strong>{" "}
               em Pelotas: Recupere sua liberdade de{" "}
               <em className="not-italic bg-gradient-to-r from-emerald-200 via-teal-200 to-amber-200 bg-clip-text text-transparent">
                 movimento!
@@ -50,18 +51,19 @@ export default function Main() {
             {/* Subtitle with SEO keywords */}
             <h2 className="text-sm sm:text-base max-w-xl font-normal text-emerald-50/85 mb-6 leading-relaxed animate-fade-up">
               A Clínica Reabilitare é especialista em{" "}
-              <strong className="font-semibold text-white">fisioterapia em Pelotas</strong> e{" "}
-              <strong className="font-semibold text-white">pilates em Pelotas</strong>.
-              Tratamentos personalizados para alívio da dor, reabilitação e
+              <strong className="font-semibold text-white">fisioterapia em Pelotas</strong>,{" "}
+              <strong className="font-semibold text-white">pilates em Pelotas</strong> e{" "}
+              <strong className="font-semibold text-white">quiropraxia em Pelotas</strong>.
+              Tratamentos personalizados para alívio da dor, alinhamento vertebral e
               qualidade de vida.
             </h2>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 w-full animate-fade-up">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 w-full animate-fade-up">
               <WhatsAppButton
                 href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20fisioterapia."
                 aria-label="Agendar avaliação de Fisioterapia pelo WhatsApp"
-                className="group inline-flex items-center justify-center gap-2 rounded-full cursor-pointer text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 bg-white text-emerald-950 hover:bg-emerald-50 shadow-lg shadow-black/15 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
+                className="group inline-flex items-center justify-center gap-2 rounded-full cursor-pointer text-sm font-bold px-5 py-2.5 sm:py-3 transition-all duration-300 bg-white text-emerald-950 hover:bg-emerald-50 shadow-lg shadow-black/15 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
               >
                 <span>Agendar Fisioterapia</span>
                 <svg
@@ -78,9 +80,20 @@ export default function Main() {
               <WhatsAppButton
                 href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20as%20aulas%20de%20pilates."
                 aria-label="Agendar aula de Pilates pelo WhatsApp"
-                className="inline-flex items-center justify-center gap-2 border border-white/25 rounded-full cursor-pointer text-sm sm:text-base font-bold px-6 py-3 transition-all duration-300 bg-white/10 text-white backdrop-blur-md hover:bg-white/20 hover:border-white/40 hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 border border-white/25 rounded-full cursor-pointer text-sm font-bold px-5 py-2.5 sm:py-3 transition-all duration-300 bg-white/10 text-white backdrop-blur-md hover:bg-white/20 hover:border-white/40 hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
               >
                 <span>Agendar Pilates</span>
+              </WhatsAppButton>
+
+              <WhatsAppButton
+                href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20atendimentos%20de%20quiropraxia."
+                aria-label="Agendar atendimento de Quiropraxia pelo WhatsApp"
+                className="relative inline-flex items-center justify-center gap-2 border border-emerald-300/35 rounded-full cursor-pointer text-sm font-bold px-5 py-2.5 sm:py-3 transition-all duration-300 bg-emerald-800/50 text-white backdrop-blur-md hover:bg-emerald-700/60 hover:border-emerald-300/60 hover:-translate-y-0.5 active:translate-y-0 whitespace-nowrap"
+              >
+                <span>Agendar Quiropraxia</span>
+                <span className="bg-amber-400 text-emerald-950 text-[10px] font-extrabold uppercase tracking-wider px-2 py-0.5 rounded-full shadow-xs">
+                  Novidade
+                </span>
               </WhatsAppButton>
             </div>
 
@@ -118,7 +131,7 @@ export default function Main() {
 
             <Image
               src="/kauane-ramos-fisioterapia-pelotas.webp"
-              alt="Kauane Ramos - Fisioterapeuta especializada em fisioterapia e pilates em Pelotas"
+              alt="Kauane Ramos - Fisioterapeuta especializada em fisioterapia, pilates e quiropraxia em Pelotas"
               width={810}
               height={1013}
               priority

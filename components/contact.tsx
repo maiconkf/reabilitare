@@ -19,7 +19,7 @@ const Contact = () => {
                 Pronto para dar o primeiro passo?
               </h2>
               <p className="text-emerald-100/85 text-base sm:text-lg mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Saiba mais sobre nossos serviços de fisioterapia e pilates em Pelotas. Nossa equipe está pronta para cuidar da sua recuperação.
+                Saiba mais sobre nossos serviços de fisioterapia, pilates e quiropraxia em Pelotas. Nossa equipe está pronta para cuidar da sua recuperação.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left max-w-xl mx-auto lg:mx-0">

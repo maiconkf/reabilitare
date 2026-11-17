@@ -24,25 +24,31 @@ export const metadata: Metadata = {
     },
   },
   title: {
-    default: "Clínica Reabilitare | Fisioterapia e Pilates em Pelotas - RS",
+    default:
+      "Clínica Reabilitare | Fisioterapia, Pilates e Quiropraxia em Pelotas - RS",
     template: "%s | Clínica Reabilitare",
   },
   description:
-    "Procurando fisioterapia em Pelotas ou pilates em Pelotas? A Clínica Reabilitare (Bairro Areal) oferece tratamentos especializados para dores na coluna, lesões, pós-operatório e postura. Atendemos particular e convênios (Prevpel, IBCM, ASPRA, ASSTBM, Cabergs). Agende sua avaliação!",
+    "Procurando fisioterapia, pilates ou quiropraxia em Pelotas? A Clínica Reabilitare (Bairro Areal) oferece tratamentos especializados para dor na coluna, lesões, pós-operatório e postura. Atendemos particular e convênios (Prevpel, IBCM, ASPRA, ASSTBM, Cabergs). Agende sua avaliação!",
   keywords: [
     "fisioterapia pelotas",
     "pilates pelotas",
+    "quiropraxia pelotas",
+    "quiropraxista pelotas",
+    "ajuste vertebral pelotas",
     "fisioterapeuta pelotas",
     "clínica de fisioterapia pelotas",
     "pilates clínico pelotas",
     "estúdio de pilates pelotas",
     "fisioterapia em pelotas rs",
     "pilates em pelotas rs",
+    "quiropraxia em pelotas rs",
     "fisioterapia bairro areal pelotas",
     "tratamento de dor pelotas",
     "tratamento de coluna pelotas",
+    "hérnia de disco pelotas",
+    "nervo ciático pelotas",
     "fisioterapia pós-operatória pelotas",
-    "fisioterapia ortopédica pelotas",
     "fisioterapia prevpel pelotas",
     "fisioterapia ibcm pelotas",
     "fisioterapia cabergs pelotas",
@@ -73,15 +79,16 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas-RS",
+    title:
+      "Clínica Reabilitare - Fisioterapia, Pilates e Quiropraxia em Pelotas-RS",
     description:
-      "Fisioterapia e pilates personalizados em Pelotas (Av. Bento Gonçalves, 2146 - Areal). Tratamentos eficazes para dor, lesões e bem-estar. Agende sua consulta na Reabilitare!",
+      "Fisioterapia, pilates e quiropraxia personalizados em Pelotas (Av. Bento Gonçalves, 2146 - Areal). Tratamentos eficazes para dor, lesões, alinhamento vertebral e bem-estar. Agende sua consulta!",
     images: [
       {
         url: "/cover.png",
         width: 1200,
         height: 630,
-        alt: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas RS",
+        alt: "Clínica Reabilitare - Fisioterapia, Pilates e Quiropraxia em Pelotas RS",
       },
     ],
     url: "https://www.clinicareabilitare.com",
@@ -92,9 +99,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@clinicareabilitare",
-    title: "Clínica Reabilitare - Fisioterapia e Pilates em Pelotas-RS",
+    title:
+      "Clínica Reabilitare - Fisioterapia, Pilates e Quiropraxia em Pelotas-RS",
     description:
-      "Especialistas em Fisioterapia e Pilates Clínico em Pelotas-RS. Agende sua avaliação na Clínica Reabilitare!",
+      "Especialistas em Fisioterapia, Pilates Clínico e Quiropraxia em Pelotas-RS. Agende sua avaliação na Clínica Reabilitare!",
     images: ["/cover.png"],
   },
   other: {

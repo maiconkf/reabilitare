@@ -12,32 +12,35 @@ import dynamic from "next/dynamic";
 const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
-  title: "Fisioterapia e Pilates em Pelotas | Clínica Especializada",
+  title: "Fisioterapia, Pilates e Quiropraxia em Pelotas | Clínica Especializada",
   description:
-    "Procurando fisioterapia em Pelotas ou pilates em Pelotas? A Clínica Reabilitare oferece tratamentos especializados com profissionais qualificados. Agende sua avaliação!",
+    "Procurando fisioterapia, pilates ou quiropraxia em Pelotas? A Clínica Reabilitare oferece tratamentos especializados com profissionais qualificados. Agende sua avaliação!",
   keywords: [
     "fisioterapia pelotas",
     "pilates pelotas",
+    "quiropraxia pelotas",
+    "quiropraxista pelotas",
     "fisioterapeuta pelotas",
     "clínica de fisioterapia pelotas",
     "pilates clínico pelotas",
     "fisioterapia em pelotas rs",
     "pilates em pelotas rs",
+    "quiropraxia em pelotas rs",
   ],
   alternates: {
-    canonical: "/fisioterapia-pilates-pelotas",
+    canonical: "/fisioterapia-pilates-quiropraxia-pelotas",
   },
   openGraph: {
-    title: "Fisioterapia e Pilates em Pelotas | Clínica Reabilitare",
+    title: "Fisioterapia, Pilates e Quiropraxia em Pelotas | Clínica Reabilitare",
     description:
-      "Clínica especializada em fisioterapia e pilates em Pelotas. Tratamentos personalizados para dores, reabilitação e bem-estar. Agende agora!",
-    url: "https://www.clinicareabilitare.com/fisioterapia-pilates-pelotas",
+      "Clínica especializada em fisioterapia, pilates e quiropraxia em Pelotas. Tratamentos personalizados para dores, reabilitação e bem-estar. Agende agora!",
+    url: "https://www.clinicareabilitare.com/fisioterapia-pilates-quiropraxia-pelotas",
     images: "/cover.png",
   },
   twitter: {
-    title: "Fisioterapia e Pilates em Pelotas | Clínica Reabilitare",
+    title: "Fisioterapia, Pilates e Quiropraxia em Pelotas | Clínica Reabilitare",
     description:
-      "Clínica especializada em fisioterapia e pilates em Pelotas. Tratamentos personalizados para dores, reabilitação e bem-estar. Agende agora!",
+      "Clínica especializada em fisioterapia, pilates e quiropraxia em Pelotas. Tratamentos personalizados para dores, reabilitação e bem-estar. Agende agora!",
     images: ["/cover.png"],
   },
 };
@@ -55,10 +58,10 @@ export default function Home() {
                 "@type": "MedicalClinic",
                 medicalSpecialty: "Physiotherapy",
                 "@id": "https://www.clinicareabilitare.com/#organization",
-                name: "Clínica Reabilitare - Fisioterapia e Pilates",
+                name: "Clínica Reabilitare - Fisioterapia, Pilates e Quiropraxia",
                 description:
-                  "Clínica especializada em fisioterapia e pilates em Pelotas, RS. Oferecemos tratamentos personalizados para dores, lesões, reabilitação e bem-estar.",
-                url: "https://www.clinicareabilitare.com/fisioterapia-pilates-pelotas",
+                  "Clínica especializada em fisioterapia, pilates e quiropraxia em Pelotas, RS. Oferecemos tratamentos personalizados para dores, lesões, reabilitação e bem-estar.",
+                url: "https://www.clinicareabilitare.com/fisioterapia-pilates-quiropraxia-pelotas",
                 logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
                 image: [
                   "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
@@ -92,7 +95,7 @@ export default function Home() {
                 },
                 hasOfferCatalog: {
                   "@type": "OfferCatalog",
-                  name: "Serviços de Fisioterapia e Pilates",
+                  name: "Serviços de Fisioterapia, Pilates e Quiropraxia",
                   itemListElement: [
                     {
                       "@type": "Offer",
@@ -110,6 +113,15 @@ export default function Home() {
                         name: "Pilates em Pelotas",
                         description:
                           "Aulas de pilates para fortalecimento, flexibilidade e consciência corporal",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Quiropraxia em Pelotas",
+                        description:
+                          "Ajustes articulares e vertebrais para restauração do alinhamento da coluna",
                       },
                     },
                   ],
@@ -151,8 +163,8 @@ export default function Home() {
                   {
                     "@type": "ListItem",
                     position: 2,
-                    name: "Fisioterapia e Pilates em Pelotas",
-                    item: "https://www.clinicareabilitare.com/fisioterapia-pilates-pelotas",
+                    name: "Fisioterapia, Pilates e Quiropraxia em Pelotas",
+                    item: "https://www.clinicareabilitare.com/fisioterapia-pilates-quiropraxia-pelotas",
                   },
                 ],
               },
@@ -161,14 +173,9 @@ export default function Home() {
         }}
       />
       <Header />
-
-      <InternalHero
-        title={
-          <>
-            Fisioterapia e{" "}
-            <strong className="text-emerald-300 font-extrabold">Pilates</strong>
-          </>
-        }
+      
+      <InternalHero 
+        title={<>Fisioterapia, Pilates e <strong className="text-emerald-300 font-extrabold">Quiropraxia</strong></>}
         subtitle="Sua Clínica Especializada no bairro Areal, Pelotas. Tudo para sua reabilitação em um só lugar."
       />
 
@@ -179,17 +186,10 @@ export default function Home() {
             <ScrollReveal>
               <section className="prose prose-lg md:prose-xl prose-emerald max-w-none text-gray-600 leading-relaxed mb-16">
                 <p>
-                  Está procurando <strong>fisioterapia em Pelotas</strong> ou{" "}
-                  <strong>pilates em Pelotas</strong>? A{" "}
-                  <strong>Clínica Reabilitare</strong> é referência em
-                  tratamentos especializados na cidade. Cada serviço é realizado
-                  de forma dedicada, garantindo atenção total às necessidades de
-                  cada paciente.
+                  Está procurando <strong>fisioterapia em Pelotas</strong>, <strong>pilates em Pelotas</strong> ou <strong>quiropraxia em Pelotas</strong>? A <strong>Clínica Reabilitare</strong> é referência em tratamentos especializados na cidade. Cada serviço é realizado de forma dedicada, garantindo atenção total às necessidades de cada paciente.
                 </p>
                 <p>
-                  Localizada no bairro Areal, nossa clínica conta com{" "}
-                  <strong>profissionais qualificados</strong> e infraestrutura
-                  moderna para oferecer o melhor tratamento da região.
+                  Localizada no bairro Areal, nossa clínica conta com <strong>profissionais qualificados</strong> e infraestrutura moderna para oferecer o melhor tratamento da região.
                 </p>
               </section>
             </ScrollReveal>
@@ -202,9 +202,7 @@ export default function Home() {
                     Fisioterapia Especializada
                   </h2>
                   <p className="text-gray-600 text-lg mb-8">
-                    Nossa fisioterapia oferece tratamentos para dores, lesões e
-                    reabilitação funcional. Cada paciente recebe atenção
-                    individual e um plano personalizado para recuperação eficaz.
+                    Nossa fisioterapia oferece tratamentos para dores, lesões e reabilitação funcional. Cada paciente recebe atenção individual e um plano personalizado para recuperação eficaz.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Link
@@ -232,9 +230,7 @@ export default function Home() {
                     Estúdio de Pilates
                   </h2>
                   <p className="text-gray-600 text-lg mb-8">
-                    O Pilates é focado em melhorar postura, força, flexibilidade
-                    e consciência corporal. É indicado para quem busca
-                    bem-estar, condicionamento físico e prevenção de lesões.
+                    O Pilates é focado em melhorar postura, força, flexibilidade e consciência corporal. É indicado para quem busca bem-estar, condicionamento físico e prevenção de lesões.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Link
@@ -255,9 +251,37 @@ export default function Home() {
                   </div>
                 </section>
               </ScrollReveal>
+
+              <ScrollReveal delay={300}>
+                <section className="bg-emerald-50/30 rounded-3xl p-8 md:p-10 border border-emerald-100 hover:shadow-lg transition-all duration-300">
+                  <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
+                    Quiropraxia Clínica
+                  </h2>
+                  <p className="text-gray-600 text-lg mb-8">
+                    A Quiropraxia é focada no alinhamento da coluna vertebral e restauração do equilíbrio articular. Auxilia no alívio rápido de dores nas costas, pescoço e articulações, devolvendo mobilidade.
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Link
+                      href="/quiropraxia-pelotas"
+                      aria-label="Saiba mais sobre Quiropraxia Clínica em Pelotas"
+                      className="inline-flex items-center justify-center font-bold px-8 py-3 bg-white text-(--color-emerald-800) border border-emerald-200 rounded-full hover:bg-emerald-50 transition-colors shadow-xs"
+                    >
+                      <span>Saiba Mais</span>
+                      <span className="sr-only"> sobre Quiropraxia Clínica em Pelotas</span>
+                    </Link>
+                    <WhatsAppButton
+                      href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20atendimentos%20de%20quiropraxia."
+                      className="inline-flex items-center gap-2 border-none rounded-full cursor-pointer text-base md:text-lg font-bold px-8 py-3 bg-(--color-emerald-800) text-white hover:bg-emerald-900 transition-all shadow-md hover:shadow-xl hover:-translate-y-1"
+                      aria-label="Agendar atendimento de Quiropraxia pelo WhatsApp"
+                    >
+                      Agendar Quiropraxia <span className="text-xl">→</span>
+                    </WhatsAppButton>
+                  </div>
+                </section>
+              </ScrollReveal>
             </div>
           </div>
-
+          
           <div className="mt-20">
             <Contact />
           </div>
