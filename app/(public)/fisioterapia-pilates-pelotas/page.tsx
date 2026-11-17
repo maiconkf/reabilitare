@@ -83,8 +83,8 @@ export default function Home() {
                 },
                 geo: {
                   "@type": "GeoCoordinates",
-                  latitude: -31.7649,
-                  longitude: -52.3371,
+                  latitude: -31.7650111,
+                  longitude: -52.3255797,
                 },
                 areaServed: {
                   "@type": "City",
