@@ -13,28 +13,30 @@ import dynamic from "next/dynamic";
 const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
-  title: "Quiropraxia em Pelotas - Ajuste Vertebral e Alívio de Dores",
+  title: {
+    absolute: "Quiropraxia em Pelotas | Quiropraxista e Ajuste Vertebral",
+  },
   description:
-    "Quiropraxia em Pelotas na Clínica Reabilitare (Bairro Areal). Ajustes vertebrais e articulares seguros para dor na coluna, hérnia de disco, nervo ciático, cervicalgia e postura. Agende sua consulta!",
+    "Quiropraxia em Pelotas na Clínica Reabilitare (Areal). Ajustes vertebrais e articulares seguros para dor na coluna, hérnia de disco, nervo ciático e torcicolo. Alívio rápido. Agende!",
   keywords: [
     "quiropraxia pelotas",
     "quiropraxista pelotas",
+    "quiropraxista em pelotas",
+    "quiropraxia em pelotas",
     "ajuste vertebral pelotas",
     "tratamento de coluna pelotas",
-    "alinhamento vertebral pelotas",
-    "quiropraxia em pelotas rs",
+    "alinhamento da coluna pelotas",
+    "nervo ciático quiropraxia pelotas",
+    "hérnia de disco quiropraxia pelotas",
     "quiropraxia bairro areal pelotas",
-    "dor na coluna pelotas",
-    "hérnia de disco pelotas",
-    "nervo ciático pelotas",
   ],
   alternates: {
     canonical: "/quiropraxia-pelotas",
   },
   openGraph: {
-    title: "Quiropraxia em Pelotas | Clínica Reabilitare - Ajuste Vertebral",
+    title: "Quiropraxia em Pelotas | Quiropraxista e Ajuste Vertebral",
     description:
-      "Procurando quiropraxia em Pelotas? A Clínica Reabilitare oferece atendimentos especializados para alinhamento da coluna e alívio imediato de dores. Agende agora!",
+      "Procurando quiropraxia em Pelotas? A Clínica Reabilitare oferece atendimentos especializados para alinhamento da coluna e alívio de dores. Agende agora!",
     url: "https://www.clinicareabilitare.com/quiropraxia-pelotas",
     type: "website",
     locale: "pt_BR",
@@ -50,12 +52,40 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quiropraxia em Pelotas | Clínica Reabilitare - Ajuste Vertebral",
+    title: "Quiropraxia em Pelotas | Quiropraxista e Ajuste Vertebral",
     description:
-      "Procurando quiropraxia em Pelotas? A Clínica Reabilitare oferece atendimentos especializados para alinhamento da coluna e alívio de dores. Agende agora!",
+      "Ajustes vertebrais precisos e indolores para alívio imediato de dores na coluna no Bairro Areal em Pelotas.",
     images: ["/cover.png"],
   },
 };
+
+const quiropraxiaFaq = [
+  {
+    question: "O que é Quiropraxia e como ela ajuda nas dores da coluna em Pelotas?",
+    answer:
+      "A Quiropraxia é uma área da saúde focada no diagnóstico, tratamento e prevenção de desordens neuro-músculo-esqueléticas, com ênfase na coluna vertebral. Por meio de ajustes rápidos e precisos, removemos interferências articulares (subluxações) que comprimem raízes nervosas, devolvendo a mobilidade natural e eliminando a dor.",
+  },
+  {
+    question: "Os ajustes vertebrais da quiropraxia doem ou são perigosos?",
+    answer:
+      "Não doem e são extremamente seguros quando realizados por profissionais qualificados após uma criteriosa avaliação biomecânica. O famoso estalo audível durante o ajuste é apenas a liberação de gás da cavidade articular (cavitação), resultando em alívio imediato da pressão e sensação de leveza.",
+  },
+  {
+    question: "A quiropraxia é indicada para quem tem hérnia de disco ou nervo ciático?",
+    answer:
+      "Sim! É uma das indicações mais frequentes na Clínica Reabilitare em Pelotas. Os ajustes descomprimem os forames intervertebrais por onde passam as raízes do nervo ciático, aliviando a queimação, dormência e irradiação para glúteos e pernas.",
+  },
+  {
+    question: "Quantas sessões de quiropraxia são necessárias para sentir melhora?",
+    answer:
+      "A grande maioria dos pacientes relata alívio significativo de dor e relaxamento muscular logo após o primeiro atendimento. A continuidade do plano é planejada conforme a cronicidade da lesão e os objetivos de alinhamento postural a longo prazo.",
+  },
+  {
+    question: "Como agendar uma consulta de quiropraxia na Clínica Reabilitare em Pelotas?",
+    answer:
+      "O agendamento é rápido e direto via WhatsApp no número (53) 99166-9801. Nossa clínica fica na Av. Bento Gonçalves, 2146, no bairro Areal em Pelotas/RS, com estacionamento facilitado e atendimento com hora marcada.",
+  },
+];
 
 export default function QuiropraxiaPage() {
   return (
@@ -70,14 +100,15 @@ export default function QuiropraxiaPage() {
                 "@type": ["MedicalClinic", "LocalBusiness"],
                 medicalSpecialty: ["Physiotherapy", "Musculoskeletal"],
                 "@id": "https://www.clinicareabilitare.com/#organization",
-                name: "Clínica Reabilitare - Quiropraxia em Pelotas",
+                name: "Clínica Reabilitare - Quiropraxia e Quiropraxista em Pelotas",
+                alternateName: "Quiropraxia em Pelotas - Reabilitare",
                 description:
-                  "Quiropraxia em Pelotas com profissionais qualificados. Tratamento de dores na coluna, ajustes articulares e alinhamento vertebral.",
+                  "Quiropraxia em Pelotas com profissionais qualificados. Tratamento de dores na coluna, ajustes articulares indolores e alinhamento vertebral seguro.",
                 url: "https://www.clinicareabilitare.com/quiropraxia-pelotas",
                 logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
                 image: [
-                  "https://www.clinicareabilitare.com/foto-clinica.webp",
                   "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
+                  "https://www.clinicareabilitare.com/cover.png",
                 ],
                 telephone: "+55-53-99166-9801",
                 priceRange: "$$",
@@ -94,6 +125,11 @@ export default function QuiropraxiaPage() {
                   "@type": "GeoCoordinates",
                   latitude: -31.7650111,
                   longitude: -52.3255797,
+                },
+                areaServed: {
+                  "@type": "City",
+                  name: "Pelotas",
+                  "@id": "https://www.wikidata.org/wiki/Q170851",
                 },
                 aggregateRating: {
                   "@type": "AggregateRating",
@@ -116,6 +152,28 @@ export default function QuiropraxiaPage() {
                     "@type": "EducationalOccupationalCredential",
                     credentialCategory: "CREFITO-5: 375851-F",
                   },
+                },
+                hasOfferCatalog: {
+                  "@type": "OfferCatalog",
+                  name: "Atendimentos de Quiropraxia em Pelotas",
+                  itemListElement: [
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "MedicalTherapy",
+                        name: "Ajuste Vertebral e Articular",
+                        description: "Manobras biomecânicas de alta velocidade e baixa amplitude para restauração do eixo da coluna.",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "MedicalTherapy",
+                        name: "Tratamento de Dor Lombar e Ciático",
+                        description: "Descompressão articular para alívio imediato de pinçamento radicular.",
+                      },
+                    },
+                  ],
                 },
                 sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
                 openingHoursSpecification: [
@@ -152,55 +210,42 @@ export default function QuiropraxiaPage() {
               },
               {
                 "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: "Quiropraxia dói ou é perigosa?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Não! Os ajustes quiropráticos são indolores, precisos e extremamente seguros quando realizados por profissionais capacitados após uma criteriosa avaliação.",
-                    },
+                mainEntity: quiropraxiaFaq.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: faq.answer,
                   },
-                  {
-                    "@type": "Question",
-                    name: "Quantas sessões de quiropraxia são necessárias?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Muitos pacientes relatam alívio logo no primeiro atendimento. O plano ideal é definido de forma individualizada após a avaliação inicial.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Quais problemas a quiropraxia trata?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "A quiropraxia é indicada para dores lombares e cervicais, hérnia de disco, nervo ciático, tensões musculares, dores de cabeça tensionais e desequilíbrios articulares.",
-                    },
-                  },
-                ],
+                })),
               },
             ],
           }),
         }}
       />
       <Header />
-      
-      <InternalHero 
-        title={<>Quiropraxia em <strong className="text-emerald-300 font-extrabold">Pelotas</strong></>}
-        subtitle="Ajustes Vertebrais e Articulares para restauração do alinhamento corporal e alívio imediato de dores."
+
+      <InternalHero
+        title={
+          <>
+            Quiropraxia em{" "}
+            <strong className="text-emerald-300 font-extrabold">Pelotas</strong>
+          </>
+        }
+        subtitle="Ajustes Vertebrais e Articulares para alinhamento postural, descompressão e alívio imediato de dores."
       />
-      
+
       <div className="bg-white">
-        <main className="container mx-auto px-4 py-20">
+        <main className="container mx-auto px-4 py-16 sm:py-20">
           <div className="max-w-4xl mx-auto">
             {/* Intro Section */}
             <ScrollReveal>
               <section className="prose prose-lg md:prose-xl prose-emerald max-w-none text-gray-600 leading-relaxed mb-16">
                 <p>
-                  Procurando <strong>quiropraxia em Pelotas</strong>? A <strong>Clínica Reabilitare</strong> oferece atendimento especializado em <strong>ajustes vertebrais e articulares</strong> para restaurar o alinhamento natural do corpo e aliviar dores na coluna.
+                  Procurando <strong>quiropraxia em Pelotas</strong> ou atendimento com <strong>quiropraxista</strong> especializado? A <strong>Clínica Reabilitare</strong> oferece protocolos seguros e avançados de <strong>ajustes vertebrais e articulares</strong> para restaurar o alinhamento da coluna e eliminar a causa de dores agudas e crônicas.
                 </p>
                 <p>
-                  Localizada no bairro Areal, nossa clínica de <strong>quiropraxia em Pelotas, RS</strong> combina técnicas modernas e seguras para devolver sua mobilidade, aliviar tensões acumuladas e proporcionar bem-estar contínuo.
+                  Localizada no Bairro Areal (Av. Bento Gonçalves, 2146), nossa clínica oferece um espaço acolhedor e climatizado. Antes de qualquer ajuste, realizamos uma rigorosa avaliação postural e testes ortopédicos, garantindo intervenções precisas, seguras e confortáveis.
                 </p>
               </section>
             </ScrollReveal>
@@ -209,40 +254,69 @@ export default function QuiropraxiaPage() {
             <section className="mb-16">
               <ScrollReveal>
                 <div className="text-center mb-10">
+                  <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100/80 px-3.5 py-1.5 rounded-full inline-block mb-3">
+                    Principais Indicações
+                  </span>
                   <h2 className="text-3xl font-extrabold text-(--color-emerald-800) mb-4">
-                    Benefícios da Quiropraxia
+                    Benefícios da Quiropraxia na Reabilitare
                   </h2>
-                  <p className="text-gray-600 text-lg">Alívio imediato e saúde para sua coluna vertebral.</p>
+                  <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
+                    Alívio rápido de pressões mecânicas para sua coluna funcionar com máxima liberdade.
+                  </p>
                 </div>
               </ScrollReveal>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
                 {[
-                  "Alívio rápido de dores nas costas, pescoço e ombros",
-                  "Ajustes articulares para alinhamento correto da coluna",
-                  "Tratamento complementar para hérnias de disco e ciatalgia",
-                  "Redução de tensões musculares e dores de cabeça tensionais",
-                  "Melhora da mobilidade, postura e qualidade de vida"
+                  {
+                    title: "Dores na Coluna Lombar e Cervical",
+                    desc: "Alívio imediato de travamentos, rigidez no pescoço (torcicolo) e dores agudas na região lombar.",
+                  },
+                  {
+                    title: "Descompressão do Nervo Ciático",
+                    desc: "Redução da pressão sobre as raízes nervosas, cessando a irradiação de dor e formigamento para pernas e pés.",
+                  },
+                  {
+                    title: "Cefaleia Tensional e Enxaqueca",
+                    desc: "Diminuição das tensões musculares suboccipitais que disparam dores de cabeça e cansaço visual diário.",
+                  },
+                  {
+                    title: "Alinhamento Postural Global",
+                    desc: "Correção de assimetrias na pelve e nos ombros, distribuindo o peso corporal de forma equilibrada.",
+                  },
+                  {
+                    title: "Recuperação de Mobilidade Articular",
+                    desc: "Restauração do arco de movimento em vértebras bloqueadas, aumentando sua sensação de leveza.",
+                  },
+                  {
+                    title: "Melhora da Qualidade do Sono",
+                    desc: "Com o alívio das tensões acumuladas na coluna, seu corpo relaxa profundamente durante o descanso.",
+                  },
                 ].map((item, i) => (
-                  <ScrollReveal key={i} delay={i * 100}>
-                    <div className="bg-emerald-50/50 border border-emerald-100 rounded-2xl p-5 flex items-start gap-3 h-full hover:bg-emerald-50 hover:shadow-md transition-all">
-                      <span className="text-emerald-500 mt-0.5">
-                        <svg className="w-6 h-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                      </span>
-                      <span className="text-gray-700 font-medium">{item}</span>
+                  <ScrollReveal key={i} delay={i * 80}>
+                    <div className="bg-emerald-50/50 border border-emerald-100 rounded-2xl p-6 h-full hover:bg-emerald-50 hover:shadow-md transition-all">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">
+                          ✓
+                        </span>
+                        <h3 className="font-bold text-lg text-emerald-950">
+                          {item.title}
+                        </h3>
+                      </div>
+                      <p className="text-gray-600 text-sm leading-relaxed pl-7">
+                        {item.desc}
+                      </p>
                     </div>
                   </ScrollReveal>
                 ))}
               </div>
-              
+
               <ScrollReveal delay={200}>
                 <div className="text-center">
                   <WhatsAppButton
-                    href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20quiropraxia."
+                    href="https://wa.me/5553991669801?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta%20de%20Quiropraxia%20em%20Pelotas."
                     className="inline-flex items-center gap-2 border-none rounded-full cursor-pointer text-lg font-bold px-9 py-3.5 bg-(--color-emerald-800) text-white hover:bg-emerald-900 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-                    aria-label="Agendar atendimento de Quiropraxia pelo WhatsApp"
+                    aria-label="Agendar atendimento de Quiropraxia em Pelotas pelo WhatsApp"
                   >
                     Agendar Quiropraxia
                     <span className="text-xl">→</span>
@@ -256,22 +330,38 @@ export default function QuiropraxiaPage() {
               <ScrollReveal>
                 <div className="text-center mb-10">
                   <h2 className="text-3xl font-extrabold text-(--color-emerald-800) mb-4">
-                    Por que Escolher a Clínica Reabilitare?
+                    Por que Escolher a Reabilitare para Quiropraxia?
                   </h2>
                 </div>
               </ScrollReveal>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
-                  { title: "Profissionais Especializados", desc: "Equipe com alta capacitação em técnicas de ajustes articulares." },
-                  { title: "Avaliação Completa", desc: "Realizamos uma avaliação funcional detalhada antes de qualquer ajuste." },
-                  { title: "Técnicas Seguras", desc: "Ajustes indolores e adaptados para cada idade e condição física." },
-                  { title: "Infraestrutura Moderna", desc: "Clínica completa e equipada no bairro Areal para seu conforto." },
+                  {
+                    title: "Avaliação Biomecânica Rigorosa",
+                    desc: "Analisamos exames de imagem e a postura do paciente antes de realizar qualquer manipulação articular.",
+                  },
+                  {
+                    title: "Ajustes Confortáveis e Seguros",
+                    desc: "Manobras de alta precisão que respeitam a biomecânica e o limite de conforto de cada paciente.",
+                  },
+                  {
+                    title: "Integração Multidisciplinar",
+                    desc: "Possibilidade de combinar a quiropraxia com Fisioterapia e Pilates para manter a coluna estável a longo prazo.",
+                  },
+                  {
+                    title: "Ambiente Confortável no Areal",
+                    desc: "Fácil estacionamento, atendimento pontual e instalações modernas na Av. Bento Gonçalves, 2146.",
+                  },
                 ].map((item, i) => (
                   <ScrollReveal key={i} delay={i * 100}>
                     <div className="bg-white rounded-2xl p-6 shadow-xs border border-gray-100 h-full">
-                      <h3 className="font-bold text-lg text-(--color-emerald-800) mb-2">{item.title}</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+                      <h3 className="font-bold text-lg text-(--color-emerald-800) mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
                     </div>
                   </ScrollReveal>
                 ))}
@@ -281,47 +371,43 @@ export default function QuiropraxiaPage() {
             {/* FAQ Section */}
             <section className="mb-16">
               <ScrollReveal>
-                <div className="text-center mb-4">
+                <div className="text-center mb-6">
+                  <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100/80 px-3.5 py-1.5 rounded-full inline-block mb-3">
+                    Dúvidas Frequentes
+                  </span>
                   <h2 className="text-3xl font-extrabold text-(--color-emerald-800)">
-                    Perguntas Frequentes sobre Quiropraxia
+                    Perguntas Frequentes sobre Quiropraxia em Pelotas
                   </h2>
                 </div>
               </ScrollReveal>
-              <FaqAccordion 
-                items={[
-                  {
-                    question: "Quiropraxia dói ou é perigosa?",
-                    answer: "Não! Os ajustes quiropráticos são indolores, precisos e extremamente seguros quando realizados por profissionais capacitados após uma criteriosa avaliação inicial."
-                  },
-                  {
-                    question: "Quantas sessões de quiropraxia são necessárias?",
-                    answer: "Muitos pacientes relatam alívio imediato logo no primeiro atendimento. O plano ideal a longo prazo é definido de forma individualizada de acordo com o seu caso."
-                  },
-                  {
-                    question: "Quais problemas a quiropraxia trata?",
-                    answer: "É extremamente indicada para dores lombares e cervicais, hérnia de disco, nervo ciático, tensões musculares agudas, dores de cabeça tensionais e desequilíbrios articulares."
-                  }
-                ]} 
-              />
+              <FaqAccordion items={quiropraxiaFaq} />
             </section>
+
             {/* Cross-link Section */}
             <section className="mb-12 rounded-2xl bg-emerald-50/60 border border-emerald-100 p-6 sm:p-8 text-center">
               <h2 className="text-xl font-extrabold text-emerald-950 mb-2">
-                Conheça Também Fisioterapia e Pilates na Reabilitare
+                Conheça Também Nossas Outras Especialidades em Pelotas
               </h2>
               <p className="text-slate-600 text-sm sm:text-base mb-5">
-                Potencialize seus resultados combinando a quiropraxia com{" "}
-                <Link href="/fisioterapia-pelotas" className="text-emerald-800 font-bold underline">
+                Potencialize a saúde da sua coluna integrando o ajuste com{" "}
+                <Link
+                  href="/fisioterapia-pelotas"
+                  className="text-emerald-800 font-bold underline hover:text-emerald-950 transition-colors"
+                >
                   Fisioterapia em Pelotas
                 </Link>{" "}
                 e{" "}
-                <Link href="/pilates-pelotas" className="text-emerald-800 font-bold underline">
-                  Pilates Clínico em Pelotas
-                </Link>.
+                <Link
+                  href="/pilates-pelotas"
+                  className="text-emerald-800 font-bold underline hover:text-emerald-950 transition-colors"
+                >
+                  Estúdio de Pilates em Pelotas
+                </Link>{" "}
+                para resultados estáveis e duradouros.
               </p>
             </section>
           </div>
-          
+
           <div className="mt-16">
             <Contact />
           </div>

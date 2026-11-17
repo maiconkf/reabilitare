@@ -13,20 +13,25 @@ import dynamic from "next/dynamic";
 const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
-  title: "Fisioterapia em Pelotas - Ortopédica, Coluna e Pós-Operatório",
+  title: {
+    absolute: "Fisioterapia em Pelotas | Fisioterapeuta - Clínica Reabilitare",
+  },
   description:
-    "Procurando fisioterapia em Pelotas? A Clínica Reabilitare (Bairro Areal) oferece fisioterapia especializada para dores na coluna, lesões, pós-operatório e postura. Atendemos particular e convênios (Prevpel, IBCM, ASPRA, ASSTBM, Cabergs). Agende sua avaliação!",
+    "Procurando fisioterapia ou fisioterapeuta em Pelotas? A Clínica Reabilitare (Areal) oferece atendimento individualizado para dores na coluna, hérnia de disco, pós-operatório e lesões. Aceitamos convênios. Agende já!",
   keywords: [
     "fisioterapia pelotas",
     "fisioterapeuta pelotas",
+    "fisioterapeuta em pelotas",
+    "fisioterapia em pelotas",
     "clínica de fisioterapia pelotas",
-    "fisioterapia em pelotas rs",
-    "fisioterapia bairro areal pelotas",
-    "tratamento de dor pelotas",
-    "reabilitação pelotas",
-    "fisioterapia ortopédica pelotas",
+    "fisioterapia postural pelotas",
+    "fisioterapia para coluna pelotas",
+    "fisioterapia hérnia de disco pelotas",
+    "fisioterapia nervo ciático pelotas",
     "fisioterapia pós-operatória pelotas",
-    "fisioterapia coluna pelotas",
+    "fisioterapia ortopédica pelotas",
+    "fisioterapia bairro areal pelotas",
+    "dra kauane ramos fisioterapeuta pelotas",
     "fisioterapia prevpel pelotas",
     "fisioterapia ibcm pelotas",
     "fisioterapia cabergs pelotas",
@@ -35,9 +40,9 @@ export const metadata: Metadata = {
     canonical: "/fisioterapia-pelotas",
   },
   openGraph: {
-    title: "Fisioterapia em Pelotas | Clínica Reabilitare - Especialistas",
+    title: "Fisioterapia em Pelotas | Fisioterapeuta - Clínica Reabilitare",
     description:
-      "Procurando fisioterapia em Pelotas? Tratamentos personalizados para dores, lesões e reabilitação pós-operatória na Av. Bento Gonçalves, 2146. Agende agora!",
+      "Procurando fisioterapia ou fisioterapeuta em Pelotas? Atendimento individualizado para dores na coluna, lesões e pós-operatório na Av. Bento Gonçalves, 2146. Agende agora!",
     url: "https://www.clinicareabilitare.com/fisioterapia-pelotas",
     type: "website",
     locale: "pt_BR",
@@ -53,12 +58,40 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fisioterapia em Pelotas | Clínica Reabilitare - Especialistas",
+    title: "Fisioterapia em Pelotas | Fisioterapeuta - Clínica Reabilitare",
     description:
-      "Procurando fisioterapia em Pelotas? A Clínica Reabilitare oferece tratamentos personalizados para dores, lesões e reabilitação. Agende agora!",
+      "Procurando fisioterapia em Pelotas? Atendimentos especializados para coluna, reabilitação e lesões com a Dra. Kauane Ramos. Agende agora!",
     images: ["/cover.png"],
   },
 };
+
+const fisioterapiaFaq = [
+  {
+    question: "Preciso de encaminhamento ou pedido médico para iniciar a fisioterapia em Pelotas?",
+    answer:
+      "Não é obrigatório. O fisioterapeuta é um profissional de primeiro contato habilitado para avaliar, diagnosticar disfunções cinético-funcionais e prescrever o tratamento adequado. Se você já tiver exames de imagem (raio-X, ressonância magnética) ou laudo médico, traga-os na sua primeira consulta para complementar a avaliação.",
+  },
+  {
+    question: "Quais convênios são atendidos para Fisioterapia na Clínica Reabilitare?",
+    answer:
+      "Atendemos pacientes pelos convênios PrevPel, IBCM, ASPRA, ASSTBM e Cabergs, além de planos e consultas particulares com condições facilitadas. Entre em contato pelo WhatsApp (53) 99166-9801 para verificar as coberturas específicas do seu plano.",
+  },
+  {
+    question: "Como funciona a primeira consulta e avaliação com a fisioterapeuta?",
+    answer:
+      "A consulta inicial é 100% individualizada e inclui anamnese aprofundada, testes ortopédicos, análise postural e palpatória da coluna e das articulações. Identificamos a causa raiz da sua dor ou limitação e montamos um plano de tratamento personalizado para devolver sua qualidade de vida no menor tempo possível.",
+  },
+  {
+    question: "Qual o tempo de duração da sessão e quantas sessões são recomendadas?",
+    answer:
+      "Cada sessão de fisioterapia dura aproximadamente 50 a 60 minutos de atenção contínua e exclusiva do profissional. A frequência e a quantidade total de sessões variam conforme a gravidade da lesão, o tempo de dor e a resposta biológica de cada paciente, sendo reavaliadas a cada etapa.",
+  },
+  {
+    question: "A fisioterapia trata dor crônica na coluna, nervo ciático e hérnia de disco?",
+    answer:
+      "Sim! Essa é uma das principais especialidades da Clínica Reabilitare em Pelotas. Utilizamos técnicas de terapia manual, descompressão articular, liberação miofascial e exercícios terapêuticos específicos que aliviam a compressão dos nervos, restauram a mobilidade e fortalecem a musculatura profunda estabilizadora.",
+  },
+];
 
 export default function FisioterapiaPage() {
   return (
@@ -73,14 +106,15 @@ export default function FisioterapiaPage() {
                 "@type": ["MedicalClinic", "LocalBusiness"],
                 medicalSpecialty: "Physiotherapy",
                 "@id": "https://www.clinicareabilitare.com/#organization",
-                name: "Clínica Reabilitare - Fisioterapia em Pelotas",
+                name: "Clínica Reabilitare - Fisioterapia e Fisioterapeuta em Pelotas",
+                alternateName: "Fisioterapia em Pelotas - Reabilitare",
                 description:
-                  "Fisioterapia especializada em Pelotas com tratamentos para dores, lesões, reabilitação pós-operatória e correção postural.",
+                  "Fisioterapia especializada em Pelotas com atendimento individualizado para dores na coluna, hérnia de disco, nervo ciático, reabilitação pós-operatória e lesões ortopédicas.",
                 url: "https://www.clinicareabilitare.com/fisioterapia-pelotas",
                 logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
                 image: [
-                  "https://www.clinicareabilitare.com/foto-clinica.webp",
                   "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
+                  "https://www.clinicareabilitare.com/cover.png",
                 ],
                 telephone: "+55-53-99166-9801",
                 priceRange: "$$",
@@ -97,6 +131,11 @@ export default function FisioterapiaPage() {
                   "@type": "GeoCoordinates",
                   latitude: -31.7650111,
                   longitude: -52.3255797,
+                },
+                areaServed: {
+                  "@type": "City",
+                  name: "Pelotas",
+                  "@id": "https://www.wikidata.org/wiki/Q170851",
                 },
                 aggregateRating: {
                   "@type": "AggregateRating",
@@ -119,6 +158,36 @@ export default function FisioterapiaPage() {
                     "@type": "EducationalOccupationalCredential",
                     credentialCategory: "CREFITO-5: 375851-F",
                   },
+                },
+                hasOfferCatalog: {
+                  "@type": "OfferCatalog",
+                  name: "Serviços de Fisioterapia em Pelotas",
+                  itemListElement: [
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "MedicalTherapy",
+                        name: "Fisioterapia para Dor na Coluna e Hérnia de Disco",
+                        description: "Tratamento biomecânico e terapia manual para descompressão discal e alívio de dor ciática e lombar.",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "MedicalTherapy",
+                        name: "Reabilitação Pós-Operatória Ortopédica",
+                        description: "Protocolos fisioterapêuticos para recuperação segura após artroscopia, prótese e cirurgias ortopédicas.",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "MedicalTherapy",
+                        name: "Fisioterapia Ortopédica e Traumatológica",
+                        description: "Tratamento de tendinites, bursites, entorses e lesões musculares e articulares.",
+                      },
+                    },
+                  ],
                 },
                 sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
                 openingHoursSpecification: [
@@ -155,32 +224,14 @@ export default function FisioterapiaPage() {
               },
               {
                 "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: "Preciso de encaminhamento médico para fisioterapia?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Não é obrigatório, mas pode ser útil dependendo do caso. Nossos fisioterapeutas avaliam cada situação individualmente.",
-                    },
+                mainEntity: fisioterapiaFaq.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: faq.answer,
                   },
-                  {
-                    "@type": "Question",
-                    name: "Quantas sessões são necessárias?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "O número de sessões varia conforme a condição de cada paciente. Após a avaliação, definimos um plano personalizado.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "O plano de saúde cobre as sessões?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Trabalhamos com diversas modalidades de atendimento. Entre em contato para verificar a cobertura do seu plano.",
-                    },
-                  },
-                ],
+                })),
               },
             ],
           }),
@@ -195,71 +246,80 @@ export default function FisioterapiaPage() {
             <strong className="text-emerald-300 font-extrabold">Pelotas</strong>
           </>
         }
-        subtitle="A Melhor Clínica de Reabilitação para dores, lesões, recuperação pós-operatória e correção postural."
+        subtitle="Atendimento individualizado com fisioterapeuta especialista para dores na coluna, lesões e pós-operatório."
       />
 
       <div className="bg-white">
-        <main className="container mx-auto px-4 py-20">
+        <main className="container mx-auto px-4 py-16 sm:py-20">
           <div className="max-w-4xl mx-auto">
             {/* Intro Section */}
             <ScrollReveal>
               <section className="prose prose-lg md:prose-xl prose-emerald max-w-none text-gray-600 leading-relaxed mb-16">
                 <p>
-                  Procurando <strong>fisioterapia em Pelotas</strong>? A{" "}
-                  <strong>Clínica Reabilitare</strong> é referência em
-                  tratamentos fisioterapêuticos na cidade. Nossa equipe de{" "}
-                  <strong>fisioterapeutas altamente qualificados</strong>{" "}
-                  oferece tratamentos personalizados para dores, lesões,
-                  reabilitação pós-operatória e correção postural.
+                  Procurando <strong>fisioterapia em Pelotas</strong> ou atendimento especializado com <strong>fisioterapeuta</strong> de confiança? A <strong>Clínica Reabilitare</strong> é referência no tratamento humanizado e individualizado de dores agudas e crônicas, recuperação funcional e reabilitação ortopédica em Pelotas/RS.
                 </p>
                 <p>
-                  Localizada no bairro Areal, nossa clínica de{" "}
-                  <strong>fisioterapia em Pelotas, RS</strong> atende pacientes
-                  com atenção individual e um plano de cuidado adaptado às
-                  necessidades específicas de cada um.
+                  Localizada no bairro Areal (Av. Bento Gonçalves, 2146), a clínica é liderada pela <strong>Dra. Kauane Ramos (CREFITO-5: 375851-F)</strong>, oferecendo atendimento exclusivo de um paciente por horário. Isso assegura que cada sessão seja focada exatamente na causa da sua dor, sem tratamentos genéricos ou repetições sem acompanhamento próximo.
                 </p>
               </section>
             </ScrollReveal>
 
-            {/* Benefits Section */}
+            {/* Specialties Grid */}
             <section className="mb-16">
               <ScrollReveal>
                 <div className="text-center mb-10">
+                  <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100/80 px-3.5 py-1.5 rounded-full inline-block mb-3">
+                    Áreas de Atuação
+                  </span>
                   <h2 className="text-3xl font-extrabold text-(--color-emerald-800) mb-4">
-                    Benefícios da Fisioterapia na Reabilitare
+                    O que Tratamos na Fisioterapia em Pelotas
                   </h2>
-                  <p className="text-gray-600 text-lg">
-                    Resultados que transformam a sua qualidade de vida.
+                  <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
+                    Diagnóstico cinético-funcional preciso e técnicas baseadas em evidências científicas para alívio duradouro.
                   </p>
                 </div>
               </ScrollReveal>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">
                 {[
-                  "Tratamento de lesões musculares, articulares e ligamentares",
-                  "Recuperação pós-operatória com suporte especializado",
-                  "Correção postural e prevenção de dores crônicas",
-                  "Alívio de dores agudas e crônicas de forma eficaz",
-                  "Plano de cuidado individualizado e acompanhamento contínuo",
+                  {
+                    title: "Coluna Vertebral & Hérnia de Disco",
+                    desc: "Alívio eficaz para dor lombar (lombalgia), cervicalgia, ciático inflamado, protusões discais e rigidez postural.",
+                  },
+                  {
+                    title: "Reabilitação Pós-Operatória",
+                    desc: "Recuperação segura e gradual de amplitude de movimento após artroscopia, reconstrução ligamentar, prótese e cirurgias ortopédicas.",
+                  },
+                  {
+                    title: "Lesões Musculares & Articulares",
+                    desc: "Tratamento para tendinites, bursites, epicondilites, entorses de tornozelo, lesões de menisco e distensões musculares.",
+                  },
+                  {
+                    title: "Terapia Manual & Liberação Miofascial",
+                    desc: "Manobras manuais para desativar pontos-gatilho (trigger points), reduzir nós de tensão muscular e devolver a mobilidade tecidual.",
+                  },
+                  {
+                    title: "Correção Postural & Dores do Trabalho",
+                    desc: "Adequação biomecânica para quem passa muitas horas sentado ou em pé, prevenindo dores crônicas nos ombros e pescoço.",
+                  },
+                  {
+                    title: "Convênios e Particular Facilitado",
+                    desc: "Atendimento pelos convênios PrevPel, IBCM, ASPRA, ASSTBM e Cabergs, além de planos particulares acessíveis.",
+                  },
                 ].map((item, i) => (
-                  <ScrollReveal key={i} delay={i * 100}>
-                    <div className="bg-emerald-50/50 border border-emerald-100 rounded-2xl p-5 flex items-start gap-3 h-full hover:bg-emerald-50 hover:shadow-md transition-all">
-                      <span className="text-emerald-500 mt-0.5">
-                        <svg
-                          className="w-6 h-6 flex-shrink-0"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth={2}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
-                      </span>
-                      <span className="text-gray-700 font-medium">{item}</span>
+                  <ScrollReveal key={i} delay={i * 80}>
+                    <div className="bg-emerald-50/50 border border-emerald-100 rounded-2xl p-6 h-full hover:bg-emerald-50 hover:shadow-md transition-all">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xs font-bold">
+                          ✓
+                        </span>
+                        <h3 className="font-bold text-lg text-emerald-950">
+                          {item.title}
+                        </h3>
+                      </div>
+                      <p className="text-gray-600 text-sm leading-relaxed pl-7">
+                        {item.desc}
+                      </p>
                     </div>
                   </ScrollReveal>
                 ))}
@@ -268,11 +328,11 @@ export default function FisioterapiaPage() {
               <ScrollReveal delay={200}>
                 <div className="text-center">
                   <WhatsAppButton
-                    href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20fisioterapia."
+                    href="https://wa.me/5553991669801?text=Olá%2C%20gostaria%20de%20agendar%20uma%20avaliação%20de%20fisioterapia%20em%20Pelotas."
                     className="inline-flex items-center gap-2 border-none rounded-full cursor-pointer text-lg font-bold px-9 py-3.5 bg-(--color-emerald-800) text-white hover:bg-emerald-900 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-                    aria-label="Agendar avaliação de Fisioterapia pelo WhatsApp"
+                    aria-label="Agendar avaliação de Fisioterapia em Pelotas pelo WhatsApp"
                   >
-                    Agendar Fisioterapia
+                    Agendar Avaliação de Fisioterapia
                     <span className="text-xl">→</span>
                   </WhatsAppButton>
                 </div>
@@ -284,7 +344,7 @@ export default function FisioterapiaPage() {
               <ScrollReveal>
                 <div className="text-center mb-10">
                   <h2 className="text-3xl font-extrabold text-(--color-emerald-800) mb-4">
-                    Por que Escolher Nossa Clínica em Pelotas?
+                    Por que Escolher a Clínica Reabilitare em Pelotas?
                   </h2>
                 </div>
               </ScrollReveal>
@@ -292,20 +352,20 @@ export default function FisioterapiaPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
                   {
-                    title: "Atendimento Personalizado",
-                    desc: "Foco total na sua recuperação com acompanhamento individualizado.",
+                    title: "Atendimento 100% Individualizado",
+                    desc: "Sua sessão é exclusiva. O fisioterapeuta acompanha cada exercício e manobra do início ao fim, garantindo máxima eficácia.",
                   },
                   {
-                    title: "Profissionais Qualificados",
-                    desc: "Equipe experiente e em constante atualização científica.",
+                    title: "Profissional Responsável e Especializada",
+                    desc: "Atendimento conduzido pela Dra. Kauane Ramos (CREFITO-5: 375851-F), com constante atualização científica e clínica.",
                   },
                   {
-                    title: "Infraestrutura Moderna",
-                    desc: "Ambiente acolhedor e equipamentos de ponta para sua reabilitação.",
+                    title: "Localização com Estacionamento",
+                    desc: "Facilidade de acesso no Bairro Areal (Av. Bento Gonçalves, 2146), com ambiente climatizado, seguro e acolhedor.",
                   },
                   {
-                    title: "Foco na Causa",
-                    desc: "Tratamos a origem da dor e não apenas os sintomas superficiais.",
+                    title: "Tratamento da Raiz da Dor",
+                    desc: "Não tratamos apenas os sintomas momentâneos; corrigimos o desequilíbrio muscular e articular causador da queixa.",
                   },
                 ].map((item, i) => (
                   <ScrollReveal key={i} delay={i * 100}>
@@ -325,54 +385,39 @@ export default function FisioterapiaPage() {
             {/* FAQ Section */}
             <section className="mb-16">
               <ScrollReveal>
-                <div className="text-center mb-4">
+                <div className="text-center mb-6">
+                  <span className="text-xs font-extrabold uppercase tracking-widest text-emerald-800 bg-emerald-100/80 px-3.5 py-1.5 rounded-full inline-block mb-3">
+                    Tire Suas Dúvidas
+                  </span>
                   <h2 className="text-3xl font-extrabold text-(--color-emerald-800)">
-                    Perguntas Frequentes sobre Fisioterapia
+                    Perguntas Frequentes sobre Fisioterapia em Pelotas
                   </h2>
                 </div>
               </ScrollReveal>
-              <FaqAccordion
-                items={[
-                  {
-                    question:
-                      "Preciso de encaminhamento médico para fisioterapia?",
-                    answer:
-                      "Não é obrigatório, mas pode ser útil dependendo do caso. Nossos fisioterapeutas avaliam cada situação individualmente em sua primeira consulta.",
-                  },
-                  {
-                    question: "Quantas sessões são necessárias?",
-                    answer:
-                      "O número de sessões varia conforme a condição de cada paciente. Após a avaliação inicial e o diagnóstico fisioterapêutico, definimos um plano personalizado.",
-                  },
-                  {
-                    question: "O plano de saúde cobre as sessões?",
-                    answer:
-                      "Trabalhamos com diversas modalidades de atendimento e convênios parceiros. Entre em contato com nossa equipe para verificar a cobertura exata do seu plano.",
-                  },
-                ]}
-              />
+              <FaqAccordion items={fisioterapiaFaq} />
             </section>
+
             {/* Cross-link Section */}
             <section className="mb-12 rounded-2xl bg-emerald-50/60 border border-emerald-100 p-6 sm:p-8 text-center">
               <h2 className="text-xl font-extrabold text-emerald-950 mb-2">
                 Conheça Também Nossas Outras Especialidades em Pelotas
               </h2>
               <p className="text-slate-600 text-sm sm:text-base mb-5">
-                Integramos nossos tratamentos com{" "}
+                Integramos a fisioterapia com o nosso{" "}
                 <Link
                   href="/pilates-pelotas"
-                  className="text-emerald-800 font-bold underline"
+                  className="text-emerald-800 font-bold underline hover:text-emerald-950 transition-colors"
                 >
                   Estúdio de Pilates em Pelotas
                 </Link>{" "}
-                e{" "}
+                e atendimentos de{" "}
                 <Link
                   href="/quiropraxia-pelotas"
-                  className="text-emerald-800 font-bold underline"
+                  className="text-emerald-800 font-bold underline hover:text-emerald-950 transition-colors"
                 >
                   Quiropraxia em Pelotas
                 </Link>{" "}
-                para resultados completos e duradouros.
+                para um cuidado completo e duradouro.
               </p>
             </section>
           </div>

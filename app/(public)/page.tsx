@@ -13,6 +13,11 @@ const Ratings = dynamic(() => import("@/components/ratings"));
 const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
+  title: {
+    absolute: "Fisioterapia, Pilates e Quiropraxia em Pelotas | Reabilitare",
+  },
+  description:
+    "Clínica Reabilitare em Pelotas (Areal): Especialistas em Fisioterapia, Pilates Clínico e Quiropraxia. Atendimento individualizado para dores na coluna, lesões e postura. Agende!",
   alternates: {
     canonical: "/",
   },
@@ -73,7 +78,6 @@ export default function Home() {
                 url: "https://www.clinicareabilitare.com",
                 logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
                 image: [
-                  "https://www.clinicareabilitare.com/foto-clinica.webp",
                   "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
                   "https://www.clinicareabilitare.com/cover.png",
                 ],
