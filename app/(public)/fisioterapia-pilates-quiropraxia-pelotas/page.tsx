@@ -64,7 +64,6 @@ export default function Home() {
                 url: "https://www.clinicareabilitare.com/fisioterapia-pilates-quiropraxia-pelotas",
                 logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
                 image: [
-                  "https://www.clinicareabilitare.com/foto-clinica.webp",
                   "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
                 ],
                 telephone: "+55-53-99166-9801",
