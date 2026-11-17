@@ -181,11 +181,11 @@ export default function Services() {
                     </ul>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+                  <div className="flex flex-col gap-2.5 pt-2">
                     <WhatsAppButton
                       href={`https://wa.me/5553991669801?text=${pillar.msg}`}
                       aria-label={`Agendar ${pillar.title} pelo WhatsApp`}
-                      className="flex-1 inline-flex items-center justify-center gap-2 rounded-full bg-emerald-900 text-white font-bold text-sm px-5 py-3 hover:bg-emerald-800 transition-all shadow-sm hover:shadow-md"
+                      className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-emerald-900 text-white font-bold text-sm px-5 py-3 hover:bg-emerald-800 transition-all shadow-sm hover:shadow-md"
                     >
                       <span>Agendar Agora</span>
                       <span>→</span>
@@ -193,7 +193,7 @@ export default function Services() {
                     <Link
                       href={pillar.href}
                       aria-label={pillar.ctaAria}
-                      className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-slate-50 hover:bg-emerald-50 hover:border-emerald-200 text-slate-700 hover:text-emerald-900 font-semibold text-sm px-5 py-3 transition-colors text-center"
+                      className="w-full inline-flex items-center justify-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 hover:bg-emerald-50 hover:border-emerald-200 text-slate-700 hover:text-emerald-900 font-semibold text-sm px-5 py-2.5 transition-colors text-center"
                     >
                       <span>{pillar.ctaText}</span>
                     </Link>
