@@ -9,6 +9,8 @@ export default function Services() {
       subtitle: "Ortopedia, Traumatologia & Pós-Operatório",
       desc: "Avaliação biomecânica precisa e tratamento individualizado para eliminar a causa da dor, recuperar lesões e devolver sua autonomia.",
       href: "/fisioterapia-pelotas",
+      ctaText: "Conhecer Fisioterapia →",
+      ctaAria: "Conhecer tratamentos de Fisioterapia em Pelotas",
       msg: "Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamentos%20de%20fisioterapia.",
       highlights: [
         "Alívio de dores agudas e crônicas",
@@ -26,6 +28,8 @@ export default function Services() {
       subtitle: "Postura, Força & Mobilidade",
       desc: "Aulas orientadas por fisioterapeutas em estúdio completo. Fortaleça a musculatura profunda, previna lesões e melhore sua postura.",
       href: "/pilates-pelotas",
+      ctaText: "Conhecer Pilates →",
+      ctaAria: "Conhecer o Estúdio de Pilates Clínico em Pelotas",
       msg: "Olá%2C%20preciso%20de%20informações%20sobre%20as%20aulas%20de%20pilates.",
       highlights: [
         "Aulas adaptadas ao seu nível",
@@ -188,11 +192,10 @@ export default function Services() {
                     </WhatsAppButton>
                     <Link
                       href={pillar.href}
-                      aria-label={`Saiba mais sobre ${pillar.title} em Pelotas`}
-                      className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-slate-50 hover:bg-emerald-50 hover:border-emerald-200 text-slate-700 hover:text-emerald-900 font-semibold text-sm px-5 py-3 transition-colors"
+                      aria-label={pillar.ctaAria}
+                      className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-slate-50 hover:bg-emerald-50 hover:border-emerald-200 text-slate-700 hover:text-emerald-900 font-semibold text-sm px-5 py-3 transition-colors text-center"
                     >
-                      <span>Saiba mais</span>
-                      <span className="sr-only"> sobre {pillar.title} em Pelotas</span>
+                      <span>{pillar.ctaText}</span>
                     </Link>
                   </div>
                 </div>
