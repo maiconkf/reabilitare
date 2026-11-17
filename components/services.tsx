@@ -12,10 +12,24 @@ export default function Services() {
       ctaText: "Conhecer Fisioterapia →",
       ctaAria: "Conhecer tratamentos de Fisioterapia em Pelotas",
       msg: "Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamentos%20de%20fisioterapia.",
-      highlights: ["Alívio de dores agudas e crônicas", "Reabilitação pós-cirúrgica", "Atendimento 100% personalizado"],
+      highlights: [
+        "Alívio de dores agudas e crônicas",
+        "Reabilitação pós-cirúrgica",
+        "Atendimento 100% personalizado",
+      ],
       icon: (
-        <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
+        <svg
+          className="w-7 h-7"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={1.8}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
+          />
         </svg>
       ),
     },
@@ -27,10 +41,24 @@ export default function Services() {
       ctaText: "Conhecer Pilates →",
       ctaAria: "Conhecer o Estúdio de Pilates Clínico em Pelotas",
       msg: "Olá%2C%20preciso%20de%20informações%20sobre%20as%20aulas%20de%20pilates.",
-      highlights: ["Aulas adaptadas ao seu nível", "Foco em coluna e core", "Equipamentos modernos"],
+      highlights: [
+        "Aulas adaptadas ao seu nível",
+        "Foco em coluna e core",
+        "Equipamentos modernos",
+      ],
       icon: (
-        <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+        <svg
+          className="w-7 h-7"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={1.8}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+          />
         </svg>
       ),
     },
@@ -43,10 +71,24 @@ export default function Services() {
       ctaAria: "Conhecer atendimentos de Quiropraxia em Pelotas",
       msg: "Olá%2C%20preciso%20de%20informações%20sobre%20os%20atendimentos%20de%20quiropraxia.",
       isNew: true,
-      highlights: ["Ajustes seguros e precisos", "Hérnia de disco e ciático", "Alívio imediato de tensões"],
+      highlights: [
+        "Ajustes seguros e precisos",
+        "Hérnia de disco e ciático",
+        "Alívio imediato de tensões",
+      ],
       icon: (
-        <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z" />
+        <svg
+          className="w-7 h-7"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={1.8}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456Z"
+          />
         </svg>
       ),
     },
@@ -148,7 +190,9 @@ export default function Services() {
                 <span className="text-emerald-800">Quiropraxia Integradas</span>
               </h2>
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-                Tratamentos personalizados com embasamento científico para restaurar seu alinhamento, aliviar dores e renovar sua qualidade de vida.
+                Tratamentos personalizados com embasamento científico para
+                restaurar seu alinhamento, aliviar dores e renovar sua qualidade
+                de vida.
               </p>
             </div>
           </ScrollReveal>
@@ -156,7 +200,11 @@ export default function Services() {
           {/* 3 Main Pillars Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mb-20">
             {mainPillars.map((pillar, i) => (
-              <ScrollReveal key={pillar.title} delay={i * 100} className="h-full">
+              <ScrollReveal
+                key={pillar.title}
+                delay={i * 100}
+                className="h-full"
+              >
                 <div className="h-full relative rounded-3xl bg-white border border-slate-200/80 p-7 sm:p-8 shadow-sm hover:shadow-2xl hover:border-emerald-600/30 transition-all duration-300 flex flex-col justify-between group overflow-hidden">
                   {/* Top gradient accent bar */}
                   <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-emerald-800 via-emerald-600 to-teal-500 opacity-85 group-hover:opacity-100 transition-opacity" />
@@ -186,7 +234,10 @@ export default function Services() {
 
                     <ul className="space-y-2.5 mb-8 border-t border-slate-100 pt-5">
                       {pillar.highlights.map((h) => (
-                        <li key={h} className="flex items-center gap-2.5 text-sm font-medium text-slate-700">
+                        <li
+                          key={h}
+                          className="flex items-center gap-2.5 text-sm font-medium text-slate-700"
+                        >
                           <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs shrink-0">
                             ✓
                           </span>
@@ -230,7 +281,8 @@ export default function Services() {
                 </h3>
               </div>
               <p className="text-sm sm:text-base text-slate-600 max-w-md">
-                Clique no tratamento desejado para falar diretamente com nossa equipe e agendar sua avaliação.
+                Clique no tratamento desejado para falar diretamente com nossa
+                equipe e agendar sua avaliação.
               </p>
             </div>
           </ScrollReveal>
@@ -238,7 +290,11 @@ export default function Services() {
           {/* 12 Treatments Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
             {servicesList.map((item, index) => (
-              <ScrollReveal key={index} delay={(index % 3) * 80} className="h-full">
+              <ScrollReveal
+                key={index}
+                delay={(index % 3) * 80}
+                className="h-full"
+              >
                 <WhatsAppButton
                   href={`https://wa.me/5553991669801?text=${item.msg}`}
                   aria-label={`Agendar ${item.title} pelo WhatsApp`}
@@ -255,8 +311,18 @@ export default function Services() {
                         </span>
                       ) : (
                         <span className="w-8 h-8 rounded-full bg-slate-50 group-hover:bg-emerald-50 text-slate-400 group-hover:text-emerald-700 flex items-center justify-center transition-colors">
-                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+                            />
                           </svg>
                         </span>
                       )}
