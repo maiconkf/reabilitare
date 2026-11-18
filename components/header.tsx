@@ -34,11 +34,11 @@ export default function Header() {
           : "py-4 bg-transparent border-b border-white/5"
       }`}
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
+      <div className="container mx-auto px-3 min-[380px]:px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center gap-2">
           <Link
             href="/"
-            className="flex items-center gap-3 hover:opacity-90 transition-opacity"
+            className="flex items-center gap-2 sm:gap-3 shrink-0 hover:opacity-90 transition-opacity"
           >
             <Image
               src="/reabilitare-logo-white.webp"
@@ -48,8 +48,8 @@ export default function Header() {
               priority
               fetchPriority="high"
               loading="eager"
-              sizes="136px"
-              className="h-10 w-auto sm:h-11"
+              sizes="(max-width: 380px) 96px, (max-width: 640px) 110px, 136px"
+              className="h-8 min-[380px]:h-9 sm:h-11 w-auto"
             />
           </Link>
 
@@ -75,15 +75,15 @@ export default function Header() {
           </nav>
 
           {/* Right CTA & Mobile Menu Toggle */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 min-[380px]:gap-2 sm:gap-3 shrink-0">
             <WhatsAppButton
               href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamentos%20de%20fisioterapia%2C%20pilates%20e%20quiropraxia."
-              className="group inline-flex items-center gap-2 rounded-full cursor-pointer text-sm font-bold leading-5 px-5 py-2.5 transition-all duration-300 bg-white text-emerald-950 hover:bg-emerald-50 shadow-md shadow-black/10 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+              className="group inline-flex items-center gap-1.5 sm:gap-2 rounded-full cursor-pointer text-[11px] min-[380px]:text-xs sm:text-sm font-bold leading-4 sm:leading-5 px-3 py-2 min-[380px]:px-3.5 sm:px-5 sm:py-2.5 whitespace-nowrap transition-all duration-300 bg-white text-emerald-950 hover:bg-emerald-50 shadow-md shadow-black/10 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
               aria-label="Agendar atendimento pelo WhatsApp"
             >
-              <span className="relative flex h-2 w-2">
+              <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2 shrink-0">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-600"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 sm:h-2 sm:w-2 bg-emerald-600"></span>
               </span>
               <span>Agendar Consulta</span>
               <svg
@@ -104,14 +104,14 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden inline-flex items-center justify-center p-2.5 rounded-full text-white bg-white/10 hover:bg-white/20 border border-white/15 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-950"
+              className="lg:hidden inline-flex items-center justify-center p-2 sm:p-2.5 rounded-full text-white bg-white/10 hover:bg-white/20 border border-white/15 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 focus-visible:ring-offset-2 focus-visible:ring-offset-emerald-950"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-navigation-menu"
               aria-label={mobileMenuOpen ? "Fechar menu de navegação" : "Abrir menu de navegação"}
             >
               {mobileMenuOpen ? (
                 <svg
-                  className="w-5 h-5"
+                  className="w-4 h-4 min-[380px]:w-5 min-[380px]:h-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -125,7 +125,7 @@ export default function Header() {
                 </svg>
               ) : (
                 <svg
-                  className="w-5 h-5"
+                  className="w-4 h-4 min-[380px]:w-5 min-[380px]:h-5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
