@@ -6,6 +6,13 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import InternalHero from "@/components/InternalHero";
 import FaqAccordion from "@/components/FaqAccordion";
 import ScrollReveal from "@/components/ScrollReveal";
+import ClinicalReviewerBadge from "@/components/ClinicalReviewerBadge";
+import {
+  organizationSchema,
+  SITE_URL,
+  specialistSchema,
+  websiteSchema,
+} from "@/lib/schema";
 import type { Metadata } from "next";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -43,7 +50,7 @@ export const metadata: Metadata = {
     title: "Fisioterapia em Pelotas | Fisioterapeuta - Clínica Reabilitare",
     description:
       "Procurando fisioterapia ou fisioterapeuta em Pelotas? Atendimento individualizado para dores na coluna, lesões e pós-operatório na Av. Bento Gonçalves, 2146. Agende agora!",
-    url: "https://www.clinicareabilitare.com/fisioterapia-pelotas",
+    url: `${SITE_URL}/fisioterapia-pelotas`,
     type: "website",
     locale: "pt_BR",
     siteName: "Clínica Reabilitare",
@@ -67,33 +74,40 @@ export const metadata: Metadata = {
 
 const fisioterapiaFaq = [
   {
-    question: "Preciso de encaminhamento ou pedido médico para iniciar a fisioterapia em Pelotas?",
+    question:
+      "Preciso de encaminhamento ou pedido médico para iniciar a fisioterapia em Pelotas?",
     answer:
       "Não é obrigatório. O fisioterapeuta é um profissional de primeiro contato habilitado para avaliar, diagnosticar disfunções cinético-funcionais e prescrever o tratamento adequado. Se você já tiver exames de imagem (raio-X, ressonância magnética) ou laudo médico, traga-os na sua primeira consulta para complementar a avaliação.",
   },
   {
-    question: "Quais convênios são atendidos para Fisioterapia na Clínica Reabilitare?",
+    question:
+      "Quais convênios são atendidos para Fisioterapia na Clínica Reabilitare?",
     answer:
       "Atendemos pacientes pelos convênios PrevPel, IBCM, ASPRA, ASSTBM e Cabergs, além de planos e consultas particulares com condições facilitadas. Entre em contato pelo WhatsApp (53) 99166-9801 para verificar as coberturas específicas do seu plano.",
   },
   {
-    question: "Como funciona a primeira consulta e avaliação com a fisioterapeuta?",
+    question:
+      "Como funciona a primeira consulta e avaliação com a fisioterapeuta?",
     answer:
       "A consulta inicial é 100% individualizada e inclui anamnese aprofundada, testes ortopédicos, análise postural e palpatória da coluna e das articulações. Identificamos a causa raiz da sua dor ou limitação e montamos um plano de tratamento personalizado para devolver sua qualidade de vida no menor tempo possível.",
   },
   {
-    question: "Qual o tempo de duração da sessão e quantas sessões são recomendadas?",
+    question:
+      "Qual o tempo de duração da sessão e quantas sessões são recomendadas?",
     answer:
       "Cada sessão de fisioterapia dura aproximadamente 50 a 60 minutos de atenção contínua e exclusiva do profissional. A frequência e a quantidade total de sessões variam conforme a gravidade da lesão, o tempo de dor e a resposta biológica de cada paciente, sendo reavaliadas a cada etapa.",
   },
   {
-    question: "A fisioterapia trata dor crônica na coluna, nervo ciático e hérnia de disco?",
+    question:
+      "A fisioterapia trata dor crônica na coluna, nervo ciático e hérnia de disco?",
     answer:
       "Sim! Essa é uma das principais especialidades da Clínica Reabilitare em Pelotas. Utilizamos técnicas de terapia manual, descompressão articular, liberação miofascial e exercícios terapêuticos específicos que aliviam a compressão dos nervos, restauram a mobilidade e fortalecem a musculatura profunda estabilizadora.",
   },
 ];
 
 export default function FisioterapiaPage() {
+  const pageUrl = `${SITE_URL}/fisioterapia-pelotas`;
+
   return (
     <div>
       <script
@@ -102,62 +116,45 @@ export default function FisioterapiaPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
+              organizationSchema,
+              specialistSchema,
+              websiteSchema,
               {
-                "@type": ["MedicalClinic", "LocalBusiness"],
-                medicalSpecialty: "Physiotherapy",
-                "@id": "https://www.clinicareabilitare.com/#organization",
-                name: "Clínica Reabilitare - Fisioterapia e Fisioterapeuta em Pelotas",
-                alternateName: "Fisioterapia em Pelotas - Reabilitare",
+                "@type": "MedicalWebPage",
+                "@id": `${pageUrl}#webpage`,
+                url: pageUrl,
+                name: "Fisioterapia em Pelotas | Fisioterapeuta - Clínica Reabilitare",
                 description:
                   "Fisioterapia especializada em Pelotas com atendimento individualizado para dores na coluna, hérnia de disco, nervo ciático, reabilitação pós-operatória e lesões ortopédicas.",
-                url: "https://www.clinicareabilitare.com/fisioterapia-pelotas",
-                logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
-                image: [
-                  "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
-                  "https://www.clinicareabilitare.com/cover.png",
-                ],
-                telephone: "+55-53-99166-9801",
-                priceRange: "$$",
-                hasMap: "https://maps.app.goo.gl/S4y6tkkLfFWxKYir8",
-                address: {
-                  "@type": "PostalAddress",
-                  streetAddress: "Av. Bento Gonçalves, 2146",
-                  addressLocality: "Pelotas",
-                  addressRegion: "RS",
-                  postalCode: "96015-140",
-                  addressCountry: "BR",
+                inLanguage: "pt-BR",
+                isPartOf: {
+                  "@id": `${SITE_URL}/#website`,
                 },
-                geo: {
-                  "@type": "GeoCoordinates",
-                  latitude: -31.7650111,
-                  longitude: -52.3255797,
+                about: {
+                  "@id": `${pageUrl}#service`,
+                },
+                author: {
+                  "@id": `${SITE_URL}/#kauane-ramos`,
+                },
+                reviewedBy: {
+                  "@id": `${SITE_URL}/#kauane-ramos`,
+                },
+                lastReviewed: "2026-11-17",
+              },
+              {
+                "@type": "MedicalTherapy",
+                "@id": `${pageUrl}#service`,
+                name: "Fisioterapia Especializada em Pelotas",
+                url: pageUrl,
+                description:
+                  "Atendimento individualizado de fisioterapia ortopédica, traumatológica, terapia manual e reabilitação pós-operatória em Pelotas/RS.",
+                provider: {
+                  "@id": `${SITE_URL}/#organization`,
                 },
                 areaServed: {
                   "@type": "City",
                   name: "Pelotas",
-                  "@id": "https://www.wikidata.org/wiki/Q170851",
-                },
-                aggregateRating: {
-                  "@type": "AggregateRating",
-                  ratingValue: "5.0",
-                  bestRating: "5",
-                  ratingCount: "48",
-                },
-                contactPoint: {
-                  "@type": "ContactPoint",
-                  telephone: "+55-53-99166-9801",
-                  contactType: "customer service",
-                  areaServed: "BR",
-                  availableLanguage: "Portuguese",
-                },
-                employee: {
-                  "@type": "Person",
-                  name: "Kauane Ramos",
-                  jobTitle: "Fisioterapeuta",
-                  hasCredential: {
-                    "@type": "EducationalOccupationalCredential",
-                    credentialCategory: "CREFITO-5: 375851-F",
-                  },
+                  sameAs: "https://www.wikidata.org/wiki/Q170851",
                 },
                 hasOfferCatalog: {
                   "@type": "OfferCatalog",
@@ -168,7 +165,8 @@ export default function FisioterapiaPage() {
                       itemOffered: {
                         "@type": "MedicalTherapy",
                         name: "Fisioterapia para Dor na Coluna e Hérnia de Disco",
-                        description: "Tratamento biomecânico e terapia manual para descompressão discal e alívio de dor ciática e lombar.",
+                        description:
+                          "Tratamento biomecânico e terapia manual para descompressão discal e alívio de dor ciática e lombar.",
                       },
                     },
                     {
@@ -176,7 +174,8 @@ export default function FisioterapiaPage() {
                       itemOffered: {
                         "@type": "MedicalTherapy",
                         name: "Reabilitação Pós-Operatória Ortopédica",
-                        description: "Protocolos fisioterapêuticos para recuperação segura após artroscopia, prótese e cirurgias ortopédicas.",
+                        description:
+                          "Protocolos fisioterapêuticos para recuperação segura após artroscopia, prótese e cirurgias ortopédicas.",
                       },
                     },
                     {
@@ -184,26 +183,12 @@ export default function FisioterapiaPage() {
                       itemOffered: {
                         "@type": "MedicalTherapy",
                         name: "Fisioterapia Ortopédica e Traumatológica",
-                        description: "Tratamento de tendinites, bursites, entorses e lesões musculares e articulares.",
+                        description:
+                          "Tratamento de tendinites, bursites, entorses e lesões musculares e articulares.",
                       },
                     },
                   ],
                 },
-                sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
-                openingHoursSpecification: [
-                  {
-                    "@type": "OpeningHoursSpecification",
-                    dayOfWeek: [
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                    ],
-                    opens: "08:00",
-                    closes: "20:00",
-                  },
-                ],
               },
               {
                 "@type": "BreadcrumbList",
@@ -212,13 +197,13 @@ export default function FisioterapiaPage() {
                     "@type": "ListItem",
                     position: 1,
                     name: "Início",
-                    item: "https://www.clinicareabilitare.com",
+                    item: SITE_URL,
                   },
                   {
                     "@type": "ListItem",
                     position: 2,
                     name: "Fisioterapia em Pelotas",
-                    item: "https://www.clinicareabilitare.com/fisioterapia-pelotas",
+                    item: pageUrl,
                   },
                 ],
               },
@@ -240,6 +225,7 @@ export default function FisioterapiaPage() {
       <Header />
 
       <InternalHero
+        breadcrumbLabel="Fisioterapia em Pelotas"
         title={
           <>
             Fisioterapia em{" "}
@@ -252,14 +238,27 @@ export default function FisioterapiaPage() {
       <div className="bg-white">
         <main className="container mx-auto px-4 py-16 sm:py-20">
           <div className="max-w-4xl mx-auto">
+            <ClinicalReviewerBadge specialtyLabel="Fisioterapia e Reabilitação Funcional" />
+
             {/* Intro Section */}
             <ScrollReveal>
               <section className="prose prose-lg md:prose-xl prose-emerald max-w-none text-gray-600 leading-relaxed mb-16">
                 <p>
-                  Procurando <strong>fisioterapia em Pelotas</strong> ou atendimento especializado com <strong>fisioterapeuta</strong> de confiança? A <strong>Clínica Reabilitare</strong> é referência no tratamento humanizado e individualizado de dores agudas e crônicas, recuperação funcional e reabilitação ortopédica em Pelotas/RS.
+                  Procurando <strong>fisioterapia em Pelotas</strong> ou
+                  atendimento especializado com <strong>fisioterapeuta</strong>{" "}
+                  de confiança? A <strong>Clínica Reabilitare</strong> é
+                  referência no tratamento humanizado e individualizado de dores
+                  agudas e crônicas, recuperação funcional e reabilitação
+                  ortopédica em Pelotas/RS.
                 </p>
                 <p>
-                  Localizada no bairro Areal (Av. Bento Gonçalves, 2146), a clínica é liderada pela <strong>Dra. Kauane Ramos (CREFITO-5: 375851-F)</strong>, oferecendo atendimento exclusivo de um paciente por horário. Isso assegura que cada sessão seja focada exatamente na causa da sua dor, sem tratamentos genéricos ou repetições sem acompanhamento próximo.
+                  Localizada no bairro Areal (Av. Bento Gonçalves, 2146), a
+                  clínica é liderada pela{" "}
+                  <strong>Dra. Kauane Ramos (CREFITO-5: 375851-F)</strong>,
+                  oferecendo atendimento exclusivo de um paciente por horário.
+                  Isso assegura que cada sessão seja focada exatamente na causa
+                  da sua dor, sem tratamentos genéricos ou repetições sem
+                  acompanhamento próximo.
                 </p>
               </section>
             </ScrollReveal>
@@ -275,7 +274,8 @@ export default function FisioterapiaPage() {
                     O que Tratamos na Fisioterapia em Pelotas
                   </h2>
                   <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
-                    Diagnóstico cinético-funcional preciso e técnicas baseadas em evidências científicas para alívio duradouro.
+                    Diagnóstico cinético-funcional preciso e técnicas baseadas
+                    em evidências científicas para alívio duradouro.
                   </p>
                 </div>
               </ScrollReveal>

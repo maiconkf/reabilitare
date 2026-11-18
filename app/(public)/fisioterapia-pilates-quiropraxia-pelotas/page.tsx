@@ -5,6 +5,13 @@ import Ratings from "@/components/ratings";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import InternalHero from "@/components/InternalHero";
 import ScrollReveal from "@/components/ScrollReveal";
+import ClinicalReviewerBadge from "@/components/ClinicalReviewerBadge";
+import {
+  organizationSchema,
+  SITE_URL,
+  specialistSchema,
+  websiteSchema,
+} from "@/lib/schema";
 import type { Metadata } from "next";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -12,40 +19,53 @@ import dynamic from "next/dynamic";
 const Location = dynamic(() => import("@/components/location"));
 
 export const metadata: Metadata = {
-  title: "Fisioterapia, Pilates e Quiropraxia em Pelotas | Clínica Especializada",
+  title: {
+    absolute: "Tratamento de Coluna e Reabilitação em Pelotas | Reabilitare",
+  },
   description:
-    "Procurando fisioterapia, pilates ou quiropraxia em Pelotas? A Clínica Reabilitare oferece tratamentos especializados com profissionais qualificados. Agende sua avaliação!",
+    "Clínica de reabilitação e tratamento da coluna em Pelotas (Bairro Areal). Abordagem integrada com Fisioterapia, Pilates Clínico e Quiropraxia para hérnia de disco, ciático e lesões. Agende!",
   keywords: [
-    "fisioterapia pelotas",
-    "pilates pelotas",
-    "quiropraxia pelotas",
-    "quiropraxista pelotas",
-    "fisioterapeuta pelotas",
-    "clínica de fisioterapia pelotas",
-    "pilates clínico pelotas",
-    "fisioterapia em pelotas rs",
-    "pilates em pelotas rs",
-    "quiropraxia em pelotas rs",
+    "tratamento de coluna pelotas",
+    "clínica de reabilitação pelotas",
+    "dor na coluna pelotas",
+    "hérnia de disco pelotas",
+    "nervo ciático pelotas",
+    "reabilitação ortopédica pelotas",
+    "reabilitação pós-operatória pelotas",
+    "tratamento de dor pelotas",
   ],
   alternates: {
     canonical: "/fisioterapia-pilates-quiropraxia-pelotas",
   },
   openGraph: {
-    title: "Fisioterapia, Pilates e Quiropraxia em Pelotas | Clínica Reabilitare",
+    title: "Tratamento de Coluna e Reabilitação em Pelotas | Reabilitare",
     description:
-      "Clínica especializada em fisioterapia, pilates e quiropraxia em Pelotas. Tratamentos personalizados para dores, reabilitação e bem-estar. Agende agora!",
-    url: "https://www.clinicareabilitare.com/fisioterapia-pilates-quiropraxia-pelotas",
-    images: "/cover.png",
+      "Abordagem clínica integrada em Pelotas para coluna vertebral, hérnia de disco, lesões e pós-operatório unindo Fisioterapia, Pilates e Quiropraxia.",
+    url: `${SITE_URL}/fisioterapia-pilates-quiropraxia-pelotas`,
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Clínica Reabilitare",
+    images: [
+      {
+        url: "/cover.png",
+        width: 1200,
+        height: 630,
+        alt: "Tratamento de Coluna e Reabilitação Integrada em Pelotas - Clínica Reabilitare",
+      },
+    ],
   },
   twitter: {
-    title: "Fisioterapia, Pilates e Quiropraxia em Pelotas | Clínica Reabilitare",
+    card: "summary_large_image",
+    title: "Tratamento de Coluna e Reabilitação em Pelotas | Reabilitare",
     description:
-      "Clínica especializada em fisioterapia, pilates e quiropraxia em Pelotas. Tratamentos personalizados para dores, reabilitação e bem-estar. Agende agora!",
+      "Reabilitação integrada para dores na coluna, hérnia de disco e lesões no Bairro Areal em Pelotas.",
     images: ["/cover.png"],
   },
 };
 
-export default function Home() {
+export default function IntegratedRehabPage() {
+  const pageUrl = `${SITE_URL}/fisioterapia-pilates-quiropraxia-pelotas`;
+
   return (
     <div>
       <script
@@ -54,102 +74,46 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
+              organizationSchema,
+              specialistSchema,
+              websiteSchema,
               {
-                "@type": "MedicalClinic",
-                medicalSpecialty: "Physiotherapy",
-                "@id": "https://www.clinicareabilitare.com/#organization",
-                name: "Clínica Reabilitare - Fisioterapia, Pilates e Quiropraxia",
+                "@type": "MedicalWebPage",
+                "@id": `${pageUrl}#webpage`,
+                url: pageUrl,
+                name: "Tratamento de Coluna e Reabilitação em Pelotas | Clínica Reabilitare",
                 description:
-                  "Clínica especializada em fisioterapia, pilates e quiropraxia em Pelotas, RS. Oferecemos tratamentos personalizados para dores, lesões, reabilitação e bem-estar.",
-                url: "https://www.clinicareabilitare.com/fisioterapia-pilates-quiropraxia-pelotas",
-                logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
-                image: [
-                  "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
-                ],
-                telephone: "+55-53-99166-9801",
-                priceRange: "$$",
-                hasMap: "https://maps.app.goo.gl/S4y6tkkLfFWxKYir8",
-                aggregateRating: {
-                  "@type": "AggregateRating",
-                  ratingValue: "5.0",
-                  bestRating: "5",
-                  ratingCount: "48",
+                  "Reabilitação integrada da coluna vertebral e lesões musculoesqueléticas em Pelotas combinando Fisioterapia, Pilates Clínico e Quiropraxia.",
+                inLanguage: "pt-BR",
+                isPartOf: {
+                  "@id": `${SITE_URL}/#website`,
                 },
-                address: {
-                  "@type": "PostalAddress",
-                  streetAddress: "Av. Bento Gonçalves, 2146",
-                  addressLocality: "Pelotas",
-                  addressRegion: "RS",
-                  postalCode: "96015-140",
-                  addressCountry: "BR",
+                about: {
+                  "@id": `${pageUrl}#service`,
                 },
-                geo: {
-                  "@type": "GeoCoordinates",
-                  latitude: -31.7650111,
-                  longitude: -52.3255797,
+                author: {
+                  "@id": `${SITE_URL}/#kauane-ramos`,
+                },
+                reviewedBy: {
+                  "@id": `${SITE_URL}/#kauane-ramos`,
+                },
+                lastReviewed: "2026-11-17",
+              },
+              {
+                "@type": "MedicalTherapy",
+                "@id": `${pageUrl}#service`,
+                name: "Tratamento da Coluna e Reabilitação Integrada em Pelotas",
+                url: pageUrl,
+                description:
+                  "Protocolo multidisciplinar para alívio de dor aguda, descompressão vertebral e estabilização muscular duradoura em Pelotas/RS.",
+                provider: {
+                  "@id": `${SITE_URL}/#organization`,
                 },
                 areaServed: {
                   "@type": "City",
                   name: "Pelotas",
-                  "@id": "https://www.wikidata.org/wiki/Q170851",
+                  sameAs: "https://www.wikidata.org/wiki/Q170851",
                 },
-                hasOfferCatalog: {
-                  "@type": "OfferCatalog",
-                  name: "Serviços de Fisioterapia, Pilates e Quiropraxia",
-                  itemListElement: [
-                    {
-                      "@type": "Offer",
-                      itemOffered: {
-                        "@type": "Service",
-                        name: "Fisioterapia em Pelotas",
-                        description:
-                          "Tratamento de dores, lesões, reabilitação pós-operatória e correção postural",
-                      },
-                    },
-                    {
-                      "@type": "Offer",
-                      itemOffered: {
-                        "@type": "Service",
-                        name: "Pilates em Pelotas",
-                        description:
-                          "Aulas de pilates para fortalecimento, flexibilidade e consciência corporal",
-                      },
-                    },
-                    {
-                      "@type": "Offer",
-                      itemOffered: {
-                        "@type": "Service",
-                        name: "Quiropraxia em Pelotas",
-                        description:
-                          "Ajustes articulares e vertebrais para restauração do alinhamento da coluna",
-                      },
-                    },
-                  ],
-                },
-                openingHoursSpecification: [
-                  {
-                    "@type": "OpeningHoursSpecification",
-                    dayOfWeek: [
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                    ],
-                    opens: "08:00",
-                    closes: "20:00",
-                  },
-                ],
-                employee: {
-                  "@type": "Person",
-                  name: "Kauane Ramos",
-                  jobTitle: "Fisioterapeuta",
-                  hasCredential: {
-                    "@type": "EducationalOccupationalCredential",
-                    credentialCategory: "CREFITO-5: 375851-F",
-                  },
-                },
-                sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
               },
               {
                 "@type": "BreadcrumbList",
@@ -157,14 +121,14 @@ export default function Home() {
                   {
                     "@type": "ListItem",
                     position: 1,
-                    name: "Home",
-                    item: "https://www.clinicareabilitare.com",
+                    name: "Início",
+                    item: SITE_URL,
                   },
                   {
                     "@type": "ListItem",
                     position: 2,
-                    name: "Fisioterapia, Pilates e Quiropraxia em Pelotas",
-                    item: "https://www.clinicareabilitare.com/fisioterapia-pilates-quiropraxia-pelotas",
+                    name: "Tratamento da Coluna e Reabilitação",
+                    item: pageUrl,
                   },
                 ],
               },
@@ -173,115 +137,146 @@ export default function Home() {
         }}
       />
       <Header />
-      
-      <InternalHero 
-        title={<>Fisioterapia, Pilates e <strong className="text-emerald-300 font-extrabold">Quiropraxia</strong></>}
-        subtitle="Sua Clínica Especializada no bairro Areal, Pelotas. Tudo para sua reabilitação em um só lugar."
+
+      <InternalHero
+        breadcrumbLabel="Tratamento da Coluna e Reabilitação"
+        title={
+          <>
+            Tratamento da Coluna e{" "}
+            <strong className="text-emerald-300 font-extrabold">
+              Reabilitação em Pelotas
+            </strong>
+          </>
+        }
+        subtitle="Protocolos clínicos integrados no Bairro Areal unindo Fisioterapia, Pilates Clínico e Quiropraxia para resultados definitivos."
       />
 
       <div className="bg-white">
-        <main className="container mx-auto px-4 py-20">
+        <main className="container mx-auto px-4 py-16 sm:py-20">
           <div className="max-w-4xl mx-auto">
+            <ClinicalReviewerBadge specialtyLabel="Reabilitação da Coluna e Movimento" />
+
             {/* Intro Section */}
             <ScrollReveal>
               <section className="prose prose-lg md:prose-xl prose-emerald max-w-none text-gray-600 leading-relaxed mb-16">
                 <p>
-                  Está procurando <strong>fisioterapia em Pelotas</strong>, <strong>pilates em Pelotas</strong> ou <strong>quiropraxia em Pelotas</strong>? A <strong>Clínica Reabilitare</strong> é referência em tratamentos especializados na cidade. Cada serviço é realizado de forma dedicada, garantindo atenção total às necessidades de cada paciente.
+                  Sofrendo com <strong>dor na coluna</strong>,{" "}
+                  <strong>hérnia de disco</strong>,{" "}
+                  <strong>nervo ciático inflamado</strong> ou precisando de{" "}
+                  <strong>reabilitação ortopédica em Pelotas</strong>? Na{" "}
+                  <strong>Clínica Reabilitare</strong>, unimos três pilares
+                  clínicos em um único plano terapêutico: tiramos você da crise
+                  de dor, corrigimos o alinhamento articular e fortalecemos a
+                  musculatura profunda para que a dor não volte.
                 </p>
                 <p>
-                  Localizada no bairro Areal, nossa clínica conta com <strong>profissionais qualificados</strong> e infraestrutura moderna para oferecer o melhor tratamento da região.
+                  Localizada na Av. Bento Gonçalves, 2146 (Bairro Areal), nossa
+                  clínica oferece avaliação biomecânica individualizada e
+                  acompanhamento contínuo em todas as fases da sua recuperação.
                 </p>
               </section>
             </ScrollReveal>
 
             {/* Services Hub */}
-            <div className="space-y-12">
-              <ScrollReveal delay={100}>
+            <div className="space-y-10">
+              <ScrollReveal delay={80}>
                 <section className="bg-emerald-50/30 rounded-3xl p-8 md:p-10 border border-emerald-100 hover:shadow-lg transition-all duration-300">
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full inline-block mb-3">
+                    Etapa 1 · Controle da Dor e Função
+                  </span>
                   <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
-                    Fisioterapia Especializada
+                    Fisioterapia Ortopédica e Pós-Operatória
                   </h2>
-                  <p className="text-gray-600 text-lg mb-8">
-                    Nossa fisioterapia oferece tratamentos para dores, lesões e reabilitação funcional. Cada paciente recebe atenção individual e um plano personalizado para recuperação eficaz.
+                  <p className="text-gray-600 text-base sm:text-lg mb-8">
+                    Terapia manual, liberação miofascial e cinesioterapia
+                    individualizada para tratar lesões articulares, tendinites,
+                    lombalgias e recuperação pós-cirúrgica com segurança.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Link
                       href="/fisioterapia-pelotas"
-                      aria-label="Saiba mais sobre Fisioterapia Especializada em Pelotas"
-                      className="inline-flex items-center justify-center font-bold px-8 py-3 bg-white text-(--color-emerald-800) border border-emerald-200 rounded-full hover:bg-emerald-50 transition-colors shadow-xs"
+                      aria-label="Conhecer tratamentos de Fisioterapia Especializada em Pelotas"
+                      className="inline-flex items-center justify-center font-bold px-7 py-3 bg-white text-(--color-emerald-800) border border-emerald-200 rounded-full hover:bg-emerald-50 transition-colors shadow-xs"
                     >
-                      <span>Saiba Mais</span>
-                      <span className="sr-only"> sobre Fisioterapia Especializada em Pelotas</span>
+                      <span>Conhecer Fisioterapia →</span>
                     </Link>
                     <WhatsAppButton
-                      href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamentos%20de%20fisioterapia."
-                      className="inline-flex items-center gap-2 border-none rounded-full cursor-pointer text-base md:text-lg font-bold px-8 py-3 bg-(--color-emerald-800) text-white hover:bg-emerald-900 transition-all shadow-md hover:shadow-xl hover:-translate-y-1"
+                      href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20tratamento%20de%20coluna%20e%20fisioterapia."
+                      className="inline-flex items-center gap-2 border-none rounded-full cursor-pointer text-base font-bold px-7 py-3 bg-(--color-emerald-800) text-white hover:bg-emerald-900 transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5"
                       aria-label="Agendar avaliação de Fisioterapia pelo WhatsApp"
                     >
-                      Agendar Fisioterapia <span className="text-xl">→</span>
+                      Agendar Fisioterapia <span>→</span>
                     </WhatsAppButton>
                   </div>
                 </section>
               </ScrollReveal>
 
-              <ScrollReveal delay={200}>
+              <ScrollReveal delay={160}>
                 <section className="bg-emerald-50/30 rounded-3xl p-8 md:p-10 border border-emerald-100 hover:shadow-lg transition-all duration-300">
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full inline-block mb-3">
+                    Etapa 2 · Descompressão e Alinhamento
+                  </span>
                   <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
-                    Estúdio de Pilates
+                    Quiropraxia Clínica e Ajuste Vertebral
                   </h2>
-                  <p className="text-gray-600 text-lg mb-8">
-                    O Pilates é focado em melhorar postura, força, flexibilidade e consciência corporal. É indicado para quem busca bem-estar, condicionamento físico e prevenção de lesões.
-                  </p>
-                  <div className="flex flex-wrap gap-4">
-                    <Link
-                      href="/pilates-pelotas"
-                      aria-label="Saiba mais sobre o Estúdio de Pilates em Pelotas"
-                      className="inline-flex items-center justify-center font-bold px-8 py-3 bg-white text-(--color-emerald-800) border border-emerald-200 rounded-full hover:bg-emerald-50 transition-colors shadow-xs"
-                    >
-                      <span>Saiba Mais</span>
-                      <span className="sr-only"> sobre o Estúdio de Pilates em Pelotas</span>
-                    </Link>
-                    <WhatsAppButton
-                      href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20tratamento%20de%20pilates."
-                      className="inline-flex items-center gap-2 border-none rounded-full cursor-pointer text-base md:text-lg font-bold px-8 py-3 bg-(--color-emerald-800) text-white hover:bg-emerald-900 transition-all shadow-md hover:shadow-xl hover:-translate-y-1"
-                      aria-label="Agendar aula de Pilates pelo WhatsApp"
-                    >
-                      Agendar Pilates <span className="text-xl">→</span>
-                    </WhatsAppButton>
-                  </div>
-                </section>
-              </ScrollReveal>
-
-              <ScrollReveal delay={300}>
-                <section className="bg-emerald-50/30 rounded-3xl p-8 md:p-10 border border-emerald-100 hover:shadow-lg transition-all duration-300">
-                  <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
-                    Quiropraxia Clínica
-                  </h2>
-                  <p className="text-gray-600 text-lg mb-8">
-                    A Quiropraxia é focada no alinhamento da coluna vertebral e restauração do equilíbrio articular. Auxilia no alívio rápido de dores nas costas, pescoço e articulações, devolvendo mobilidade.
+                  <p className="text-gray-600 text-base sm:text-lg mb-8">
+                    Ajustes precisos e indolores para liberar bloqueios nas
+                    vértebras, descomprimir raízes nervosas (como o nervo
+                    ciático) e devolver mobilidade imediata à coluna.
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Link
                       href="/quiropraxia-pelotas"
-                      aria-label="Saiba mais sobre Quiropraxia Clínica em Pelotas"
-                      className="inline-flex items-center justify-center font-bold px-8 py-3 bg-white text-(--color-emerald-800) border border-emerald-200 rounded-full hover:bg-emerald-50 transition-colors shadow-xs"
+                      aria-label="Conhecer atendimentos de Quiropraxia Clínica em Pelotas"
+                      className="inline-flex items-center justify-center font-bold px-7 py-3 bg-white text-(--color-emerald-800) border border-emerald-200 rounded-full hover:bg-emerald-50 transition-colors shadow-xs"
                     >
-                      <span>Saiba Mais</span>
-                      <span className="sr-only"> sobre Quiropraxia Clínica em Pelotas</span>
+                      <span>Conhecer Quiropraxia →</span>
                     </Link>
                     <WhatsAppButton
                       href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20os%20atendimentos%20de%20quiropraxia."
-                      className="inline-flex items-center gap-2 border-none rounded-full cursor-pointer text-base md:text-lg font-bold px-8 py-3 bg-(--color-emerald-800) text-white hover:bg-emerald-900 transition-all shadow-md hover:shadow-xl hover:-translate-y-1"
+                      className="inline-flex items-center gap-2 border-none rounded-full cursor-pointer text-base font-bold px-7 py-3 bg-(--color-emerald-800) text-white hover:bg-emerald-900 transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5"
                       aria-label="Agendar atendimento de Quiropraxia pelo WhatsApp"
                     >
-                      Agendar Quiropraxia <span className="text-xl">→</span>
+                      Agendar Quiropraxia <span>→</span>
+                    </WhatsAppButton>
+                  </div>
+                </section>
+              </ScrollReveal>
+
+              <ScrollReveal delay={240}>
+                <section className="bg-emerald-50/30 rounded-3xl p-8 md:p-10 border border-emerald-100 hover:shadow-lg transition-all duration-300">
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full inline-block mb-3">
+                    Etapa 3 · Estabilização e Prevenção
+                  </span>
+                  <h2 className="text-2xl font-bold text-(--color-emerald-800) mb-4">
+                    Estúdio de Pilates Clínico em Aparelhos
+                  </h2>
+                  <p className="text-gray-600 text-base sm:text-lg mb-8">
+                    Fortalecimento do core e reeducação postural em Reformer,
+                    Cadillac, Chair e Barrel com orientação fisioterapêutica
+                    para sustentar sua coluna sem dor no longo prazo.
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Link
+                      href="/pilates-pelotas"
+                      aria-label="Conhecer o Estúdio de Pilates Clínico em Pelotas"
+                      className="inline-flex items-center justify-center font-bold px-7 py-3 bg-white text-(--color-emerald-800) border border-emerald-200 rounded-full hover:bg-emerald-50 transition-colors shadow-xs"
+                    >
+                      <span>Conhecer Pilates →</span>
+                    </Link>
+                    <WhatsAppButton
+                      href="https://wa.me/5553991669801?text=Olá%2C%20preciso%20de%20informações%20sobre%20as%20aulas%20de%20pilates."
+                      className="inline-flex items-center gap-2 border-none rounded-full cursor-pointer text-base font-bold px-7 py-3 bg-(--color-emerald-800) text-white hover:bg-emerald-900 transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5"
+                      aria-label="Agendar aula de Pilates pelo WhatsApp"
+                    >
+                      Agendar Pilates <span>→</span>
                     </WhatsAppButton>
                   </div>
                 </section>
               </ScrollReveal>
             </div>
           </div>
-          
+
           <div className="mt-20">
             <Contact />
           </div>

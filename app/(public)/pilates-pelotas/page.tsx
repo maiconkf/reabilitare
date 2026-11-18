@@ -6,6 +6,13 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import InternalHero from "@/components/InternalHero";
 import FaqAccordion from "@/components/FaqAccordion";
 import ScrollReveal from "@/components/ScrollReveal";
+import ClinicalReviewerBadge from "@/components/ClinicalReviewerBadge";
+import {
+  organizationSchema,
+  SITE_URL,
+  specialistSchema,
+  websiteSchema,
+} from "@/lib/schema";
 import type { Metadata } from "next";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -42,7 +49,7 @@ export const metadata: Metadata = {
     title: "Pilates em Pelotas | Estúdio de Pilates Clínico - Reabilitare",
     description:
       "Procurando pilates em Pelotas? Conheça o estúdio de Pilates Clínico da Clínica Reabilitare (Areal). Aulas em aparelhos guiadas por fisioterapeutas. Agende sua aula!",
-    url: "https://www.clinicareabilitare.com/pilates-pelotas",
+    url: `${SITE_URL}/pilates-pelotas`,
     type: "website",
     locale: "pt_BR",
     siteName: "Clínica Reabilitare",
@@ -97,6 +104,8 @@ const pilatesFaq = [
 ];
 
 export default function PilatesPage() {
+  const pageUrl = `${SITE_URL}/pilates-pelotas`;
+
   return (
     <div>
       <script
@@ -105,62 +114,46 @@ export default function PilatesPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
+              organizationSchema,
+              specialistSchema,
+              websiteSchema,
               {
-                "@type": ["MedicalClinic", "LocalBusiness"],
-                medicalSpecialty: "Physiotherapy",
-                "@id": "https://www.clinicareabilitare.com/#organization",
-                name: "Clínica Reabilitare - Estúdio de Pilates em Pelotas",
-                alternateName: "Pilates em Pelotas - Reabilitare",
+                "@type": "MedicalWebPage",
+                "@id": `${pageUrl}#webpage`,
+                url: pageUrl,
+                name: "Pilates em Pelotas | Estúdio de Pilates Clínico - Reabilitare",
                 description:
                   "Estúdio completo de Pilates Clínico e em Aparelhos em Pelotas (Bairro Areal). Aulas orientadas por fisioterapeutas para dores na coluna, postura, força e mobilidade.",
-                url: "https://www.clinicareabilitare.com/pilates-pelotas",
-                logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
-                image: [
-                  "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
-                  "https://www.clinicareabilitare.com/cover.png",
-                ],
-                telephone: "+55-53-99166-9801",
-                priceRange: "$$",
-                hasMap: "https://maps.app.goo.gl/S4y6tkkLfFWxKYir8",
-                address: {
-                  "@type": "PostalAddress",
-                  streetAddress: "Av. Bento Gonçalves, 2146",
-                  addressLocality: "Pelotas",
-                  addressRegion: "RS",
-                  postalCode: "96015-140",
-                  addressCountry: "BR",
+                inLanguage: "pt-BR",
+                isPartOf: {
+                  "@id": `${SITE_URL}/#website`,
                 },
-                geo: {
-                  "@type": "GeoCoordinates",
-                  latitude: -31.7650111,
-                  longitude: -52.3255797,
+                about: {
+                  "@id": `${pageUrl}#service`,
+                },
+                author: {
+                  "@id": `${SITE_URL}/#kauane-ramos`,
+                },
+                reviewedBy: {
+                  "@id": `${SITE_URL}/#kauane-ramos`,
+                },
+                lastReviewed: "2026-11-17",
+              },
+              {
+                "@type": "Service",
+                "@id": `${pageUrl}#service`,
+                serviceType: "Pilates Clínico em Aparelhos",
+                name: "Estúdio de Pilates Clínico em Pelotas",
+                url: pageUrl,
+                description:
+                  "Aulas de Pilates Clínico orientadas por fisioterapeutas em estúdio completo com Reformer, Cadillac, Chair e Barrel em Pelotas/RS.",
+                provider: {
+                  "@id": `${SITE_URL}/#organization`,
                 },
                 areaServed: {
                   "@type": "City",
                   name: "Pelotas",
-                  "@id": "https://www.wikidata.org/wiki/Q170851",
-                },
-                aggregateRating: {
-                  "@type": "AggregateRating",
-                  ratingValue: "5.0",
-                  bestRating: "5",
-                  ratingCount: "48",
-                },
-                contactPoint: {
-                  "@type": "ContactPoint",
-                  telephone: "+55-53-99166-9801",
-                  contactType: "customer service",
-                  areaServed: "BR",
-                  availableLanguage: "Portuguese",
-                },
-                employee: {
-                  "@type": "Person",
-                  name: "Kauane Ramos",
-                  jobTitle: "Fisioterapeuta",
-                  hasCredential: {
-                    "@type": "EducationalOccupationalCredential",
-                    credentialCategory: "CREFITO-5: 375851-F",
-                  },
+                  sameAs: "https://www.wikidata.org/wiki/Q170851",
                 },
                 hasOfferCatalog: {
                   "@type": "OfferCatalog",
@@ -195,21 +188,6 @@ export default function PilatesPage() {
                     },
                   ],
                 },
-                sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
-                openingHoursSpecification: [
-                  {
-                    "@type": "OpeningHoursSpecification",
-                    dayOfWeek: [
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                    ],
-                    opens: "08:00",
-                    closes: "20:00",
-                  },
-                ],
               },
               {
                 "@type": "BreadcrumbList",
@@ -218,13 +196,13 @@ export default function PilatesPage() {
                     "@type": "ListItem",
                     position: 1,
                     name: "Início",
-                    item: "https://www.clinicareabilitare.com",
+                    item: SITE_URL,
                   },
                   {
                     "@type": "ListItem",
                     position: 2,
                     name: "Pilates em Pelotas",
-                    item: "https://www.clinicareabilitare.com/pilates-pelotas",
+                    item: pageUrl,
                   },
                 ],
               },
@@ -246,6 +224,7 @@ export default function PilatesPage() {
       <Header />
 
       <InternalHero
+        breadcrumbLabel="Pilates em Pelotas"
         title={
           <>
             Pilates em{" "}
@@ -258,6 +237,8 @@ export default function PilatesPage() {
       <div className="bg-white">
         <main className="container mx-auto px-4 py-16 sm:py-20">
           <div className="max-w-4xl mx-auto">
+            <ClinicalReviewerBadge specialtyLabel="Pilates Clínico e Reeducação Postural" />
+
             {/* Intro Section */}
             <ScrollReveal>
               <section className="prose prose-lg md:prose-xl prose-emerald max-w-none text-gray-600 leading-relaxed mb-16">
@@ -419,7 +400,7 @@ export default function PilatesPage() {
             {/* Cross-link Section */}
             <section className="mb-12 rounded-2xl bg-emerald-50/60 border border-emerald-100 p-6 sm:p-8 text-center">
               <h2 className="text-xl font-extrabold text-emerald-950 mb-2">
-                Conheça Também Nossos Tratamentos de Fisioterapia em Pelotas
+                Conheça Também Nossas Outras Especialidades em Pelotas
               </h2>
               <p className="text-slate-600 text-sm sm:text-base mb-5">
                 Você pode associar o Pilates com nossos tratamentos de{" "}
@@ -429,8 +410,14 @@ export default function PilatesPage() {
                 >
                   Fisioterapia em Pelotas
                 </Link>{" "}
-                para um resultado corporal completo, reabilitação e alívio
-                duradouro de dores.
+                e sessões de{" "}
+                <Link
+                  href="/quiropraxia-pelotas"
+                  className="text-emerald-800 font-bold underline hover:text-emerald-950 transition-colors"
+                >
+                  Quiropraxia em Pelotas
+                </Link>{" "}
+                para um resultado corporal completo.
               </p>
             </section>
           </div>

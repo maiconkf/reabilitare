@@ -1,13 +1,17 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
-import ScrollReveal from "./ScrollReveal";
 
 interface InternalHeroProps {
   title: ReactNode;
   subtitle: ReactNode;
+  breadcrumbLabel?: string;
 }
 
-export default function InternalHero({ title, subtitle }: InternalHeroProps) {
+export default function InternalHero({
+  title,
+  subtitle,
+  breadcrumbLabel = "Especialidades em Pelotas",
+}: InternalHeroProps) {
   return (
     <section className="relative bg-gradient-to-br from-emerald-950 via-emerald-900 to-teal-900 pt-24 pb-12 md:pt-28 md:pb-16 overflow-hidden rounded-b-[32px] sm:rounded-b-[40px] shadow-xl shadow-emerald-950/15">
       {/* Subtle architectural grid pattern */}
@@ -25,23 +29,28 @@ export default function InternalHero({ title, subtitle }: InternalHeroProps) {
       <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-teal-300/15 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-        <ScrollReveal>
-          <div className="max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-emerald-200 text-xs font-medium mb-4 backdrop-blur-md">
-              <Link href="/" className="hover:text-white transition-colors">
-                Início
-              </Link>
-              <span className="text-white/40">/</span>
-              <span className="text-white font-semibold">Especialidades em Pelotas</span>
-            </div>
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight tracking-tight">
-              {title}
-            </h1>
-            <div className="text-sm sm:text-lg text-emerald-50/85 max-w-2xl mx-auto leading-relaxed font-normal">
-              {subtitle}
-            </div>
+        <div className="max-w-3xl mx-auto">
+          <nav
+            aria-label="Breadcrumb"
+            className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/15 text-emerald-200 text-xs font-medium mb-4 backdrop-blur-md"
+          >
+            <Link href="/" className="hover:text-white transition-colors">
+              Início
+            </Link>
+            <span className="text-white/40" aria-hidden="true">
+              /
+            </span>
+            <span className="text-white font-semibold" aria-current="page">
+              {breadcrumbLabel}
+            </span>
+          </nav>
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 leading-tight tracking-tight">
+            {title}
+          </h1>
+          <div className="text-sm sm:text-lg text-emerald-50/85 max-w-2xl mx-auto leading-relaxed font-normal">
+            {subtitle}
           </div>
-        </ScrollReveal>
+        </div>
       </div>
     </section>
   );

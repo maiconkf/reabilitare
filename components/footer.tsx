@@ -60,7 +60,7 @@ export default function Footer() {
                   </li>
                   <li>
                     <Link href="/fisioterapia-pilates-quiropraxia-pelotas" className="hover:text-white transition-colors">
-                      Tratamentos Integrados
+                      Tratamento da Coluna em Pelotas
                     </Link>
                   </li>
                 </ul>

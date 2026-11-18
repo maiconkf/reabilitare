@@ -6,6 +6,13 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import InternalHero from "@/components/InternalHero";
 import FaqAccordion from "@/components/FaqAccordion";
 import ScrollReveal from "@/components/ScrollReveal";
+import ClinicalReviewerBadge from "@/components/ClinicalReviewerBadge";
+import {
+  organizationSchema,
+  SITE_URL,
+  specialistSchema,
+  websiteSchema,
+} from "@/lib/schema";
 import type { Metadata } from "next";
 import Link from "next/link";
 import dynamic from "next/dynamic";
@@ -37,7 +44,7 @@ export const metadata: Metadata = {
     title: "Quiropraxia em Pelotas | Quiropraxista e Ajuste Vertebral",
     description:
       "Procurando quiropraxia em Pelotas? A Clínica Reabilitare oferece atendimentos especializados para alinhamento da coluna e alívio de dores. Agende agora!",
-    url: "https://www.clinicareabilitare.com/quiropraxia-pelotas",
+    url: `${SITE_URL}/quiropraxia-pelotas`,
     type: "website",
     locale: "pt_BR",
     siteName: "Clínica Reabilitare",
@@ -61,7 +68,8 @@ export const metadata: Metadata = {
 
 const quiropraxiaFaq = [
   {
-    question: "O que é Quiropraxia e como ela ajuda nas dores da coluna em Pelotas?",
+    question:
+      "O que é Quiropraxia e como ela ajuda nas dores da coluna em Pelotas?",
     answer:
       "A Quiropraxia é uma área da saúde focada no diagnóstico, tratamento e prevenção de desordens neuro-músculo-esqueléticas, com ênfase na coluna vertebral. Por meio de ajustes rápidos e precisos, removemos interferências articulares (subluxações) que comprimem raízes nervosas, devolvendo a mobilidade natural e eliminando a dor.",
   },
@@ -71,23 +79,28 @@ const quiropraxiaFaq = [
       "Não doem e são extremamente seguros quando realizados por profissionais qualificados após uma criteriosa avaliação biomecânica. O famoso estalo audível durante o ajuste é apenas a liberação de gás da cavidade articular (cavitação), resultando em alívio imediato da pressão e sensação de leveza.",
   },
   {
-    question: "A quiropraxia é indicada para quem tem hérnia de disco ou nervo ciático?",
+    question:
+      "A quiropraxia é indicada para quem tem hérnia de disco ou nervo ciático?",
     answer:
       "Sim! É uma das indicações mais frequentes na Clínica Reabilitare em Pelotas. Os ajustes descomprimem os forames intervertebrais por onde passam as raízes do nervo ciático, aliviando a queimação, dormência e irradiação para glúteos e pernas.",
   },
   {
-    question: "Quantas sessões de quiropraxia são necessárias para sentir melhora?",
+    question:
+      "Quantas sessões de quiropraxia são necessárias para sentir melhora?",
     answer:
       "A grande maioria dos pacientes relata alívio significativo de dor e relaxamento muscular logo após o primeiro atendimento. A continuidade do plano é planejada conforme a cronicidade da lesão e os objetivos de alinhamento postural a longo prazo.",
   },
   {
-    question: "Como agendar uma consulta de quiropraxia na Clínica Reabilitare em Pelotas?",
+    question:
+      "Como agendar uma consulta de quiropraxia na Clínica Reabilitare em Pelotas?",
     answer:
       "O agendamento é rápido e direto via WhatsApp no número (53) 99166-9801. Nossa clínica fica na Av. Bento Gonçalves, 2146, no bairro Areal em Pelotas/RS, com estacionamento facilitado e atendimento com hora marcada.",
   },
 ];
 
 export default function QuiropraxiaPage() {
+  const pageUrl = `${SITE_URL}/quiropraxia-pelotas`;
+
   return (
     <div>
       <script
@@ -96,62 +109,45 @@ export default function QuiropraxiaPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
+              organizationSchema,
+              specialistSchema,
+              websiteSchema,
               {
-                "@type": ["MedicalClinic", "LocalBusiness"],
-                medicalSpecialty: ["Physiotherapy", "Musculoskeletal"],
-                "@id": "https://www.clinicareabilitare.com/#organization",
-                name: "Clínica Reabilitare - Quiropraxia e Quiropraxista em Pelotas",
-                alternateName: "Quiropraxia em Pelotas - Reabilitare",
+                "@type": "MedicalWebPage",
+                "@id": `${pageUrl}#webpage`,
+                url: pageUrl,
+                name: "Quiropraxia em Pelotas | Quiropraxista e Ajuste Vertebral",
                 description:
                   "Quiropraxia em Pelotas com profissionais qualificados. Tratamento de dores na coluna, ajustes articulares indolores e alinhamento vertebral seguro.",
-                url: "https://www.clinicareabilitare.com/quiropraxia-pelotas",
-                logo: "https://www.clinicareabilitare.com/logo-reabilitare.webp",
-                image: [
-                  "https://www.clinicareabilitare.com/kauane-ramos-fisioterapia-pelotas.webp",
-                  "https://www.clinicareabilitare.com/cover.png",
-                ],
-                telephone: "+55-53-99166-9801",
-                priceRange: "$$",
-                hasMap: "https://maps.app.goo.gl/S4y6tkkLfFWxKYir8",
-                address: {
-                  "@type": "PostalAddress",
-                  streetAddress: "Av. Bento Gonçalves, 2146",
-                  addressLocality: "Pelotas",
-                  addressRegion: "RS",
-                  postalCode: "96015-140",
-                  addressCountry: "BR",
+                inLanguage: "pt-BR",
+                isPartOf: {
+                  "@id": `${SITE_URL}/#website`,
                 },
-                geo: {
-                  "@type": "GeoCoordinates",
-                  latitude: -31.7650111,
-                  longitude: -52.3255797,
+                about: {
+                  "@id": `${pageUrl}#service`,
+                },
+                author: {
+                  "@id": `${SITE_URL}/#kauane-ramos`,
+                },
+                reviewedBy: {
+                  "@id": `${SITE_URL}/#kauane-ramos`,
+                },
+                lastReviewed: "2026-11-17",
+              },
+              {
+                "@type": "MedicalTherapy",
+                "@id": `${pageUrl}#service`,
+                name: "Quiropraxia e Ajuste Vertebral em Pelotas",
+                url: pageUrl,
+                description:
+                  "Atendimentos de quiropraxia clínica para ajuste vertebral, descompressão articular, tratamento de hérnia de disco e nervo ciático em Pelotas/RS.",
+                provider: {
+                  "@id": `${SITE_URL}/#organization`,
                 },
                 areaServed: {
                   "@type": "City",
                   name: "Pelotas",
-                  "@id": "https://www.wikidata.org/wiki/Q170851",
-                },
-                aggregateRating: {
-                  "@type": "AggregateRating",
-                  ratingValue: "5.0",
-                  bestRating: "5",
-                  ratingCount: "48",
-                },
-                contactPoint: {
-                  "@type": "ContactPoint",
-                  telephone: "+55-53-99166-9801",
-                  contactType: "customer service",
-                  areaServed: "BR",
-                  availableLanguage: "Portuguese",
-                },
-                employee: {
-                  "@type": "Person",
-                  name: "Kauane Ramos",
-                  jobTitle: "Fisioterapeuta",
-                  hasCredential: {
-                    "@type": "EducationalOccupationalCredential",
-                    credentialCategory: "CREFITO-5: 375851-F",
-                  },
+                  sameAs: "https://www.wikidata.org/wiki/Q170851",
                 },
                 hasOfferCatalog: {
                   "@type": "OfferCatalog",
@@ -162,7 +158,8 @@ export default function QuiropraxiaPage() {
                       itemOffered: {
                         "@type": "MedicalTherapy",
                         name: "Ajuste Vertebral e Articular",
-                        description: "Manobras biomecânicas de alta velocidade e baixa amplitude para restauração do eixo da coluna.",
+                        description:
+                          "Manobras biomecânicas de alta velocidade e baixa amplitude para restauração do eixo da coluna.",
                       },
                     },
                     {
@@ -170,26 +167,12 @@ export default function QuiropraxiaPage() {
                       itemOffered: {
                         "@type": "MedicalTherapy",
                         name: "Tratamento de Dor Lombar e Ciático",
-                        description: "Descompressão articular para alívio imediato de pinçamento radicular.",
+                        description:
+                          "Descompressão articular para alívio imediato de pinçamento radicular.",
                       },
                     },
                   ],
                 },
-                sameAs: ["https://www.instagram.com/clinicareabilitare.fisio"],
-                openingHoursSpecification: [
-                  {
-                    "@type": "OpeningHoursSpecification",
-                    dayOfWeek: [
-                      "Monday",
-                      "Tuesday",
-                      "Wednesday",
-                      "Thursday",
-                      "Friday",
-                    ],
-                    opens: "08:00",
-                    closes: "20:00",
-                  },
-                ],
               },
               {
                 "@type": "BreadcrumbList",
@@ -198,13 +181,13 @@ export default function QuiropraxiaPage() {
                     "@type": "ListItem",
                     position: 1,
                     name: "Início",
-                    item: "https://www.clinicareabilitare.com",
+                    item: SITE_URL,
                   },
                   {
                     "@type": "ListItem",
                     position: 2,
                     name: "Quiropraxia em Pelotas",
-                    item: "https://www.clinicareabilitare.com/quiropraxia-pelotas",
+                    item: pageUrl,
                   },
                 ],
               },
@@ -226,6 +209,7 @@ export default function QuiropraxiaPage() {
       <Header />
 
       <InternalHero
+        breadcrumbLabel="Quiropraxia em Pelotas"
         title={
           <>
             Quiropraxia em{" "}
@@ -238,14 +222,26 @@ export default function QuiropraxiaPage() {
       <div className="bg-white">
         <main className="container mx-auto px-4 py-16 sm:py-20">
           <div className="max-w-4xl mx-auto">
+            <ClinicalReviewerBadge specialtyLabel="Quiropraxia Clínica e Ajuste Vertebral" />
+
             {/* Intro Section */}
             <ScrollReveal>
               <section className="prose prose-lg md:prose-xl prose-emerald max-w-none text-gray-600 leading-relaxed mb-16">
                 <p>
-                  Procurando <strong>quiropraxia em Pelotas</strong> ou atendimento com <strong>quiropraxista</strong> especializado? A <strong>Clínica Reabilitare</strong> oferece protocolos seguros e avançados de <strong>ajustes vertebrais e articulares</strong> para restaurar o alinhamento da coluna e eliminar a causa de dores agudas e crônicas.
+                  Procurando <strong>quiropraxia em Pelotas</strong> ou
+                  atendimento com <strong>quiropraxista</strong> especializado?
+                  A <strong>Clínica Reabilitare</strong> oferece protocolos
+                  seguros e avançados de{" "}
+                  <strong>ajustes vertebrais e articulares</strong> para
+                  restaurar o alinhamento da coluna e eliminar a causa de dores
+                  agudas e crônicas.
                 </p>
                 <p>
-                  Localizada no Bairro Areal (Av. Bento Gonçalves, 2146), nossa clínica oferece um espaço acolhedor e climatizado. Antes de qualquer ajuste, realizamos uma rigorosa avaliação postural e testes ortopédicos, garantindo intervenções precisas, seguras e confortáveis.
+                  Localizada no Bairro Areal (Av. Bento Gonçalves, 2146), nossa
+                  clínica oferece um espaço acolhedor e climatizado. Antes de
+                  qualquer ajuste, realizamos uma rigorosa avaliação postural e
+                  testes ortopédicos, garantindo intervenções precisas, seguras
+                  e confortáveis.
                 </p>
               </section>
             </ScrollReveal>
@@ -261,7 +257,8 @@ export default function QuiropraxiaPage() {
                     Benefícios da Quiropraxia na Reabilitare
                   </h2>
                   <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
-                    Alívio rápido de pressões mecânicas para sua coluna funcionar com máxima liberdade.
+                    Alívio rápido de pressões mecânicas para sua coluna
+                    funcionar com máxima liberdade.
                   </p>
                 </div>
               </ScrollReveal>
